@@ -26,7 +26,7 @@ def calculate_msd(traj):
 
 def main():
     # Load the trajectory
-    traj = Trajectory('./logs/pretraining_md/MD_Simulation/2024-12-05_20-43-21/md_out_npt_T_300.traj', 'r')
+    traj = Trajectory('md_out_npt_T_300.traj', 'r')
     
     # Calculate MSD
     msd = calculate_msd(traj)
@@ -49,7 +49,7 @@ def main():
     plt.tight_layout()
     
     # Save plot
-    plt.savefig('chgnet_pretraining_msd.png')
+    plt.savefig('msd.png')
     plt.show()
 
 if __name__ == "__main__":

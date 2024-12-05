@@ -1,0 +1,6 @@
+2024-12-05 20:43:21,734 - INFO - Starting molecular dynamics simulation.
+2024-12-05 20:43:21,735 - INFO - Loading CHGNet model from: ../pretraining_finetuning_chgnet/logs/CHGNet_finetuning/checkpoints/chgnet_finetuned_model.pth
+2024-12-05 20:43:21,803 - INFO - Loading structure from: BaZrO3.cif
+2024-12-05 20:43:21,821 - INFO - Setting up MD simulation.
+2024-12-05 20:43:39,857 - INFO - Starting MD simulation: 1000 fs at 300 K.
+2024-12-05 20:47:44,508 - INFO - Simulation completed. Trajectory saved to logs/finetuning_md/MD_Simulation/2024-12-05_20-43-21/md_out_npt_T_300.traj, log saved to logs/finetuning_md/MD_Simulation/2024-12-05_20-43-21/md_out_npt_T_300.log.
