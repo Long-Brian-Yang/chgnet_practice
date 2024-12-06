@@ -1,0 +1,41 @@
+2024-12-06 16:58:43,926 - INFO - Loading structure from: BaZrO3.cif
+2024-12-06 16:58:43,936 - INFO - Structure loaded: BaZrO3
+2024-12-06 16:58:43,939 - INFO - Added proton 1/1:
+2024-12-06 16:58:43,939 - INFO -   Near O atom: 2
+2024-12-06 16:58:43,940 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-06 16:58:43,940 - INFO -   OH distance: 0.980 Å
+2024-12-06 16:58:43,940 - INFO - Successfully added 1 protons
+2024-12-06 16:58:43,940 - INFO - Final composition: HBaO3Zr
+2024-12-06 16:58:43,941 - INFO - Loading finetuned CHGNet model from: ../pretraining_finetuning_chgnet/logs/CHGNet_finetuning/checkpoints/chgnet_finetuned_model.pth
+2024-12-06 16:58:43,992 - INFO - Model loaded successfully
+2024-12-06 16:58:43,993 - INFO - 
+Starting simulation at 600K...
+2024-12-06 16:58:43,993 - INFO - Initializing MD simulation...
+2024-12-06 17:05:36,156 - INFO - Running MD at 600K...
+2024-12-06 17:05:40,869 - INFO - Temperature 600K - Step 0/2000
+2024-12-06 17:12:52,149 - INFO - Temperature 600K - Step 100/2000
+2024-12-06 17:14:03,215 - INFO - Temperature 600K - Step 200/2000
+2024-12-06 17:14:43,221 - INFO - Temperature 600K - Step 300/2000
+2024-12-06 17:15:20,146 - INFO - Temperature 600K - Step 400/2000
+2024-12-06 17:15:37,758 - INFO - Temperature 600K - Step 500/2000
+2024-12-06 17:16:02,025 - INFO - Temperature 600K - Step 600/2000
+2024-12-06 17:16:25,913 - INFO - Temperature 600K - Step 700/2000
+2024-12-06 17:16:56,737 - INFO - Temperature 600K - Step 800/2000
+2024-12-06 17:17:21,271 - INFO - Temperature 600K - Step 900/2000
+2024-12-06 17:17:39,762 - INFO - Temperature 600K - Step 1000/2000
+2024-12-06 17:17:57,576 - INFO - Temperature 600K - Step 1100/2000
+2024-12-06 17:18:15,397 - INFO - Temperature 600K - Step 1200/2000
+2024-12-06 17:18:33,679 - INFO - Temperature 600K - Step 1300/2000
+2024-12-06 17:18:51,813 - INFO - Temperature 600K - Step 1400/2000
+2024-12-06 17:19:09,973 - INFO - Temperature 600K - Step 1500/2000
+2024-12-06 17:19:28,036 - INFO - Temperature 600K - Step 1600/2000
+2024-12-06 17:19:46,204 - INFO - Temperature 600K - Step 1700/2000
+2024-12-06 17:20:04,609 - INFO - Temperature 600K - Step 1800/2000
+2024-12-06 17:20:22,989 - INFO - Temperature 600K - Step 1900/2000
+2024-12-06 17:20:42,593 - INFO - Analyzing trajectory for 600K...
+2024-12-06 17:20:42,682 - INFO - Results for 600K:
+2024-12-06 17:20:42,682 - INFO -   Diffusion coefficient: 2.0806e+02 [cm^2/s]
+2024-12-06 17:20:42,682 - INFO -   Maximum MSD: 241592.68 Å²
+2024-12-06 17:20:42,683 - INFO -   Average MSD: 149541.32 Å²
+2024-12-06 17:20:43,455 - INFO - 
+All MD simulations and analysis completed successfully

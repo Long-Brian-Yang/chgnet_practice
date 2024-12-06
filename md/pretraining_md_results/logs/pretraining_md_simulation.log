@@ -1,0 +1,120 @@
+2024-12-06 16:08:11,860 - INFO - Loading structure from: BaZrO3.cif
+2024-12-06 16:08:11,886 - INFO - Structure loaded: BaZrO3
+2024-12-06 16:08:11,890 - INFO - Added proton 1/1:
+2024-12-06 16:08:11,890 - INFO -   Near O atom: 2
+2024-12-06 16:08:11,891 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-06 16:08:11,891 - INFO -   OH distance: 0.980 Å
+2024-12-06 16:08:11,891 - INFO - Successfully added 1 protons
+2024-12-06 16:08:11,891 - INFO - Final composition: HBaO3Zr
+2024-12-06 16:08:11,892 - INFO - 
+Starting simulation at 600K...
+2024-12-06 16:08:11,892 - INFO - Initializing MD simulation...
+2024-12-06 16:09:15,766 - INFO - Running MD at 600K...
+2024-12-06 16:09:16,459 - INFO - Temperature 600K - Step 0/2000
+2024-12-06 16:10:02,958 - INFO - Temperature 600K - Step 100/2000
+2024-12-06 16:10:44,680 - INFO - Temperature 600K - Step 200/2000
+2024-12-06 16:11:43,542 - INFO - Temperature 600K - Step 300/2000
+2024-12-06 16:12:22,118 - INFO - Temperature 600K - Step 400/2000
+2024-12-06 16:12:57,360 - INFO - Temperature 600K - Step 500/2000
+2024-12-06 16:13:27,139 - INFO - Temperature 600K - Step 600/2000
+2024-12-06 16:14:12,771 - INFO - Temperature 600K - Step 700/2000
+2024-12-06 16:14:51,353 - INFO - Temperature 600K - Step 800/2000
+2024-12-06 16:15:24,795 - INFO - Temperature 600K - Step 900/2000
+2024-12-06 16:16:13,302 - INFO - Temperature 600K - Step 1000/2000
+2024-12-06 16:16:46,504 - INFO - Temperature 600K - Step 1100/2000
+2024-12-06 16:17:31,209 - INFO - Temperature 600K - Step 1200/2000
+2024-12-06 16:18:10,702 - INFO - Temperature 600K - Step 1300/2000
+2024-12-06 16:18:39,396 - INFO - Temperature 600K - Step 1400/2000
+2024-12-06 16:19:08,698 - INFO - Temperature 600K - Step 1500/2000
+2024-12-06 16:19:53,344 - INFO - Temperature 600K - Step 1600/2000
+2024-12-06 16:20:44,086 - INFO - Temperature 600K - Step 1700/2000
+2024-12-06 16:21:23,817 - INFO - Temperature 600K - Step 1800/2000
+2024-12-06 16:21:56,107 - INFO - Temperature 600K - Step 1900/2000
+2024-12-06 16:22:31,905 - INFO - Simulation at 600K completed
+2024-12-06 16:22:33,186 - INFO - Analyzing trajectory for 600K...
+2024-12-06 16:22:33,230 - INFO - Results for 600K:
+2024-12-06 16:22:33,230 - INFO -   Diffusion coefficient: 3.9362e-03 [cm^2/s]
+2024-12-06 16:22:33,230 - INFO -   Maximum MSD: 21.68 Å²
+2024-12-06 16:22:33,231 - INFO -   Average MSD: 13.58 Å²
+2024-12-06 16:22:33,993 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-06 16:23:31,366 - INFO - Loading structure from: BaZrO3.cif
+2024-12-06 16:23:31,379 - INFO - Structure loaded: BaZrO3
+2024-12-06 16:23:31,383 - INFO - Added proton 1/1:
+2024-12-06 16:23:31,383 - INFO -   Near O atom: 2
+2024-12-06 16:23:31,384 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-06 16:23:31,384 - INFO -   OH distance: 0.980 Å
+2024-12-06 16:23:31,384 - INFO - Successfully added 1 protons
+2024-12-06 16:23:31,384 - INFO - Final composition: HBaO3Zr
+2024-12-06 16:23:31,389 - INFO - 
+Starting simulation at 600K...
+2024-12-06 16:23:31,389 - INFO - Initializing MD simulation...
+2024-12-06 16:24:57,598 - INFO - Running MD at 600K...
+2024-12-06 16:24:58,260 - INFO - Temperature 600K - Step 0/2000
+2024-12-06 16:25:50,741 - INFO - Temperature 600K - Step 100/2000
+2024-12-06 16:26:51,601 - INFO - Temperature 600K - Step 200/2000
+2024-12-06 16:27:36,948 - INFO - Temperature 600K - Step 300/2000
+2024-12-06 16:28:15,537 - INFO - Temperature 600K - Step 400/2000
+2024-12-06 16:28:52,117 - INFO - Temperature 600K - Step 500/2000
+2024-12-06 16:29:25,433 - INFO - Temperature 600K - Step 600/2000
+2024-12-06 16:30:06,757 - INFO - Temperature 600K - Step 700/2000
+2024-12-06 16:30:51,315 - INFO - Temperature 600K - Step 800/2000
+2024-12-06 16:31:33,389 - INFO - Temperature 600K - Step 900/2000
+2024-12-06 16:32:27,608 - INFO - Temperature 600K - Step 1000/2000
+2024-12-06 16:33:03,073 - INFO - Temperature 600K - Step 1100/2000
+2024-12-06 16:33:46,245 - INFO - Temperature 600K - Step 1200/2000
+2024-12-06 16:34:22,142 - INFO - Temperature 600K - Step 1300/2000
+2024-12-06 16:35:00,547 - INFO - Temperature 600K - Step 1400/2000
+2024-12-06 16:35:39,763 - INFO - Temperature 600K - Step 1500/2000
+2024-12-06 16:36:13,675 - INFO - Temperature 600K - Step 1600/2000
+2024-12-06 16:36:43,360 - INFO - Temperature 600K - Step 1700/2000
+2024-12-06 16:37:21,488 - INFO - Temperature 600K - Step 1800/2000
+2024-12-06 16:38:00,261 - INFO - Temperature 600K - Step 1900/2000
+2024-12-06 16:38:28,236 - INFO - Simulation at 600K completed
+2024-12-06 16:38:29,328 - INFO - Analyzing trajectory for 600K...
+2024-12-06 16:38:29,354 - INFO - Results for 600K:
+2024-12-06 16:38:29,354 - INFO -   Diffusion coefficient: 2.9396e-04 [cm^2/s]
+2024-12-06 16:38:29,354 - INFO -   Maximum MSD: 4.46 Å²
+2024-12-06 16:38:29,354 - INFO -   Average MSD: 2.07 Å²
+2024-12-06 16:38:30,114 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-06 16:43:41,053 - INFO - Loading structure from: BaZrO3.cif
+2024-12-06 16:43:41,065 - INFO - Structure loaded: BaZrO3
+2024-12-06 16:43:41,068 - INFO - Added proton 1/1:
+2024-12-06 16:43:41,068 - INFO -   Near O atom: 2
+2024-12-06 16:43:41,068 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-06 16:43:41,069 - INFO -   OH distance: 0.980 Å
+2024-12-06 16:43:41,069 - INFO - Successfully added 1 protons
+2024-12-06 16:43:41,069 - INFO - Final composition: HBaO3Zr
+2024-12-06 16:43:41,070 - INFO - 
+Starting simulation at 600K...
+2024-12-06 16:43:41,070 - INFO - Initializing MD simulation...
+2024-12-06 16:44:48,378 - INFO - Running MD at 600K...
+2024-12-06 16:44:48,879 - INFO - Temperature 600K - Step 0/2000
+2024-12-06 16:45:42,246 - INFO - Temperature 600K - Step 100/2000
+2024-12-06 16:46:37,872 - INFO - Temperature 600K - Step 200/2000
+2024-12-06 16:47:31,120 - INFO - Temperature 600K - Step 300/2000
+2024-12-06 16:48:16,733 - INFO - Temperature 600K - Step 400/2000
+2024-12-06 16:48:57,467 - INFO - Temperature 600K - Step 500/2000
+2024-12-06 16:49:36,206 - INFO - Temperature 600K - Step 600/2000
+2024-12-06 16:50:16,093 - INFO - Temperature 600K - Step 700/2000
+2024-12-06 16:50:57,083 - INFO - Temperature 600K - Step 800/2000
+2024-12-06 16:51:27,959 - INFO - Temperature 600K - Step 900/2000
+2024-12-06 16:51:55,216 - INFO - Temperature 600K - Step 1000/2000
+2024-12-06 16:52:33,616 - INFO - Temperature 600K - Step 1100/2000
+2024-12-06 16:53:13,988 - INFO - Temperature 600K - Step 1200/2000
+2024-12-06 16:53:57,213 - INFO - Temperature 600K - Step 1300/2000
+2024-12-06 16:54:34,493 - INFO - Temperature 600K - Step 1400/2000
+2024-12-06 16:55:05,243 - INFO - Temperature 600K - Step 1500/2000
+2024-12-06 16:55:34,383 - INFO - Temperature 600K - Step 1600/2000
+2024-12-06 16:56:02,976 - INFO - Temperature 600K - Step 1700/2000
+2024-12-06 16:56:52,604 - INFO - Temperature 600K - Step 1800/2000
+2024-12-06 16:57:25,214 - INFO - Temperature 600K - Step 1900/2000
+2024-12-06 16:57:59,600 - INFO - Simulation at 600K completed
+2024-12-06 16:58:00,982 - INFO - Analyzing trajectory for 600K...
+2024-12-06 16:58:01,026 - INFO - Results for 600K:
+2024-12-06 16:58:01,026 - INFO -   Diffusion coefficient: 9.2003e-03 [cm^2/s]
+2024-12-06 16:58:01,026 - INFO -   Maximum MSD: 27.86 Å²
+2024-12-06 16:58:01,027 - INFO -   Average MSD: 14.33 Å²
+2024-12-06 16:58:01,758 - INFO - 
+All MD simulations and analysis completed successfully

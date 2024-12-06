@@ -28,7 +28,7 @@ def setup_logging(log_dir: str = "logs") -> None:
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(f"{log_dir}/finetuning.log"),
+            logging.FileHandler(f"{log_dir}/training.log"),
             logging.StreamHandler()
         ]
     )
@@ -44,7 +44,7 @@ def parse_args():
     Returns:
         args (argparse.Namespace): parsed arguments
     """
-    parser = argparse.ArgumentParser(description='CHGNet Finetuning')
+    parser = argparse.ArgumentParser(description='CHGNet Training')
     parser.add_argument('--json-path', type=str, default="vasp_dataset.json",
                         help='Path to the JSON dataset file')
     parser.add_argument('--batch-size', type=int, default=2,
@@ -57,7 +57,7 @@ def parse_args():
                         help='Number of training epochs')
     parser.add_argument('--learning-rate', type=float, default=1e-2,
                         help='Learning rate for optimizer')
-    parser.add_argument('--output-dir', type=str, default='./finetuning_results',
+    parser.add_argument('--output-dir', type=str, default='./training_results',
                         help='Directory to save outputs')
     parser.add_argument('--device', type=str, default='cpu',
                         help='Device for computation (cpu/cuda)')
@@ -80,7 +80,7 @@ def setup_csv_logger(output_dir: Path) -> tuple[Path, Path]:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     log_path = output_dir / "logs" / timestamp
     log_path.mkdir(parents=True, exist_ok=True)
-    log_file = log_path / "finetuning_log.csv"
+    log_file = log_path / "training_log.csv"
 
     with open(log_file, mode="w", newline="") as file:
         writer = csv.writer(file)
@@ -104,34 +104,6 @@ def log_metrics(log_file: Path, epoch: int, train_loss: float, val_loss: float) 
         writer.writerow([epoch, train_loss, val_loss])
 
 
-def freeze_model_layers(model: CHGNet) -> CHGNet:
-    """
-    Freeze specific layers in the model for finetuning
-
-    Args:
-        model: CHGNet model
-
-    Returns:
-        CHGNet: Model with frozen layers
-    """
-    frozen_layers = [
-        model.atom_embedding,
-        model.bond_embedding,
-        model.angle_embedding,
-        model.bond_basis_expansion,
-        model.angle_basis_expansion,
-        model.atom_conv_layers[:-1],
-        model.bond_conv_layers,
-        model.angle_layers,
-    ]
-
-    for layer in frozen_layers:
-        for param in layer.parameters():
-            param.requires_grad = False
-
-    return model
-
-
 def plot_training_curves(history: dict, output_dir: Path, logger: logging.Logger) -> None:
     """
     Plot and save training curves
@@ -147,7 +119,7 @@ def plot_training_curves(history: dict, output_dir: Path, logger: logging.Logger
     plt.plot(history["train"], label="Train Loss", marker="o")
     plt.plot(history["val"], label="Validation Loss", marker="s")
 
-    plt.title("CHGNet Finetuning Progress", fontsize=fontsize)
+    plt.title("CHGNet Training Progress", fontsize=fontsize)
     plt.xlabel("Epoch", fontsize=fontsize-4)
     plt.ylabel("Loss", fontsize=fontsize-4)
     plt.tick_params(labelsize=fontsize-4)
@@ -155,16 +127,16 @@ def plot_training_curves(history: dict, output_dir: Path, logger: logging.Logger
     plt.grid(True)
     plt.tight_layout()
 
-    plot_path = output_dir / "finetuning_curves.png"
+    plot_path = output_dir / "training_curves.png"
     plt.savefig(plot_path, dpi=300, bbox_inches='tight')
     plt.close()
 
     logger.info(f"Training curves saved to {plot_path}")
 
 
-def run_finetuning(args) -> None:
+def run_training(args) -> None:
     """
-    Run CHGNet finetuning process
+    Run CHGNet training process
 
     Args:
         args (argparse.Namespace): command line arguments
@@ -193,15 +165,12 @@ def run_finetuning(args) -> None:
         )
         logger.info("Dataset loaded successfully")
 
-        # Initialize and freeze model
-        logger.info("Initializing model...")
+        # Initialize model and trainer
+        logger.info("Initializing model and trainer...")
         model = CHGNet()
-        model = freeze_model_layers(model)
-        logger.info("Model layers frozen for finetuning")
-
-        # Setup trainer
         trainer = Trainer(
             model=model,
+            # targets="efsm"
             targets="ef",
             optimizer="Adam",
             scheduler="CosLR",
@@ -209,11 +178,11 @@ def run_finetuning(args) -> None:
             epochs=args.epochs,
             learning_rate=args.learning_rate,
             use_device=args.device,
-            print_freq=1
+            print_freq=6
         )
 
         # Training loop
-        logger.info("Starting finetuning...")
+        logger.info("Starting training...")
         train_losses = []
         val_losses = []
 
@@ -230,7 +199,7 @@ def run_finetuning(args) -> None:
             logger.info(f"  Val Loss: {val_loss:.6f}")
 
         # Save model
-        model_path = output_dir / "checkpoints" / "chgnet_finetuned.pth"
+        model_path = output_dir / "checkpoints" / "chgnet_model.pth"
         model_path.parent.mkdir(exist_ok=True)
         torch.save(trainer.model.state_dict(), model_path)
         logger.info(f"Model saved to {model_path}")
@@ -239,16 +208,16 @@ def run_finetuning(args) -> None:
         history = {"train": train_losses, "val": val_losses}
         plot_training_curves(history, output_dir, logger)
 
-        logger.info("Finetuning completed successfully")
+        logger.info("Training completed successfully")
 
     except Exception as e:
-        logger.error(f"Finetuning failed: {str(e)}")
+        logger.error(f"Training failed: {str(e)}")
         raise
 
 
 if __name__ == "__main__":
     args = parse_args()
     try:
-        run_finetuning(args)
+        run_training(args)
     except Exception as e:
         logging.error(f"Program failed: {str(e)}")

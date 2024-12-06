@@ -10,8 +10,6 @@ from ase.md.velocitydistribution import MaxwellBoltzmannDistribution
 from pymatgen.core import Structure
 from pymatgen.io.ase import AseAtomsAdaptor
 from pymatgen.io.vasp import Poscar
-import torch
-from chgnet.model import CHGNet
 from chgnet.model.dynamics import MolecularDynamics
 
 warnings.filterwarnings("ignore")
@@ -32,7 +30,7 @@ def setup_logging(log_dir: str = "logs") -> None:
         level=logging.INFO,
         format='%(asctime)s - %(levelname)s - %(message)s',
         handlers=[
-            logging.FileHandler(f"{log_dir}/finetuning_md_simulation.log"),
+            logging.FileHandler(f"{log_dir}/pretraining_md_simulation.log"),
             logging.StreamHandler()
         ]
     )
@@ -137,24 +135,21 @@ def parse_args():
     Returns:
         args (argparse.Namespace): parsed arguments
     """
-    parser = argparse.ArgumentParser(description='CHGNet Finetuning MD Simulation')
+    parser = argparse.ArgumentParser(description='CHGNet pretraining MD Simulation')
     parser.add_argument('--structure-file', type=str, default="BaZrO3.cif",
                         help='Path to the structure CIF file')
-    parser.add_argument('--model-path', type=str,
-                        default="../pretraining_finetuning_chgnet/logs/CHGNet_finetuning/checkpoints/chgnet_finetuned_model.pth",
-                        help='Path to the finetuned model')
     parser.add_argument('--ensemble', type=str, default="npt",
                         choices=['npt', 'nve', 'nvt'],
                         help='Type of ensemble')
     parser.add_argument('--temperatures', type=float, nargs='+', default=[600],
                         help='Temperatures for MD simulation (K), e.g. 800 900 1000')
-    parser.add_argument('--timestep', type=float, default=1.0,
+    parser.add_argument('--timestep', type=float, default=2.0,
                         help='Timestep for MD simulation (fs)')
-    parser.add_argument('--n-steps', type=int, default=2000,
+    parser.add_argument('--n-steps', type=int, default=3000,
                         help='Number of MD steps')
     parser.add_argument('--n-protons', type=int, default=1,
                         help='Number of protons to add')
-    parser.add_argument('--output-dir', type=str, default='./finetuning_md_results',
+    parser.add_argument('--output-dir', type=str, default='./pretraining_md_results',
                         help='Directory to save outputs')
     parser.add_argument('--debug', action='store_true',
                         help='Enable debug mode')
@@ -208,9 +203,10 @@ def analyze_msd(trajectories: list, atom_index: int, temperatures: list,
         trajectory = Trajectory(str(traj_file), 'r')
         time, msd = calculate_msd(trajectory, atom_index, timestep=timestep)
 
+        # Linear fit using numpy vstack
         A = np.vstack([time, np.ones(len(time))]).T
         slope, _ = np.linalg.lstsq(A, msd, rcond=None)[0]
-        D = slope / 6
+        D = slope / 6  # diffusion coefficient
 
         plt.plot(time, msd, label=f"{temp}K")
         plt.plot(time, time * slope, '--', alpha=0.5)
@@ -220,14 +216,14 @@ def analyze_msd(trajectories: list, atom_index: int, temperatures: list,
         logger.info(f"  Maximum MSD: {np.max(msd):.2f} Å²")
         logger.info(f"  Average MSD: {np.mean(msd):.2f} Å²")
 
-    plt.title("CHGNet Finetuning MSD", fontsize=fontsize)
-    plt.xlabel("Time (ps)", fontsize=fontsize-4)
-    plt.ylabel("MSD (Å²)", fontsize=fontsize-4)
+    plt.title("CHGNet Pretraining MSD", fontsize=fontsize)
+    plt.xlabel("Time (ps)", fontsize=fontsize)
+    plt.ylabel("MSD (Å²)", fontsize=fontsize)
     plt.tick_params(labelsize=fontsize-4)
     plt.legend(fontsize=fontsize-4)
     plt.tight_layout()
 
-    plt.savefig(output_dir / 'finetuning_msd.png', dpi=300, bbox_inches='tight')
+    plt.savefig(output_dir / 'msd_analysis.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 
@@ -260,29 +256,20 @@ def run_md_simulation(args) -> None:
         atoms = add_protons(atoms, args.n_protons)
         proton_index = len(atoms) - 1  # Last added atom is the proton
 
-        # Convert back to Structure for MD
-        pmg_structure = atoms_adaptor.get_structure(atoms)
-
         # Save structure with protons
+        pmg_structure = atoms_adaptor.get_structure(atoms)
         poscar = Poscar(pmg_structure)
         poscar.write_file(output_dir / "POSCAR_with_H")
 
-        # Load model
-        logger.info(f"Loading finetuned CHGNet model from: {args.model_path}")
-        model = CHGNet()
-        model.load_state_dict(torch.load(args.model_path, map_location="cpu"))
-        model.eval()
-        logger.info("Model loaded successfully")
-
         trajectory_files = []
 
+        # Run simulation at each temperature
         for temp in args.temperatures:
             logger.info(f"\nStarting simulation at {temp}K...")
 
             temp_dir = output_dir / f"T_{temp}K"
             temp_dir.mkdir(exist_ok=True)
 
-            # Prepare trajectory and log files
             traj_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.traj"
             md_log_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.log"
             trajectory_files.append(traj_file)
@@ -291,7 +278,6 @@ def run_md_simulation(args) -> None:
             logger.info("Initializing MD simulation...")
             md = MolecularDynamics(
                 atoms=pmg_structure,
-                model=model,
                 ensemble=args.ensemble,
                 temperature=temp,
                 timestep=args.timestep,
@@ -307,7 +293,9 @@ def run_md_simulation(args) -> None:
                 if step % 100 == 0:
                     logger.info(f"Temperature {temp}K - Step {step}/{args.n_steps}")
 
-        # Analyze trajectories with proton index
+            logger.info(f"Simulation at {temp}K completed")
+
+        # Analyze trajectories
         analyze_msd(trajectory_files, proton_index, args.temperatures,
                     args.timestep, output_dir, logger)
 

@@ -3,6 +3,7 @@ from pymatgen.core import Structure
 from chgnet.utils import read_json
 from chgnet.data.dataset import StructureData, get_train_val_test_loader
 
+
 def load_dataset(json_path: str, batch_size: int = 2, train_ratio: float = 0.8, val_ratio: float = 0.1):
     """Load dataset from a JSON file and split it into train, validation, and test loaders.
 
