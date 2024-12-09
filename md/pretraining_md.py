@@ -145,7 +145,7 @@ def parse_args():
                         help='Temperatures for MD simulation (K), e.g. 800 900 1000')
     parser.add_argument('--timestep', type=float, default=2.0,
                         help='Timestep for MD simulation (fs)')
-    parser.add_argument('--n-steps', type=int, default=3000,
+    parser.add_argument('--n-steps', type=int, default=1000,
                         help='Number of MD steps')
     parser.add_argument('--n-protons', type=int, default=1,
                         help='Number of protons to add')

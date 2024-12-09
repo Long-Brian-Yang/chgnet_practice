@@ -118,3 +118,71 @@ Starting simulation at 600K...
 2024-12-06 16:58:01,027 - INFO -   Average MSD: 14.33 Å²
 2024-12-06 16:58:01,758 - INFO - 
 All MD simulations and analysis completed successfully
+2024-12-09 12:02:48,098 - INFO - Loading structure from: BaZrO3.cif
+2024-12-09 12:02:48,108 - INFO - Structure loaded: BaZrO3
+2024-12-09 12:02:48,111 - INFO - Added proton 1/1:
+2024-12-09 12:02:48,111 - INFO -   Near O atom: 2
+2024-12-09 12:02:48,111 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-09 12:02:48,111 - INFO -   OH distance: 0.980 Å
+2024-12-09 12:02:48,111 - INFO - Successfully added 1 protons
+2024-12-09 12:02:48,111 - INFO - Final composition: HBaO3Zr
+2024-12-09 12:02:48,113 - INFO - 
+Starting simulation at 600K...
+2024-12-09 12:02:48,113 - INFO - Initializing MD simulation...
+2024-12-09 12:03:45,667 - INFO - Running MD at 600K...
+2024-12-09 12:03:46,162 - INFO - Temperature 600K - Step 0/2000
+2024-12-09 12:04:41,030 - INFO - Temperature 600K - Step 100/2000
+2024-12-09 12:05:15,409 - INFO - Temperature 600K - Step 200/2000
+2024-12-09 12:06:16,096 - INFO - Temperature 600K - Step 300/2000
+2024-12-09 12:06:48,310 - INFO - Temperature 600K - Step 400/2000
+2024-12-09 12:07:15,781 - INFO - Temperature 600K - Step 500/2000
+2024-12-09 12:07:49,977 - INFO - Temperature 600K - Step 600/2000
+2024-12-09 12:08:19,929 - INFO - Temperature 600K - Step 700/2000
+2024-12-09 12:08:57,491 - INFO - Temperature 600K - Step 800/2000
+2024-12-09 12:09:31,143 - INFO - Temperature 600K - Step 900/2000
+2024-12-09 12:10:00,121 - INFO - Temperature 600K - Step 1000/2000
+2024-12-09 12:10:27,962 - INFO - Temperature 600K - Step 1100/2000
+2024-12-09 12:10:57,122 - INFO - Temperature 600K - Step 1200/2000
+2024-12-09 12:11:23,513 - INFO - Temperature 600K - Step 1300/2000
+2024-12-09 12:12:08,589 - INFO - Temperature 600K - Step 1400/2000
+2024-12-09 12:12:37,974 - INFO - Temperature 600K - Step 1500/2000
+2024-12-09 12:13:05,814 - INFO - Temperature 600K - Step 1600/2000
+2024-12-09 12:13:39,475 - INFO - Temperature 600K - Step 1700/2000
+2024-12-09 12:14:04,518 - INFO - Temperature 600K - Step 1800/2000
+2024-12-09 12:14:37,438 - INFO - Temperature 600K - Step 1900/2000
+2024-12-09 12:15:13,330 - INFO - Simulation at 600K completed
+2024-12-09 12:15:14,544 - INFO - Analyzing trajectory for 600K...
+2024-12-09 12:15:14,570 - INFO - Results for 600K:
+2024-12-09 12:15:14,570 - INFO -   Diffusion coefficient: 2.0619e-02 [cm^2/s]
+2024-12-09 12:15:14,570 - INFO -   Maximum MSD: 76.46 Å²
+2024-12-09 12:15:14,570 - INFO -   Average MSD: 57.28 Å²
+2024-12-09 12:15:15,311 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-09 12:22:19,492 - INFO - Loading structure from: BaZrO3.cif
+2024-12-09 12:22:19,502 - INFO - Structure loaded: BaZrO3
+2024-12-09 12:22:19,504 - INFO - Added proton 1/1:
+2024-12-09 12:22:19,504 - INFO -   Near O atom: 2
+2024-12-09 12:22:19,504 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-09 12:22:19,505 - INFO -   OH distance: 0.980 Å
+2024-12-09 12:22:19,505 - INFO - Successfully added 1 protons
+2024-12-09 12:22:19,505 - INFO - Final composition: HBaO3Zr
+2024-12-09 12:22:19,506 - INFO - 
+Starting simulation at 600K...
+2024-12-09 12:22:19,506 - INFO - Initializing MD simulation...
+2024-12-09 12:23:17,782 - INFO - Running MD at 600K...
+2024-12-09 12:23:18,461 - INFO - Temperature 600K - Step 0/1000
+2024-12-09 12:24:17,361 - INFO - Temperature 600K - Step 100/1000
+2024-12-09 12:24:45,694 - INFO - Temperature 600K - Step 200/1000
+2024-12-09 12:25:44,956 - INFO - Temperature 600K - Step 300/1000
+2024-12-09 12:26:15,069 - INFO - Loading structure from: BaZrO3.cif
+2024-12-09 12:26:15,080 - INFO - Structure loaded: BaZrO3
+2024-12-09 12:26:15,082 - INFO - Added proton 1/1:
+2024-12-09 12:26:15,082 - INFO -   Near O atom: 2
+2024-12-09 12:26:15,083 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-09 12:26:15,083 - INFO -   OH distance: 0.980 Å
+2024-12-09 12:26:15,083 - INFO - Successfully added 1 protons
+2024-12-09 12:26:15,083 - INFO - Final composition: HBaO3Zr
+2024-12-09 12:26:15,084 - INFO - 
+Starting simulation at 600K...
+2024-12-09 12:26:15,084 - INFO - Initializing MD simulation...
+2024-12-09 12:27:13,692 - INFO - Running MD at 600K...
