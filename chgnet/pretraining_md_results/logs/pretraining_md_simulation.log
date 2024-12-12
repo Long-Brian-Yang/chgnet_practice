@@ -1,0 +1,1584 @@
+2024-12-12 12:27:54,137 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 12:27:54,148 - INFO - Structure loaded: BaZrO3
+2024-12-12 12:27:54,151 - INFO - Added proton 1/1:
+2024-12-12 12:27:54,151 - INFO -   Near O atom: 2
+2024-12-12 12:27:54,151 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 12:27:54,151 - INFO -   OH distance: 0.980 Å
+2024-12-12 12:27:54,151 - INFO - Successfully added 1 protons
+2024-12-12 12:27:54,151 - INFO - Final composition: HBaO3Zr
+2024-12-12 12:27:54,153 - INFO - 
+Starting simulation at 800K...
+2024-12-12 12:27:54,153 - INFO - Initializing MD simulation...
+2024-12-12 12:27:54,418 - INFO - Running MD at 800K...
+2024-12-12 12:27:54,704 - INFO - Temperature 800K - Step 0/10000
+2024-12-12 12:28:00,222 - INFO - Temperature 800K - Step 100/10000
+2024-12-12 12:28:05,805 - INFO - Temperature 800K - Step 200/10000
+2024-12-12 12:28:11,236 - INFO - Temperature 800K - Step 300/10000
+2024-12-12 12:28:16,562 - INFO - Temperature 800K - Step 400/10000
+2024-12-12 12:28:22,457 - INFO - Temperature 800K - Step 500/10000
+2024-12-12 12:28:28,185 - INFO - Temperature 800K - Step 600/10000
+2024-12-12 12:28:33,670 - INFO - Temperature 800K - Step 700/10000
+2024-12-12 12:28:38,971 - INFO - Temperature 800K - Step 800/10000
+2024-12-12 12:28:44,234 - INFO - Temperature 800K - Step 900/10000
+2024-12-12 12:28:49,386 - INFO - Temperature 800K - Step 1000/10000
+2024-12-12 12:28:54,614 - INFO - Temperature 800K - Step 1100/10000
+2024-12-12 12:28:59,546 - INFO - Temperature 800K - Step 1200/10000
+2024-12-12 12:29:04,416 - INFO - Temperature 800K - Step 1300/10000
+2024-12-12 12:29:09,440 - INFO - Temperature 800K - Step 1400/10000
+2024-12-12 12:29:15,339 - INFO - Temperature 800K - Step 1500/10000
+2024-12-12 12:29:21,004 - INFO - Temperature 800K - Step 1600/10000
+2024-12-12 12:29:26,344 - INFO - Temperature 800K - Step 1700/10000
+2024-12-12 12:29:31,676 - INFO - Temperature 800K - Step 1800/10000
+2024-12-12 12:29:37,004 - INFO - Temperature 800K - Step 1900/10000
+2024-12-12 12:29:41,994 - INFO - Temperature 800K - Step 2000/10000
+2024-12-12 12:29:46,898 - INFO - Temperature 800K - Step 2100/10000
+2024-12-12 12:29:52,374 - INFO - Temperature 800K - Step 2200/10000
+2024-12-12 12:29:58,391 - INFO - Temperature 800K - Step 2300/10000
+2024-12-12 12:30:04,137 - INFO - Temperature 800K - Step 2400/10000
+2024-12-12 12:30:09,478 - INFO - Temperature 800K - Step 2500/10000
+2024-12-12 12:30:14,613 - INFO - Temperature 800K - Step 2600/10000
+2024-12-12 12:30:19,818 - INFO - Temperature 800K - Step 2700/10000
+2024-12-12 12:30:24,812 - INFO - Temperature 800K - Step 2800/10000
+2024-12-12 12:30:29,889 - INFO - Temperature 800K - Step 2900/10000
+2024-12-12 12:30:34,968 - INFO - Temperature 800K - Step 3000/10000
+2024-12-12 12:30:40,487 - INFO - Temperature 800K - Step 3100/10000
+2024-12-12 12:30:46,681 - INFO - Temperature 800K - Step 3200/10000
+2024-12-12 12:30:52,128 - INFO - Temperature 800K - Step 3300/10000
+2024-12-12 12:30:57,308 - INFO - Temperature 800K - Step 3400/10000
+2024-12-12 12:31:03,073 - INFO - Temperature 800K - Step 3500/10000
+2024-12-12 12:31:08,563 - INFO - Temperature 800K - Step 3600/10000
+2024-12-12 12:31:13,500 - INFO - Temperature 800K - Step 3700/10000
+2024-12-12 12:31:18,581 - INFO - Temperature 800K - Step 3800/10000
+2024-12-12 12:31:23,741 - INFO - Temperature 800K - Step 3900/10000
+2024-12-12 12:31:28,744 - INFO - Temperature 800K - Step 4000/10000
+2024-12-12 12:31:33,713 - INFO - Temperature 800K - Step 4100/10000
+2024-12-12 12:31:38,735 - INFO - Temperature 800K - Step 4200/10000
+2024-12-12 12:31:43,783 - INFO - Temperature 800K - Step 4300/10000
+2024-12-12 12:31:48,972 - INFO - Temperature 800K - Step 4400/10000
+2024-12-12 12:31:53,902 - INFO - Temperature 800K - Step 4500/10000
+2024-12-12 12:31:58,912 - INFO - Temperature 800K - Step 4600/10000
+2024-12-12 12:32:04,126 - INFO - Temperature 800K - Step 4700/10000
+2024-12-12 12:32:09,352 - INFO - Temperature 800K - Step 4800/10000
+2024-12-12 12:32:14,504 - INFO - Temperature 800K - Step 4900/10000
+2024-12-12 12:32:19,573 - INFO - Temperature 800K - Step 5000/10000
+2024-12-12 12:32:24,645 - INFO - Temperature 800K - Step 5100/10000
+2024-12-12 12:32:29,801 - INFO - Temperature 800K - Step 5200/10000
+2024-12-12 12:32:35,011 - INFO - Temperature 800K - Step 5300/10000
+2024-12-12 12:32:39,959 - INFO - Temperature 800K - Step 5400/10000
+2024-12-12 12:32:45,158 - INFO - Temperature 800K - Step 5500/10000
+2024-12-12 12:32:50,678 - INFO - Temperature 800K - Step 5600/10000
+2024-12-12 12:32:56,050 - INFO - Temperature 800K - Step 5700/10000
+2024-12-12 12:33:01,100 - INFO - Temperature 800K - Step 5800/10000
+2024-12-12 12:33:06,170 - INFO - Temperature 800K - Step 5900/10000
+2024-12-12 12:33:11,403 - INFO - Temperature 800K - Step 6000/10000
+2024-12-12 12:33:16,545 - INFO - Temperature 800K - Step 6100/10000
+2024-12-12 12:33:21,978 - INFO - Temperature 800K - Step 6200/10000
+2024-12-12 12:33:27,277 - INFO - Temperature 800K - Step 6300/10000
+2024-12-12 12:33:33,535 - INFO - Temperature 800K - Step 6400/10000
+2024-12-12 12:33:40,176 - INFO - Temperature 800K - Step 6500/10000
+2024-12-12 12:33:46,827 - INFO - Temperature 800K - Step 6600/10000
+2024-12-12 12:33:52,407 - INFO - Temperature 800K - Step 6700/10000
+2024-12-12 12:33:58,749 - INFO - Temperature 800K - Step 6800/10000
+2024-12-12 12:34:04,492 - INFO - Temperature 800K - Step 6900/10000
+2024-12-12 12:34:10,366 - INFO - Temperature 800K - Step 7000/10000
+2024-12-12 12:34:16,786 - INFO - Temperature 800K - Step 7100/10000
+2024-12-12 12:34:22,664 - INFO - Temperature 800K - Step 7200/10000
+2024-12-12 12:34:28,124 - INFO - Temperature 800K - Step 7300/10000
+2024-12-12 12:34:33,837 - INFO - Temperature 800K - Step 7400/10000
+2024-12-12 12:34:39,056 - INFO - Temperature 800K - Step 7500/10000
+2024-12-12 12:34:44,430 - INFO - Temperature 800K - Step 7600/10000
+2024-12-12 12:34:50,383 - INFO - Temperature 800K - Step 7700/10000
+2024-12-12 12:34:56,590 - INFO - Temperature 800K - Step 7800/10000
+2024-12-12 12:35:02,046 - INFO - Temperature 800K - Step 7900/10000
+2024-12-12 12:35:07,636 - INFO - Temperature 800K - Step 8000/10000
+2024-12-12 12:35:14,525 - INFO - Temperature 800K - Step 8100/10000
+2024-12-12 12:35:20,617 - INFO - Temperature 800K - Step 8200/10000
+2024-12-12 12:35:26,407 - INFO - Temperature 800K - Step 8300/10000
+2024-12-12 12:35:31,537 - INFO - Temperature 800K - Step 8400/10000
+2024-12-12 12:35:37,946 - INFO - Temperature 800K - Step 8500/10000
+2024-12-12 12:35:43,219 - INFO - Temperature 800K - Step 8600/10000
+2024-12-12 12:35:48,466 - INFO - Temperature 800K - Step 8700/10000
+2024-12-12 12:35:53,706 - INFO - Temperature 800K - Step 8800/10000
+2024-12-12 12:35:59,103 - INFO - Temperature 800K - Step 8900/10000
+2024-12-12 12:36:05,011 - INFO - Temperature 800K - Step 9000/10000
+2024-12-12 12:36:10,811 - INFO - Temperature 800K - Step 9100/10000
+2024-12-12 12:36:17,003 - INFO - Temperature 800K - Step 9200/10000
+2024-12-12 12:36:22,952 - INFO - Temperature 800K - Step 9300/10000
+2024-12-12 12:36:29,198 - INFO - Temperature 800K - Step 9400/10000
+2024-12-12 12:36:35,317 - INFO - Temperature 800K - Step 9500/10000
+2024-12-12 12:36:40,550 - INFO - Temperature 800K - Step 9600/10000
+2024-12-12 12:36:45,976 - INFO - Temperature 800K - Step 9700/10000
+2024-12-12 12:36:50,957 - INFO - Temperature 800K - Step 9800/10000
+2024-12-12 12:36:56,137 - INFO - Temperature 800K - Step 9900/10000
+2024-12-12 12:37:01,253 - INFO - Simulation at 800K completed
+2024-12-12 12:37:01,253 - INFO - Analyzing trajectory for 800K...
+2024-12-12 12:37:03,176 - INFO - 
+MSD Analysis Results for 800K:
+2024-12-12 12:37:03,177 - INFO - ----------------------------------------
+2024-12-12 12:37:03,177 - INFO - Diffusion Coefficients [cm²/s]:
+2024-12-12 12:37:03,177 - INFO -   Total: 5.9456e-04
+2024-12-12 12:37:03,177 - INFO -   X-direction: 1.9779e-04
+2024-12-12 12:37:03,177 - INFO -   Y-direction: 1.0814e-03
+2024-12-12 12:37:03,177 - INFO -   Z-direction: 5.0450e-04
+2024-12-12 12:37:03,177 - INFO - ----------------------------------------
+2024-12-12 12:37:03,177 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 12:41:58,650 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 12:41:58,661 - INFO - Structure loaded: BaZrO3
+2024-12-12 12:41:58,663 - INFO - Added proton 1/1:
+2024-12-12 12:41:58,663 - INFO -   Near O atom: 2
+2024-12-12 12:41:58,664 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 12:41:58,664 - INFO -   OH distance: 0.980 Å
+2024-12-12 12:41:58,664 - INFO - Successfully added 1 protons
+2024-12-12 12:41:58,664 - INFO - Final composition: HBaO3Zr
+2024-12-12 12:41:58,665 - INFO - 
+Starting simulation at 800K...
+2024-12-12 12:41:58,665 - INFO - Initializing MD simulation...
+2024-12-12 12:41:58,944 - INFO - Running MD at 800K...
+2024-12-12 12:41:59,226 - INFO - Temperature 800K - Step 0/10000
+2024-12-12 12:42:04,404 - INFO - Temperature 800K - Step 100/10000
+2024-12-12 12:42:09,393 - INFO - Temperature 800K - Step 200/10000
+2024-12-12 12:42:14,615 - INFO - Temperature 800K - Step 300/10000
+2024-12-12 12:42:19,459 - INFO - Temperature 800K - Step 400/10000
+2024-12-12 12:42:24,401 - INFO - Temperature 800K - Step 500/10000
+2024-12-12 12:42:29,200 - INFO - Temperature 800K - Step 600/10000
+2024-12-12 12:42:34,084 - INFO - Temperature 800K - Step 700/10000
+2024-12-12 12:42:38,779 - INFO - Temperature 800K - Step 800/10000
+2024-12-12 12:42:43,587 - INFO - Temperature 800K - Step 900/10000
+2024-12-12 12:42:48,455 - INFO - Temperature 800K - Step 1000/10000
+2024-12-12 12:42:53,494 - INFO - Temperature 800K - Step 1100/10000
+2024-12-12 12:42:58,214 - INFO - Temperature 800K - Step 1200/10000
+2024-12-12 12:43:02,888 - INFO - Temperature 800K - Step 1300/10000
+2024-12-12 12:43:07,650 - INFO - Temperature 800K - Step 1400/10000
+2024-12-12 12:43:12,654 - INFO - Temperature 800K - Step 1500/10000
+2024-12-12 12:43:17,439 - INFO - Temperature 800K - Step 1600/10000
+2024-12-12 12:43:22,438 - INFO - Temperature 800K - Step 1700/10000
+2024-12-12 12:43:27,260 - INFO - Temperature 800K - Step 1800/10000
+2024-12-12 12:43:32,116 - INFO - Temperature 800K - Step 1900/10000
+2024-12-12 12:43:36,982 - INFO - Temperature 800K - Step 2000/10000
+2024-12-12 12:43:41,941 - INFO - Temperature 800K - Step 2100/10000
+2024-12-12 12:43:47,169 - INFO - Temperature 800K - Step 2200/10000
+2024-12-12 12:43:52,185 - INFO - Temperature 800K - Step 2300/10000
+2024-12-12 12:43:58,163 - INFO - Temperature 800K - Step 2400/10000
+2024-12-12 12:44:02,982 - INFO - Temperature 800K - Step 2500/10000
+2024-12-12 12:44:08,078 - INFO - Temperature 800K - Step 2600/10000
+2024-12-12 12:44:13,861 - INFO - Temperature 800K - Step 2700/10000
+2024-12-12 12:44:18,592 - INFO - Temperature 800K - Step 2800/10000
+2024-12-12 12:44:23,687 - INFO - Temperature 800K - Step 2900/10000
+2024-12-12 12:44:28,556 - INFO - Temperature 800K - Step 3000/10000
+2024-12-12 12:44:33,319 - INFO - Temperature 800K - Step 3100/10000
+2024-12-12 12:44:38,078 - INFO - Temperature 800K - Step 3200/10000
+2024-12-12 12:44:42,915 - INFO - Temperature 800K - Step 3300/10000
+2024-12-12 12:44:47,690 - INFO - Temperature 800K - Step 3400/10000
+2024-12-12 12:44:52,570 - INFO - Temperature 800K - Step 3500/10000
+2024-12-12 12:44:57,373 - INFO - Temperature 800K - Step 3600/10000
+2024-12-12 12:45:02,057 - INFO - Temperature 800K - Step 3700/10000
+2024-12-12 12:45:06,779 - INFO - Temperature 800K - Step 3800/10000
+2024-12-12 12:45:11,660 - INFO - Temperature 800K - Step 3900/10000
+2024-12-12 12:45:16,845 - INFO - Temperature 800K - Step 4000/10000
+2024-12-12 12:45:21,930 - INFO - Temperature 800K - Step 4100/10000
+2024-12-12 12:45:26,758 - INFO - Temperature 800K - Step 4200/10000
+2024-12-12 12:45:31,623 - INFO - Temperature 800K - Step 4300/10000
+2024-12-12 12:45:36,577 - INFO - Temperature 800K - Step 4400/10000
+2024-12-12 12:45:41,381 - INFO - Temperature 800K - Step 4500/10000
+2024-12-12 12:45:46,248 - INFO - Temperature 800K - Step 4600/10000
+2024-12-12 12:45:51,147 - INFO - Temperature 800K - Step 4700/10000
+2024-12-12 12:45:56,030 - INFO - Temperature 800K - Step 4800/10000
+2024-12-12 12:46:00,830 - INFO - Temperature 800K - Step 4900/10000
+2024-12-12 12:46:05,737 - INFO - Temperature 800K - Step 5000/10000
+2024-12-12 12:46:10,743 - INFO - Temperature 800K - Step 5100/10000
+2024-12-12 12:46:15,787 - INFO - Temperature 800K - Step 5200/10000
+2024-12-12 12:46:20,646 - INFO - Temperature 800K - Step 5300/10000
+2024-12-12 12:46:25,482 - INFO - Temperature 800K - Step 5400/10000
+2024-12-12 12:46:30,927 - INFO - Temperature 800K - Step 5500/10000
+2024-12-12 12:46:36,075 - INFO - Temperature 800K - Step 5600/10000
+2024-12-12 12:46:41,396 - INFO - Temperature 800K - Step 5700/10000
+2024-12-12 12:46:46,191 - INFO - Temperature 800K - Step 5800/10000
+2024-12-12 12:46:51,627 - INFO - Temperature 800K - Step 5900/10000
+2024-12-12 12:46:56,860 - INFO - Temperature 800K - Step 6000/10000
+2024-12-12 12:47:01,870 - INFO - Temperature 800K - Step 6100/10000
+2024-12-12 12:47:06,801 - INFO - Temperature 800K - Step 6200/10000
+2024-12-12 12:47:11,661 - INFO - Temperature 800K - Step 6300/10000
+2024-12-12 12:47:16,813 - INFO - Temperature 800K - Step 6400/10000
+2024-12-12 12:47:21,924 - INFO - Temperature 800K - Step 6500/10000
+2024-12-12 12:47:28,005 - INFO - Temperature 800K - Step 6600/10000
+2024-12-12 12:47:33,083 - INFO - Temperature 800K - Step 6700/10000
+2024-12-12 12:47:38,065 - INFO - Temperature 800K - Step 6800/10000
+2024-12-12 12:47:42,909 - INFO - Temperature 800K - Step 6900/10000
+2024-12-12 12:47:48,067 - INFO - Temperature 800K - Step 7000/10000
+2024-12-12 12:47:53,167 - INFO - Temperature 800K - Step 7100/10000
+2024-12-12 12:47:58,047 - INFO - Temperature 800K - Step 7200/10000
+2024-12-12 12:48:03,082 - INFO - Temperature 800K - Step 7300/10000
+2024-12-12 12:48:08,027 - INFO - Temperature 800K - Step 7400/10000
+2024-12-12 12:48:13,225 - INFO - Temperature 800K - Step 7500/10000
+2024-12-12 12:48:18,338 - INFO - Temperature 800K - Step 7600/10000
+2024-12-12 12:48:23,447 - INFO - Temperature 800K - Step 7700/10000
+2024-12-12 12:48:28,708 - INFO - Temperature 800K - Step 7800/10000
+2024-12-12 12:48:33,845 - INFO - Temperature 800K - Step 7900/10000
+2024-12-12 12:48:39,227 - INFO - Temperature 800K - Step 8000/10000
+2024-12-12 12:48:44,689 - INFO - Temperature 800K - Step 8100/10000
+2024-12-12 12:48:49,586 - INFO - Temperature 800K - Step 8200/10000
+2024-12-12 12:48:55,317 - INFO - Temperature 800K - Step 8300/10000
+2024-12-12 12:49:00,663 - INFO - Temperature 800K - Step 8400/10000
+2024-12-12 12:49:06,011 - INFO - Temperature 800K - Step 8500/10000
+2024-12-12 12:49:10,937 - INFO - Temperature 800K - Step 8600/10000
+2024-12-12 12:49:15,795 - INFO - Temperature 800K - Step 8700/10000
+2024-12-12 12:49:20,819 - INFO - Temperature 800K - Step 8800/10000
+2024-12-12 12:49:25,783 - INFO - Temperature 800K - Step 8900/10000
+2024-12-12 12:49:30,782 - INFO - Temperature 800K - Step 9000/10000
+2024-12-12 12:49:35,524 - INFO - Temperature 800K - Step 9100/10000
+2024-12-12 12:49:40,542 - INFO - Temperature 800K - Step 9200/10000
+2024-12-12 12:49:45,616 - INFO - Temperature 800K - Step 9300/10000
+2024-12-12 12:49:50,615 - INFO - Temperature 800K - Step 9400/10000
+2024-12-12 12:49:56,937 - INFO - Temperature 800K - Step 9500/10000
+2024-12-12 12:50:02,030 - INFO - Temperature 800K - Step 9600/10000
+2024-12-12 12:50:07,476 - INFO - Temperature 800K - Step 9700/10000
+2024-12-12 12:50:12,582 - INFO - Temperature 800K - Step 9800/10000
+2024-12-12 12:50:17,869 - INFO - Temperature 800K - Step 9900/10000
+2024-12-12 12:50:22,905 - INFO - Simulation at 800K completed
+2024-12-12 12:50:24,048 - INFO - Analyzing trajectory for 800K...
+2024-12-12 12:50:24,251 - INFO - Results for 800K (x-direction):
+2024-12-12 12:50:24,252 - INFO -   Diffusion coefficient: 1.9779e-04 [cm²/s]
+2024-12-12 12:50:24,252 - INFO -   Maximum MSD: 1.98 Å²
+2024-12-12 12:50:24,252 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 12:50:24,253 - INFO - Results for 800K (y-direction):
+2024-12-12 12:50:24,253 - INFO -   Diffusion coefficient: 1.0814e-03 [cm²/s]
+2024-12-12 12:50:24,253 - INFO -   Maximum MSD: 5.71 Å²
+2024-12-12 12:50:24,253 - INFO -   Average MSD: 2.41 Å²
+2024-12-12 12:50:24,254 - INFO - Results for 800K (z-direction):
+2024-12-12 12:50:24,255 - INFO -   Diffusion coefficient: 5.0450e-04 [cm²/s]
+2024-12-12 12:50:24,255 - INFO -   Maximum MSD: 4.09 Å²
+2024-12-12 12:50:24,255 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 12:50:24,256 - INFO - Results for 800K (total-direction):
+2024-12-12 12:50:24,256 - INFO -   Diffusion coefficient: 5.9456e-04 [cm²/s]
+2024-12-12 12:50:24,256 - INFO -   Maximum MSD: 10.30 Å²
+2024-12-12 12:50:24,256 - INFO -   Average MSD: 5.45 Å²
+2024-12-12 12:50:28,981 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 13:03:30,220 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 13:03:30,231 - INFO - Structure loaded: BaZrO3
+2024-12-12 13:03:30,234 - INFO - Added proton 1/1:
+2024-12-12 13:03:30,234 - INFO -   Near O atom: 2
+2024-12-12 13:03:30,235 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 13:03:30,235 - INFO -   OH distance: 0.980 Å
+2024-12-12 13:03:30,235 - INFO - Successfully added 1 protons
+2024-12-12 13:03:30,235 - INFO - Final composition: HBaO3Zr
+2024-12-12 13:03:30,237 - INFO - 
+Starting simulation at 800K...
+2024-12-12 13:03:30,237 - INFO - Initializing MD simulation...
+2024-12-12 13:03:30,499 - INFO - Running MD at 800K...
+2024-12-12 13:03:30,775 - INFO - Temperature 800K - Step 0/1000
+2024-12-12 13:03:36,221 - INFO - Temperature 800K - Step 100/1000
+2024-12-12 13:03:42,941 - INFO - Temperature 800K - Step 200/1000
+2024-12-12 13:03:47,887 - INFO - Temperature 800K - Step 300/1000
+2024-12-12 13:03:53,011 - INFO - Temperature 800K - Step 400/1000
+2024-12-12 13:03:58,080 - INFO - Temperature 800K - Step 500/1000
+2024-12-12 13:04:02,892 - INFO - Temperature 800K - Step 600/1000
+2024-12-12 13:04:07,881 - INFO - Temperature 800K - Step 700/1000
+2024-12-12 13:04:12,820 - INFO - Temperature 800K - Step 800/1000
+2024-12-12 13:04:17,537 - INFO - Temperature 800K - Step 900/1000
+2024-12-12 13:04:22,396 - INFO - Simulation at 800K completed
+2024-12-12 13:04:23,454 - INFO - Analyzing trajectory for 800K...
+2024-12-12 13:04:23,499 - INFO - Results for 800K (x-direction):
+2024-12-12 13:04:23,499 - INFO -   Diffusion coefficient: 4.9104e-04 [cm²/s]
+2024-12-12 13:04:23,499 - INFO -   Maximum MSD: 0.71 Å²
+2024-12-12 13:04:23,499 - INFO -   Average MSD: 0.39 Å²
+2024-12-12 13:04:23,500 - INFO - Results for 800K (y-direction):
+2024-12-12 13:04:23,500 - INFO -   Diffusion coefficient: 2.6795e-03 [cm²/s]
+2024-12-12 13:04:23,500 - INFO -   Maximum MSD: 1.81 Å²
+2024-12-12 13:04:23,500 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 13:04:23,502 - INFO - Results for 800K (z-direction):
+2024-12-12 13:04:23,502 - INFO -   Diffusion coefficient: 2.7489e-03 [cm²/s]
+2024-12-12 13:04:23,502 - INFO -   Maximum MSD: 2.11 Å²
+2024-12-12 13:04:23,502 - INFO -   Average MSD: 1.13 Å²
+2024-12-12 13:04:23,503 - INFO - Results for 800K (total-direction):
+2024-12-12 13:04:23,503 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 13:04:23,503 - INFO -   Maximum MSD: 3.91 Å²
+2024-12-12 13:04:23,503 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 13:04:26,863 - INFO - Total Results for 800K:
+2024-12-12 13:04:26,863 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 13:04:27,495 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 13:08:42,551 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 13:08:42,562 - INFO - Structure loaded: BaZrO3
+2024-12-12 13:08:42,565 - INFO - Added proton 1/1:
+2024-12-12 13:08:42,565 - INFO -   Near O atom: 2
+2024-12-12 13:08:42,566 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 13:08:42,566 - INFO -   OH distance: 0.980 Å
+2024-12-12 13:08:42,566 - INFO - Successfully added 1 protons
+2024-12-12 13:08:42,566 - INFO - Final composition: HBaO3Zr
+2024-12-12 13:08:42,576 - INFO - 
+Starting simulation at 800K...
+2024-12-12 13:08:42,577 - INFO - Initializing MD simulation...
+2024-12-12 13:08:42,878 - INFO - Running MD at 800K...
+2024-12-12 13:08:43,174 - INFO - Temperature 800K - Step 0/1000
+2024-12-12 13:08:48,825 - INFO - Temperature 800K - Step 100/1000
+2024-12-12 13:08:54,170 - INFO - Temperature 800K - Step 200/1000
+2024-12-12 13:08:59,549 - INFO - Temperature 800K - Step 300/1000
+2024-12-12 13:09:04,494 - INFO - Temperature 800K - Step 400/1000
+2024-12-12 13:09:09,690 - INFO - Temperature 800K - Step 500/1000
+2024-12-12 13:09:15,182 - INFO - Temperature 800K - Step 600/1000
+2024-12-12 13:09:20,370 - INFO - Temperature 800K - Step 700/1000
+2024-12-12 13:09:25,517 - INFO - Temperature 800K - Step 800/1000
+2024-12-12 13:09:30,555 - INFO - Temperature 800K - Step 900/1000
+2024-12-12 13:09:35,536 - INFO - Simulation at 800K completed
+2024-12-12 13:09:36,581 - INFO - Analyzing trajectory for 800K...
+2024-12-12 13:09:36,614 - INFO - Results for 800K (x-direction):
+2024-12-12 13:09:36,614 - INFO -   Diffusion coefficient: 4.9104e-04 [cm²/s]
+2024-12-12 13:09:36,614 - INFO -   Maximum MSD: 0.71 Å²
+2024-12-12 13:09:36,614 - INFO -   Average MSD: 0.39 Å²
+2024-12-12 13:09:36,616 - INFO - Results for 800K (y-direction):
+2024-12-12 13:09:36,616 - INFO -   Diffusion coefficient: 2.6795e-03 [cm²/s]
+2024-12-12 13:09:36,616 - INFO -   Maximum MSD: 1.81 Å²
+2024-12-12 13:09:36,616 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 13:09:36,617 - INFO - Results for 800K (z-direction):
+2024-12-12 13:09:36,617 - INFO -   Diffusion coefficient: 2.7489e-03 [cm²/s]
+2024-12-12 13:09:36,617 - INFO -   Maximum MSD: 2.11 Å²
+2024-12-12 13:09:36,617 - INFO -   Average MSD: 1.13 Å²
+2024-12-12 13:09:36,618 - INFO - Results for 800K (total-direction):
+2024-12-12 13:09:36,618 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 13:09:36,618 - INFO -   Maximum MSD: 3.91 Å²
+2024-12-12 13:09:36,618 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 13:09:40,153 - INFO - Total Results for 800K:
+2024-12-12 13:09:40,154 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 13:09:41,033 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 13:45:46,771 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 13:45:46,782 - INFO - Structure loaded: BaZrO3
+2024-12-12 13:45:46,783 - INFO - Setting up CHGNet calculator for optimization...
+2024-12-12 13:45:47,052 - ERROR - MD simulation failed: 'MolecularDynamics' object has no attribute 'calculator'
+2024-12-12 13:45:47,052 - ERROR - Program failed: 'MolecularDynamics' object has no attribute 'calculator'
+2024-12-12 14:01:07,966 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:01:08,003 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:01:08,013 - INFO - Added proton 1/1:
+2024-12-12 14:01:08,014 - INFO -   Near O atom: 2
+2024-12-12 14:01:08,021 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 14:01:08,025 - INFO -   OH distance: 0.980 Å
+2024-12-12 14:01:08,025 - INFO - Successfully added 1 protons
+2024-12-12 14:01:08,025 - INFO - Final composition: HBaO3Zr
+2024-12-12 14:01:08,045 - INFO - 
+Starting simulation at 800K...
+2024-12-12 14:01:08,045 - INFO - Initializing MD simulation...
+2024-12-12 14:01:09,264 - INFO - Running MD at 800K...
+2024-12-12 14:01:09,702 - INFO - Temperature 800K - Step 0/1000
+2024-12-12 14:01:16,771 - INFO - Temperature 800K - Step 100/1000
+2024-12-12 14:01:22,336 - INFO - Temperature 800K - Step 200/1000
+2024-12-12 14:01:28,262 - INFO - Temperature 800K - Step 300/1000
+2024-12-12 14:01:34,488 - INFO - Temperature 800K - Step 400/1000
+2024-12-12 14:01:39,998 - INFO - Temperature 800K - Step 500/1000
+2024-12-12 14:01:45,945 - INFO - Temperature 800K - Step 600/1000
+2024-12-12 14:01:52,217 - INFO - Temperature 800K - Step 700/1000
+2024-12-12 14:01:57,831 - INFO - Temperature 800K - Step 800/1000
+2024-12-12 14:02:03,103 - INFO - Temperature 800K - Step 900/1000
+2024-12-12 14:02:11,171 - INFO - Simulation at 800K completed
+2024-12-12 14:02:12,433 - INFO - Analyzing trajectory for 800K...
+2024-12-12 14:02:12,509 - INFO - Results for 800K (x-direction):
+2024-12-12 14:02:12,509 - INFO -   Diffusion coefficient: 4.9104e-04 [cm²/s]
+2024-12-12 14:02:12,510 - INFO -   Maximum MSD: 0.71 Å²
+2024-12-12 14:02:12,510 - INFO -   Average MSD: 0.39 Å²
+2024-12-12 14:02:12,515 - INFO - Results for 800K (y-direction):
+2024-12-12 14:02:12,516 - INFO -   Diffusion coefficient: 2.6795e-03 [cm²/s]
+2024-12-12 14:02:12,516 - INFO -   Maximum MSD: 1.81 Å²
+2024-12-12 14:02:12,516 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 14:02:12,520 - INFO - Results for 800K (z-direction):
+2024-12-12 14:02:12,521 - INFO -   Diffusion coefficient: 2.7489e-03 [cm²/s]
+2024-12-12 14:02:12,521 - INFO -   Maximum MSD: 2.11 Å²
+2024-12-12 14:02:12,521 - INFO -   Average MSD: 1.13 Å²
+2024-12-12 14:02:12,525 - INFO - Results for 800K (total-direction):
+2024-12-12 14:02:12,525 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 14:02:12,525 - INFO -   Maximum MSD: 3.91 Å²
+2024-12-12 14:02:12,525 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 14:02:16,400 - INFO - Total Results for 800K:
+2024-12-12 14:02:16,401 - INFO -   Diffusion coefficient: 1.9731e-03 [cm²/s]
+2024-12-12 14:02:17,110 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 14:03:22,799 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:03:22,810 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:03:22,810 - ERROR - MD simulation failed: cannot import name 'StructureModule' from 'chgnet.model' (/opt/anaconda3/envs/chg_env/lib/python3.11/site-packages/chgnet/model/__init__.py)
+2024-12-12 14:03:22,811 - ERROR - Program failed: cannot import name 'StructureModule' from 'chgnet.model' (/opt/anaconda3/envs/chg_env/lib/python3.11/site-packages/chgnet/model/__init__.py)
+2024-12-12 14:05:13,296 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:05:13,308 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:05:13,358 - ERROR - MD simulation failed: Optimizer.run() got an unexpected keyword argument 'mask'
+2024-12-12 14:05:13,358 - ERROR - Program failed: Optimizer.run() got an unexpected keyword argument 'mask'
+2024-12-12 14:06:08,424 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:06:08,435 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:06:08,536 - ERROR - MD simulation failed: 'CHGNet' object has no attribute 'get_forces'
+2024-12-12 14:06:08,536 - ERROR - Program failed: 'CHGNet' object has no attribute 'get_forces'
+2024-12-12 14:07:29,531 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:07:29,548 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:07:29,551 - INFO - Added proton 1/1:
+2024-12-12 14:07:29,551 - INFO -   Near O atom: 2
+2024-12-12 14:07:29,552 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 14:07:29,552 - INFO -   OH distance: 0.980 Å
+2024-12-12 14:07:29,552 - INFO - Successfully added 1 protons
+2024-12-12 14:07:29,553 - INFO - Final composition: HBaO3Zr
+2024-12-12 14:07:29,555 - INFO - 
+Starting simulation at 800K...
+2024-12-12 14:07:29,555 - INFO - Initializing MD simulation...
+2024-12-12 14:07:29,925 - INFO - Running MD at 800K...
+2024-12-12 14:07:30,207 - INFO - Temperature 800K - Step 0/10000
+2024-12-12 14:07:35,953 - INFO - Temperature 800K - Step 100/10000
+2024-12-12 14:07:41,026 - INFO - Temperature 800K - Step 200/10000
+2024-12-12 14:07:46,223 - INFO - Temperature 800K - Step 300/10000
+2024-12-12 14:07:51,680 - INFO - Temperature 800K - Step 400/10000
+2024-12-12 14:07:57,782 - INFO - Temperature 800K - Step 500/10000
+2024-12-12 14:08:03,120 - INFO - Temperature 800K - Step 600/10000
+2024-12-12 14:08:08,041 - INFO - Temperature 800K - Step 700/10000
+2024-12-12 14:08:13,829 - INFO - Temperature 800K - Step 800/10000
+2024-12-12 14:08:18,674 - INFO - Temperature 800K - Step 900/10000
+2024-12-12 14:08:23,632 - INFO - Temperature 800K - Step 1000/10000
+2024-12-12 14:08:28,518 - INFO - Temperature 800K - Step 1100/10000
+2024-12-12 14:08:33,335 - INFO - Temperature 800K - Step 1200/10000
+2024-12-12 14:08:39,272 - INFO - Temperature 800K - Step 1300/10000
+2024-12-12 14:08:44,146 - INFO - Temperature 800K - Step 1400/10000
+2024-12-12 14:08:49,056 - INFO - Temperature 800K - Step 1500/10000
+2024-12-12 14:08:54,074 - INFO - Temperature 800K - Step 1600/10000
+2024-12-12 14:08:59,208 - INFO - Temperature 800K - Step 1700/10000
+2024-12-12 14:09:04,482 - INFO - Temperature 800K - Step 1800/10000
+2024-12-12 14:09:09,324 - INFO - Temperature 800K - Step 1900/10000
+2024-12-12 14:09:14,171 - INFO - Temperature 800K - Step 2000/10000
+2024-12-12 14:09:18,947 - INFO - Temperature 800K - Step 2100/10000
+2024-12-12 14:09:24,124 - INFO - Temperature 800K - Step 2200/10000
+2024-12-12 14:09:29,106 - INFO - Temperature 800K - Step 2300/10000
+2024-12-12 14:09:33,907 - INFO - Temperature 800K - Step 2400/10000
+2024-12-12 14:09:39,029 - INFO - Temperature 800K - Step 2500/10000
+2024-12-12 14:09:44,021 - INFO - Temperature 800K - Step 2600/10000
+2024-12-12 14:09:48,990 - INFO - Temperature 800K - Step 2700/10000
+2024-12-12 14:09:53,781 - INFO - Temperature 800K - Step 2800/10000
+2024-12-12 14:09:58,640 - INFO - Temperature 800K - Step 2900/10000
+2024-12-12 14:10:03,486 - INFO - Temperature 800K - Step 3000/10000
+2024-12-12 14:10:08,484 - INFO - Temperature 800K - Step 3100/10000
+2024-12-12 14:10:13,495 - INFO - Temperature 800K - Step 3200/10000
+2024-12-12 14:10:18,331 - INFO - Temperature 800K - Step 3300/10000
+2024-12-12 14:10:23,299 - INFO - Temperature 800K - Step 3400/10000
+2024-12-12 14:10:28,508 - INFO - Temperature 800K - Step 3500/10000
+2024-12-12 14:10:33,426 - INFO - Temperature 800K - Step 3600/10000
+2024-12-12 14:10:39,014 - INFO - Temperature 800K - Step 3700/10000
+2024-12-12 14:10:43,901 - INFO - Temperature 800K - Step 3800/10000
+2024-12-12 14:10:48,923 - INFO - Temperature 800K - Step 3900/10000
+2024-12-12 14:10:53,865 - INFO - Temperature 800K - Step 4000/10000
+2024-12-12 14:10:58,755 - INFO - Temperature 800K - Step 4100/10000
+2024-12-12 14:11:03,842 - INFO - Temperature 800K - Step 4200/10000
+2024-12-12 14:11:08,856 - INFO - Temperature 800K - Step 4300/10000
+2024-12-12 14:11:14,088 - INFO - Temperature 800K - Step 4400/10000
+2024-12-12 14:11:19,855 - INFO - Temperature 800K - Step 4500/10000
+2024-12-12 14:11:26,263 - INFO - Temperature 800K - Step 4600/10000
+2024-12-12 14:11:31,766 - INFO - Temperature 800K - Step 4700/10000
+2024-12-12 14:11:36,954 - INFO - Temperature 800K - Step 4800/10000
+2024-12-12 14:11:42,362 - INFO - Temperature 800K - Step 4900/10000
+2024-12-12 14:11:47,353 - INFO - Temperature 800K - Step 5000/10000
+2024-12-12 14:11:52,779 - INFO - Temperature 800K - Step 5100/10000
+2024-12-12 14:11:58,837 - INFO - Temperature 800K - Step 5200/10000
+2024-12-12 14:12:05,119 - INFO - Temperature 800K - Step 5300/10000
+2024-12-12 14:12:10,239 - INFO - Temperature 800K - Step 5400/10000
+2024-12-12 14:12:15,413 - INFO - Temperature 800K - Step 5500/10000
+2024-12-12 14:12:20,833 - INFO - Temperature 800K - Step 5600/10000
+2024-12-12 14:12:25,914 - INFO - Temperature 800K - Step 5700/10000
+2024-12-12 14:12:30,815 - INFO - Temperature 800K - Step 5800/10000
+2024-12-12 14:12:36,013 - INFO - Temperature 800K - Step 5900/10000
+2024-12-12 14:12:40,939 - INFO - Temperature 800K - Step 6000/10000
+2024-12-12 14:12:46,377 - INFO - Temperature 800K - Step 6100/10000
+2024-12-12 14:12:51,524 - INFO - Temperature 800K - Step 6200/10000
+2024-12-12 14:12:56,476 - INFO - Temperature 800K - Step 6300/10000
+2024-12-12 14:13:01,447 - INFO - Temperature 800K - Step 6400/10000
+2024-12-12 14:13:07,753 - INFO - Temperature 800K - Step 6500/10000
+2024-12-12 14:13:15,233 - INFO - Temperature 800K - Step 6600/10000
+2024-12-12 14:13:21,949 - INFO - Temperature 800K - Step 6700/10000
+2024-12-12 14:13:28,563 - INFO - Temperature 800K - Step 6800/10000
+2024-12-12 14:13:33,875 - INFO - Temperature 800K - Step 6900/10000
+2024-12-12 14:13:39,267 - INFO - Temperature 800K - Step 7000/10000
+2024-12-12 14:13:44,920 - INFO - Temperature 800K - Step 7100/10000
+2024-12-12 14:13:50,463 - INFO - Temperature 800K - Step 7200/10000
+2024-12-12 14:13:55,868 - INFO - Temperature 800K - Step 7300/10000
+2024-12-12 14:14:01,133 - INFO - Temperature 800K - Step 7400/10000
+2024-12-12 14:14:06,573 - INFO - Temperature 800K - Step 7500/10000
+2024-12-12 14:14:13,201 - INFO - Temperature 800K - Step 7600/10000
+2024-12-12 14:14:18,207 - INFO - Temperature 800K - Step 7700/10000
+2024-12-12 14:14:23,292 - INFO - Temperature 800K - Step 7800/10000
+2024-12-12 14:14:30,049 - INFO - Temperature 800K - Step 7900/10000
+2024-12-12 14:14:35,592 - INFO - Temperature 800K - Step 8000/10000
+2024-12-12 14:14:41,131 - INFO - Temperature 800K - Step 8100/10000
+2024-12-12 14:14:46,072 - INFO - Temperature 800K - Step 8200/10000
+2024-12-12 14:14:50,953 - INFO - Temperature 800K - Step 8300/10000
+2024-12-12 14:14:56,527 - INFO - Temperature 800K - Step 8400/10000
+2024-12-12 14:15:02,228 - INFO - Temperature 800K - Step 8500/10000
+2024-12-12 14:15:07,447 - INFO - Temperature 800K - Step 8600/10000
+2024-12-12 14:15:13,480 - INFO - Temperature 800K - Step 8700/10000
+2024-12-12 14:15:18,676 - INFO - Temperature 800K - Step 8800/10000
+2024-12-12 14:15:23,895 - INFO - Temperature 800K - Step 8900/10000
+2024-12-12 14:15:30,193 - INFO - Temperature 800K - Step 9000/10000
+2024-12-12 14:15:37,830 - INFO - Temperature 800K - Step 9100/10000
+2024-12-12 14:15:45,320 - INFO - Temperature 800K - Step 9200/10000
+2024-12-12 14:15:52,552 - INFO - Temperature 800K - Step 9300/10000
+2024-12-12 14:15:58,747 - INFO - Temperature 800K - Step 9400/10000
+2024-12-12 14:16:03,938 - INFO - Temperature 800K - Step 9500/10000
+2024-12-12 14:16:08,977 - INFO - Temperature 800K - Step 9600/10000
+2024-12-12 14:16:14,570 - INFO - Temperature 800K - Step 9700/10000
+2024-12-12 14:16:19,766 - INFO - Temperature 800K - Step 9800/10000
+2024-12-12 14:16:25,207 - INFO - Temperature 800K - Step 9900/10000
+2024-12-12 14:16:31,332 - INFO - Simulation at 800K completed
+2024-12-12 14:16:32,764 - INFO - Analyzing trajectory for 800K...
+2024-12-12 14:16:32,966 - INFO - Results for 800K (x-direction):
+2024-12-12 14:16:32,966 - INFO -   Diffusion coefficient: 1.9779e-04 [cm²/s]
+2024-12-12 14:16:32,966 - INFO -   Maximum MSD: 1.98 Å²
+2024-12-12 14:16:32,966 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 14:16:32,967 - INFO - Results for 800K (y-direction):
+2024-12-12 14:16:32,967 - INFO -   Diffusion coefficient: 1.0814e-03 [cm²/s]
+2024-12-12 14:16:32,967 - INFO -   Maximum MSD: 5.71 Å²
+2024-12-12 14:16:32,967 - INFO -   Average MSD: 2.41 Å²
+2024-12-12 14:16:32,969 - INFO - Results for 800K (z-direction):
+2024-12-12 14:16:32,969 - INFO -   Diffusion coefficient: 5.0450e-04 [cm²/s]
+2024-12-12 14:16:32,969 - INFO -   Maximum MSD: 4.09 Å²
+2024-12-12 14:16:32,969 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 14:16:32,970 - INFO - Results for 800K (total-direction):
+2024-12-12 14:16:32,970 - INFO -   Diffusion coefficient: 5.9456e-04 [cm²/s]
+2024-12-12 14:16:32,970 - INFO -   Maximum MSD: 10.30 Å²
+2024-12-12 14:16:32,970 - INFO -   Average MSD: 5.45 Å²
+2024-12-12 14:16:36,412 - INFO - Total Results for 800K:
+2024-12-12 14:16:36,412 - INFO -   Diffusion coefficient: 5.9456e-04 [cm²/s]
+2024-12-12 14:16:37,117 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 14:39:05,168 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:39:05,178 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:39:05,182 - INFO - Added proton 1/1:
+2024-12-12 14:39:05,182 - INFO -   Near O atom: 2
+2024-12-12 14:39:05,182 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 14:39:05,183 - INFO -   OH distance: 0.980 Å
+2024-12-12 14:39:05,183 - INFO - Successfully added 1 protons
+2024-12-12 14:39:05,183 - INFO - Final composition: HBaO3Zr
+2024-12-12 14:39:05,183 - INFO - Starting energy minimization...
+2024-12-12 14:39:05,224 - ERROR - MD simulation failed: 'CHGNet' object has no attribute 'ase_calculator'
+2024-12-12 14:39:05,224 - ERROR - Program failed: 'CHGNet' object has no attribute 'ase_calculator'
+2024-12-12 14:40:38,303 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 14:40:38,314 - INFO - Structure loaded: BaZrO3
+2024-12-12 14:40:38,317 - INFO - Added proton 1/1:
+2024-12-12 14:40:38,317 - INFO -   Near O atom: 2
+2024-12-12 14:40:38,318 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 14:40:38,318 - INFO -   OH distance: 0.980 Å
+2024-12-12 14:40:38,318 - INFO - Successfully added 1 protons
+2024-12-12 14:40:38,318 - INFO - Final composition: HBaO3Zr
+2024-12-12 14:40:38,318 - INFO - Starting energy minimization...
+2024-12-12 14:40:38,385 - ERROR - Energy minimization failed: 'CHGNet' object has no attribute 'get_forces'
+2024-12-12 14:40:38,387 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 14:40:38,387 - INFO - Initializing MD simulation...
+2024-12-12 14:40:38,653 - INFO - Running MD at 1000K...
+2024-12-12 14:40:38,944 - INFO - Temperature 1000K - Step 0/10000
+2024-12-12 14:40:44,240 - INFO - Temperature 1000K - Step 100/10000
+2024-12-12 14:40:49,720 - INFO - Temperature 1000K - Step 200/10000
+2024-12-12 15:16:14,997 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 15:16:15,007 - INFO - Structure loaded: BaZrO3
+2024-12-12 15:16:15,010 - INFO - Added proton 1/1:
+2024-12-12 15:16:15,010 - INFO -   Near O atom: 2
+2024-12-12 15:16:15,011 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 15:16:15,011 - INFO -   OH distance: 0.980 Å
+2024-12-12 15:16:15,011 - INFO - Successfully added 1 protons
+2024-12-12 15:16:15,012 - INFO - Final composition: HBaO3Zr
+2024-12-12 15:16:15,013 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 15:16:15,013 - INFO - Initializing MD simulation...
+2024-12-12 15:16:15,285 - INFO - Running MD at 1000K...
+2024-12-12 15:16:15,671 - INFO - Temperature 1000K - Step 0/10000
+2024-12-12 15:16:21,129 - INFO - Temperature 1000K - Step 100/10000
+2024-12-12 15:16:26,235 - INFO - Temperature 1000K - Step 200/10000
+2024-12-12 15:16:31,960 - INFO - Temperature 1000K - Step 300/10000
+2024-12-12 15:16:36,842 - INFO - Temperature 1000K - Step 400/10000
+2024-12-12 15:16:41,953 - INFO - Temperature 1000K - Step 500/10000
+2024-12-12 15:16:46,970 - INFO - Temperature 1000K - Step 600/10000
+2024-12-12 15:16:52,011 - INFO - Temperature 1000K - Step 700/10000
+2024-12-12 15:16:57,389 - INFO - Temperature 1000K - Step 800/10000
+2024-12-12 15:17:02,874 - INFO - Temperature 1000K - Step 900/10000
+2024-12-12 15:17:08,460 - INFO - Temperature 1000K - Step 1000/10000
+2024-12-12 15:17:14,164 - INFO - Temperature 1000K - Step 1100/10000
+2024-12-12 15:17:19,605 - INFO - Temperature 1000K - Step 1200/10000
+2024-12-12 15:17:25,060 - INFO - Temperature 1000K - Step 1300/10000
+2024-12-12 15:17:30,267 - INFO - Temperature 1000K - Step 1400/10000
+2024-12-12 15:17:35,668 - INFO - Temperature 1000K - Step 1500/10000
+2024-12-12 15:17:41,142 - INFO - Temperature 1000K - Step 1600/10000
+2024-12-12 15:17:46,873 - INFO - Temperature 1000K - Step 1700/10000
+2024-12-12 15:17:52,001 - INFO - Temperature 1000K - Step 1800/10000
+2024-12-12 15:17:56,920 - INFO - Temperature 1000K - Step 1900/10000
+2024-12-12 15:18:02,495 - INFO - Temperature 1000K - Step 2000/10000
+2024-12-12 15:18:07,781 - INFO - Temperature 1000K - Step 2100/10000
+2024-12-12 15:18:13,092 - INFO - Temperature 1000K - Step 2200/10000
+2024-12-12 15:18:18,246 - INFO - Temperature 1000K - Step 2300/10000
+2024-12-12 15:18:23,092 - INFO - Temperature 1000K - Step 2400/10000
+2024-12-12 15:18:28,248 - INFO - Temperature 1000K - Step 2500/10000
+2024-12-12 15:18:33,172 - INFO - Temperature 1000K - Step 2600/10000
+2024-12-12 15:18:38,389 - INFO - Temperature 1000K - Step 2700/10000
+2024-12-12 15:18:43,593 - INFO - Temperature 1000K - Step 2800/10000
+2024-12-12 15:18:49,054 - INFO - Temperature 1000K - Step 2900/10000
+2024-12-12 15:18:55,246 - INFO - Temperature 1000K - Step 3000/10000
+2024-12-12 15:19:00,912 - INFO - Temperature 1000K - Step 3100/10000
+2024-12-12 15:19:07,453 - INFO - Temperature 1000K - Step 3200/10000
+2024-12-12 15:19:12,662 - INFO - Temperature 1000K - Step 3300/10000
+2024-12-12 15:19:17,899 - INFO - Temperature 1000K - Step 3400/10000
+2024-12-12 15:19:23,623 - INFO - Temperature 1000K - Step 3500/10000
+2024-12-12 15:19:29,494 - INFO - Temperature 1000K - Step 3600/10000
+2024-12-12 15:19:35,262 - INFO - Temperature 1000K - Step 3700/10000
+2024-12-12 15:19:40,619 - INFO - Temperature 1000K - Step 3800/10000
+2024-12-12 15:19:46,064 - INFO - Temperature 1000K - Step 3900/10000
+2024-12-12 15:19:51,576 - INFO - Temperature 1000K - Step 4000/10000
+2024-12-12 15:19:56,717 - INFO - Temperature 1000K - Step 4100/10000
+2024-12-12 15:20:03,126 - INFO - Temperature 1000K - Step 4200/10000
+2024-12-12 15:20:08,205 - INFO - Temperature 1000K - Step 4300/10000
+2024-12-12 15:20:13,297 - INFO - Temperature 1000K - Step 4400/10000
+2024-12-12 15:20:18,512 - INFO - Temperature 1000K - Step 4500/10000
+2024-12-12 15:20:24,458 - INFO - Temperature 1000K - Step 4600/10000
+2024-12-12 15:20:29,983 - INFO - Temperature 1000K - Step 4700/10000
+2024-12-12 15:20:35,888 - INFO - Temperature 1000K - Step 4800/10000
+2024-12-12 15:20:41,167 - INFO - Temperature 1000K - Step 4900/10000
+2024-12-12 15:20:47,472 - INFO - Temperature 1000K - Step 5000/10000
+2024-12-12 15:20:53,095 - INFO - Temperature 1000K - Step 5100/10000
+2024-12-12 15:20:58,056 - INFO - Temperature 1000K - Step 5200/10000
+2024-12-12 15:21:03,164 - INFO - Temperature 1000K - Step 5300/10000
+2024-12-12 15:21:08,427 - INFO - Temperature 1000K - Step 5400/10000
+2024-12-12 15:21:13,915 - INFO - Temperature 1000K - Step 5500/10000
+2024-12-12 15:21:19,513 - INFO - Temperature 1000K - Step 5600/10000
+2024-12-12 15:21:27,177 - INFO - Temperature 1000K - Step 5700/10000
+2024-12-12 15:21:32,788 - INFO - Temperature 1000K - Step 5800/10000
+2024-12-12 15:21:38,168 - INFO - Temperature 1000K - Step 5900/10000
+2024-12-12 15:21:43,103 - INFO - Temperature 1000K - Step 6000/10000
+2024-12-12 15:21:48,270 - INFO - Temperature 1000K - Step 6100/10000
+2024-12-12 15:21:53,352 - INFO - Temperature 1000K - Step 6200/10000
+2024-12-12 15:21:58,486 - INFO - Temperature 1000K - Step 6300/10000
+2024-12-12 15:22:03,563 - INFO - Temperature 1000K - Step 6400/10000
+2024-12-12 15:22:08,502 - INFO - Temperature 1000K - Step 6500/10000
+2024-12-12 15:22:13,875 - INFO - Temperature 1000K - Step 6600/10000
+2024-12-12 15:22:18,726 - INFO - Temperature 1000K - Step 6700/10000
+2024-12-12 15:22:23,639 - INFO - Temperature 1000K - Step 6800/10000
+2024-12-12 15:22:28,438 - INFO - Temperature 1000K - Step 6900/10000
+2024-12-12 15:22:33,701 - INFO - Temperature 1000K - Step 7000/10000
+2024-12-12 15:22:38,854 - INFO - Temperature 1000K - Step 7100/10000
+2024-12-12 15:22:44,089 - INFO - Temperature 1000K - Step 7200/10000
+2024-12-12 15:22:49,740 - INFO - Temperature 1000K - Step 7300/10000
+2024-12-12 15:22:55,178 - INFO - Temperature 1000K - Step 7400/10000
+2024-12-12 15:23:00,806 - INFO - Temperature 1000K - Step 7500/10000
+2024-12-12 15:23:07,080 - INFO - Temperature 1000K - Step 7600/10000
+2024-12-12 15:23:12,539 - INFO - Temperature 1000K - Step 7700/10000
+2024-12-12 15:23:17,749 - INFO - Temperature 1000K - Step 7800/10000
+2024-12-12 15:23:23,084 - INFO - Temperature 1000K - Step 7900/10000
+2024-12-12 15:23:28,542 - INFO - Temperature 1000K - Step 8000/10000
+2024-12-12 15:23:33,779 - INFO - Temperature 1000K - Step 8100/10000
+2024-12-12 15:23:39,198 - INFO - Temperature 1000K - Step 8200/10000
+2024-12-12 15:23:45,344 - INFO - Temperature 1000K - Step 8300/10000
+2024-12-12 15:23:51,676 - INFO - Temperature 1000K - Step 8400/10000
+2024-12-12 15:23:57,705 - INFO - Temperature 1000K - Step 8500/10000
+2024-12-12 15:24:02,778 - INFO - Temperature 1000K - Step 8600/10000
+2024-12-12 15:24:08,083 - INFO - Temperature 1000K - Step 8700/10000
+2024-12-12 15:24:13,402 - INFO - Temperature 1000K - Step 8800/10000
+2024-12-12 15:24:18,714 - INFO - Temperature 1000K - Step 8900/10000
+2024-12-12 15:24:24,569 - INFO - Temperature 1000K - Step 9000/10000
+2024-12-12 15:24:30,432 - INFO - Temperature 1000K - Step 9100/10000
+2024-12-12 15:24:39,834 - INFO - Temperature 1000K - Step 9200/10000
+2024-12-12 15:24:49,526 - INFO - Temperature 1000K - Step 9300/10000
+2024-12-12 15:24:55,161 - INFO - Temperature 1000K - Step 9400/10000
+2024-12-12 15:25:01,044 - INFO - Temperature 1000K - Step 9500/10000
+2024-12-12 15:25:06,297 - INFO - Temperature 1000K - Step 9600/10000
+2024-12-12 15:25:11,527 - INFO - Temperature 1000K - Step 9700/10000
+2024-12-12 15:25:16,644 - INFO - Temperature 1000K - Step 9800/10000
+2024-12-12 15:25:22,208 - INFO - Temperature 1000K - Step 9900/10000
+2024-12-12 15:25:27,936 - INFO - Simulation at 1000K completed
+2024-12-12 15:25:29,142 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 15:25:29,502 - INFO - Results for 1000K (x-direction):
+2024-12-12 15:25:29,502 - INFO -   Diffusion coefficient: 5.7235e-04 [cm²/s]
+2024-12-12 15:25:29,502 - INFO -   Maximum MSD: 4.61 Å²
+2024-12-12 15:25:29,502 - INFO -   Average MSD: 1.76 Å²
+2024-12-12 15:25:29,503 - INFO - Results for 1000K (y-direction):
+2024-12-12 15:25:29,503 - INFO -   Diffusion coefficient: 6.7185e-04 [cm²/s]
+2024-12-12 15:25:29,503 - INFO -   Maximum MSD: 7.33 Å²
+2024-12-12 15:25:29,503 - INFO -   Average MSD: 3.25 Å²
+2024-12-12 15:25:29,505 - INFO - Results for 1000K (z-direction):
+2024-12-12 15:25:29,505 - INFO -   Diffusion coefficient: 6.8388e-04 [cm²/s]
+2024-12-12 15:25:29,505 - INFO -   Maximum MSD: 6.13 Å²
+2024-12-12 15:25:29,505 - INFO -   Average MSD: 3.21 Å²
+2024-12-12 15:25:29,506 - INFO - Results for 1000K (total-direction):
+2024-12-12 15:25:29,506 - INFO -   Diffusion coefficient: 6.4269e-04 [cm²/s]
+2024-12-12 15:25:29,506 - INFO -   Maximum MSD: 15.05 Å²
+2024-12-12 15:25:29,506 - INFO -   Average MSD: 8.22 Å²
+2024-12-12 15:25:32,954 - INFO - Total Results for 1000K:
+2024-12-12 15:25:32,955 - INFO -   Diffusion coefficient: 6.4269e-04 [cm²/s]
+2024-12-12 15:25:33,587 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 16:47:42,490 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 16:47:42,521 - INFO - Structure loaded: BaZrO3
+2024-12-12 16:47:42,526 - INFO - Added proton 1/1:
+2024-12-12 16:47:42,526 - INFO -   Near O atom: 2
+2024-12-12 16:47:42,527 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 16:47:42,527 - INFO -   OH distance: 0.980 Å
+2024-12-12 16:47:42,527 - INFO - Successfully added 1 protons
+2024-12-12 16:47:42,527 - INFO - Final composition: HBaO3Zr
+2024-12-12 16:47:42,529 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 16:47:42,529 - INFO - Initializing MD simulation...
+2024-12-12 16:48:00,332 - INFO - Running MD at 1000K...
+2024-12-12 16:48:00,572 - INFO - Temperature 1000K - Step 0/1000
+2024-12-12 16:48:11,816 - INFO - Temperature 1000K - Step 100/1000
+2024-12-12 16:48:24,521 - INFO - Temperature 1000K - Step 200/1000
+2024-12-12 16:48:34,124 - INFO - Temperature 1000K - Step 300/1000
+2024-12-12 16:48:44,240 - INFO - Temperature 1000K - Step 400/1000
+2024-12-12 16:48:53,410 - INFO - Temperature 1000K - Step 500/1000
+2024-12-12 16:49:02,415 - INFO - Temperature 1000K - Step 600/1000
+2024-12-12 16:49:11,552 - INFO - Temperature 1000K - Step 700/1000
+2024-12-12 16:49:21,073 - INFO - Temperature 1000K - Step 800/1000
+2024-12-12 16:49:29,896 - INFO - Temperature 1000K - Step 900/1000
+2024-12-12 16:49:38,732 - INFO - Simulation at 1000K completed
+2024-12-12 16:49:39,953 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 16:49:40,007 - INFO - Results for 1000K (x-direction):
+2024-12-12 16:49:40,007 - INFO -   Diffusion coefficient: 2.6751e-03 [cm²/s]
+2024-12-12 16:49:40,007 - INFO -   Maximum MSD: 1.65 Å²
+2024-12-12 16:49:40,007 - INFO -   Average MSD: 0.86 Å²
+2024-12-12 16:49:40,009 - INFO - Results for 1000K (y-direction):
+2024-12-12 16:49:40,009 - INFO -   Diffusion coefficient: 1.2722e-03 [cm²/s]
+2024-12-12 16:49:40,009 - INFO -   Maximum MSD: 1.12 Å²
+2024-12-12 16:49:40,009 - INFO -   Average MSD: 0.51 Å²
+2024-12-12 16:49:40,010 - INFO - Results for 1000K (z-direction):
+2024-12-12 16:49:40,010 - INFO -   Diffusion coefficient: 2.2745e-02 [cm²/s]
+2024-12-12 16:49:40,010 - INFO -   Maximum MSD: 9.64 Å²
+2024-12-12 16:49:40,010 - INFO -   Average MSD: 4.76 Å²
+2024-12-12 16:49:40,011 - INFO - Results for 1000K (total-direction):
+2024-12-12 16:49:40,011 - INFO -   Diffusion coefficient: 8.8973e-03 [cm²/s]
+2024-12-12 16:49:40,012 - INFO -   Maximum MSD: 11.65 Å²
+2024-12-12 16:49:40,012 - INFO -   Average MSD: 6.12 Å²
+2024-12-12 16:49:43,512 - INFO - Total Results for 1000K:
+2024-12-12 16:49:43,512 - INFO -   Diffusion coefficient: 8.8973e-03 [cm²/s]
+2024-12-12 16:49:44,130 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 16:50:41,252 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 16:50:41,264 - INFO - Structure loaded: BaZrO3
+2024-12-12 16:50:41,267 - INFO - Added proton 1/1:
+2024-12-12 16:50:41,267 - INFO -   Near O atom: 2
+2024-12-12 16:50:41,269 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 16:50:41,269 - INFO -   OH distance: 0.980 Å
+2024-12-12 16:50:41,269 - INFO - Successfully added 1 protons
+2024-12-12 16:50:41,269 - INFO - Final composition: HBaO3Zr
+2024-12-12 16:50:41,271 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 16:50:41,271 - INFO - Initializing MD simulation...
+2024-12-12 16:50:56,794 - INFO - Running MD at 1000K...
+2024-12-12 16:50:57,029 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 16:51:07,668 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 16:51:17,948 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 16:51:28,327 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 16:51:37,614 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 16:51:46,829 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 16:51:56,199 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 16:52:06,008 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 16:52:17,738 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 16:52:26,908 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 16:52:36,260 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 16:52:46,470 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 16:52:55,637 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 16:53:04,994 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 16:53:17,228 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 16:53:27,201 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 16:53:36,388 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 16:53:46,024 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 16:53:55,297 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 16:54:03,723 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 16:54:14,456 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 16:54:24,559 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 16:54:32,986 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 16:54:41,741 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 16:54:49,813 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 16:54:57,648 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 16:55:05,697 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 16:55:13,532 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 16:55:21,803 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 16:55:29,739 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 16:55:37,633 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 16:55:45,524 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 16:55:53,202 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 16:56:01,061 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 16:56:09,362 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 16:56:17,129 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 16:56:25,229 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 16:56:33,570 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 16:56:41,732 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 16:56:50,729 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 16:56:58,728 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 16:57:06,349 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 16:57:14,368 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 16:57:22,233 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 16:57:30,179 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 16:57:38,000 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 16:57:45,840 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 16:57:53,629 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 16:58:01,551 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 16:58:09,608 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 16:58:18,225 - INFO - Simulation at 1000K completed
+2024-12-12 16:58:19,534 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 16:58:19,651 - INFO - Results for 1000K (x-direction):
+2024-12-12 16:58:19,651 - INFO -   Diffusion coefficient: 1.2682e-04 [cm²/s]
+2024-12-12 16:58:19,651 - INFO -   Maximum MSD: 1.27 Å²
+2024-12-12 16:58:19,651 - INFO -   Average MSD: 0.65 Å²
+2024-12-12 16:58:19,653 - INFO - Results for 1000K (y-direction):
+2024-12-12 16:58:19,653 - INFO -   Diffusion coefficient: 1.5978e-03 [cm²/s]
+2024-12-12 16:58:19,653 - INFO -   Maximum MSD: 5.82 Å²
+2024-12-12 16:58:19,653 - INFO -   Average MSD: 1.88 Å²
+2024-12-12 16:58:19,655 - INFO - Results for 1000K (z-direction):
+2024-12-12 16:58:19,655 - INFO -   Diffusion coefficient: 2.5086e-03 [cm²/s]
+2024-12-12 16:58:19,655 - INFO -   Maximum MSD: 12.32 Å²
+2024-12-12 16:58:19,655 - INFO -   Average MSD: 8.29 Å²
+2024-12-12 16:58:19,659 - INFO - Results for 1000K (total-direction):
+2024-12-12 16:58:19,659 - INFO -   Diffusion coefficient: 1.4111e-03 [cm²/s]
+2024-12-12 16:58:19,659 - INFO -   Maximum MSD: 15.20 Å²
+2024-12-12 16:58:19,659 - INFO -   Average MSD: 10.82 Å²
+2024-12-12 16:58:23,058 - INFO - Total Results for 1000K:
+2024-12-12 16:58:23,059 - INFO -   Diffusion coefficient: 1.4111e-03 [cm²/s]
+2024-12-12 16:58:23,817 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 16:58:44,502 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 16:58:44,529 - INFO - Structure loaded: BaZrO3
+2024-12-12 16:58:44,534 - INFO - Added proton 1/1:
+2024-12-12 16:58:44,534 - INFO -   Near O atom: 2
+2024-12-12 16:58:44,535 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 16:58:44,536 - INFO -   OH distance: 0.980 Å
+2024-12-12 16:58:44,536 - INFO - Successfully added 1 protons
+2024-12-12 16:58:44,538 - INFO - Final composition: HBaO3Zr
+2024-12-12 16:58:44,544 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 16:58:44,545 - INFO - Initializing MD simulation...
+2024-12-12 16:59:01,102 - INFO - Running MD at 1000K...
+2024-12-12 16:59:01,392 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 16:59:11,695 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 16:59:22,126 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 16:59:31,890 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 16:59:40,918 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 16:59:51,057 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:00:00,157 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:00:09,401 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:00:18,659 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:00:27,975 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:00:37,283 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:00:47,736 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:00:57,696 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:01:07,028 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:01:16,491 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:01:26,093 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:01:34,925 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:01:43,589 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:01:52,239 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:02:00,652 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:02:10,610 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:02:19,369 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:02:28,652 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:02:37,595 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:02:45,495 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:02:53,669 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:03:02,031 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:03:09,913 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:03:18,176 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:03:30,645 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:03:39,935 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:03:48,290 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:03:57,239 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:04:05,564 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:04:14,227 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:04:22,092 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:04:30,559 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:04:40,016 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:04:49,189 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:04:57,145 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:05:06,218 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:05:15,214 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:05:25,054 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:05:36,562 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:05:51,160 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:06:01,705 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:06:10,972 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:06:20,183 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:06:30,729 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:06:41,038 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:06:49,769 - INFO - Simulation at 1000K completed
+2024-12-12 17:06:50,955 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:06:51,078 - INFO - Results for 1000K (x-direction):
+2024-12-12 17:06:51,078 - INFO -   Diffusion coefficient: 1.2682e-04 [cm²/s]
+2024-12-12 17:06:51,078 - INFO -   Maximum MSD: 1.27 Å²
+2024-12-12 17:06:51,078 - INFO -   Average MSD: 0.65 Å²
+2024-12-12 17:06:51,080 - INFO - Results for 1000K (y-direction):
+2024-12-12 17:06:51,080 - INFO -   Diffusion coefficient: 1.5978e-03 [cm²/s]
+2024-12-12 17:06:51,080 - INFO -   Maximum MSD: 5.82 Å²
+2024-12-12 17:06:51,080 - INFO -   Average MSD: 1.88 Å²
+2024-12-12 17:06:51,081 - INFO - Results for 1000K (z-direction):
+2024-12-12 17:06:51,081 - INFO -   Diffusion coefficient: 2.5086e-03 [cm²/s]
+2024-12-12 17:06:51,081 - INFO -   Maximum MSD: 12.32 Å²
+2024-12-12 17:06:51,081 - INFO -   Average MSD: 8.29 Å²
+2024-12-12 17:06:51,083 - INFO - Results for 1000K (total-direction):
+2024-12-12 17:06:51,083 - INFO -   Diffusion coefficient: 1.4111e-03 [cm²/s]
+2024-12-12 17:06:51,083 - INFO -   Maximum MSD: 15.20 Å²
+2024-12-12 17:06:51,083 - INFO -   Average MSD: 10.82 Å²
+2024-12-12 17:06:54,406 - INFO - Total Results for 1000K:
+2024-12-12 17:06:54,407 - INFO -   Diffusion coefficient: 1.4111e-03 [cm²/s]
+2024-12-12 17:06:55,041 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:10:39,501 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:10:39,513 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:10:39,515 - INFO - Added proton 1/1:
+2024-12-12 17:10:39,515 - INFO -   Near O atom: 2
+2024-12-12 17:10:39,516 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:10:39,516 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:10:39,516 - INFO - Successfully added 1 protons
+2024-12-12 17:10:39,516 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:10:39,517 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 17:10:39,517 - INFO - Initializing MD simulation...
+2024-12-12 17:10:39,777 - INFO - Running MD at 1000K...
+2024-12-12 17:10:40,071 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 17:10:46,134 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 17:10:52,251 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 17:10:57,823 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 17:11:04,454 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 17:11:10,180 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:11:15,564 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:11:22,548 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:11:28,260 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:11:35,269 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:11:40,674 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:11:46,367 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:11:52,420 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:11:57,811 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:12:03,215 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:12:08,439 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:12:13,856 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:12:20,171 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:12:25,586 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:12:31,891 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:12:37,343 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:12:43,460 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:12:49,250 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:12:54,971 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:13:00,030 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:13:05,859 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:13:11,142 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:13:16,579 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:13:21,899 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:13:27,167 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:13:32,405 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:13:37,991 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:13:43,536 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:13:48,771 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:13:54,311 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:13:59,977 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:14:05,211 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:14:11,255 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:14:16,903 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:14:22,248 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:14:27,359 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:14:32,566 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:14:38,378 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:14:43,758 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:14:49,254 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:14:54,526 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:15:00,132 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:15:07,020 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:15:12,037 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:15:17,731 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:15:23,758 - INFO - Simulation at 1000K completed
+2024-12-12 17:15:24,874 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:15:24,974 - INFO - Results for 1000K (x-direction):
+2024-12-12 17:15:24,974 - INFO -   Diffusion coefficient: 8.8564e-04 [cm²/s]
+2024-12-12 17:15:24,974 - INFO -   Maximum MSD: 2.67 Å²
+2024-12-12 17:15:24,974 - INFO -   Average MSD: 1.36 Å²
+2024-12-12 17:15:24,975 - INFO - Results for 1000K (y-direction):
+2024-12-12 17:15:24,975 - INFO -   Diffusion coefficient: 1.2792e-03 [cm²/s]
+2024-12-12 17:15:24,975 - INFO -   Maximum MSD: 4.85 Å²
+2024-12-12 17:15:24,975 - INFO -   Average MSD: 2.63 Å²
+2024-12-12 17:15:24,977 - INFO - Results for 1000K (z-direction):
+2024-12-12 17:15:24,977 - INFO -   Diffusion coefficient: 1.0267e-03 [cm²/s]
+2024-12-12 17:15:24,977 - INFO -   Maximum MSD: 4.69 Å²
+2024-12-12 17:15:24,977 - INFO -   Average MSD: 2.72 Å²
+2024-12-12 17:15:24,978 - INFO - Results for 1000K (total-direction):
+2024-12-12 17:15:24,978 - INFO -   Diffusion coefficient: 1.0639e-03 [cm²/s]
+2024-12-12 17:15:24,978 - INFO -   Maximum MSD: 11.07 Å²
+2024-12-12 17:15:24,978 - INFO -   Average MSD: 6.71 Å²
+2024-12-12 17:15:28,785 - INFO - Total Results for 1000K:
+2024-12-12 17:15:28,786 - INFO -   Diffusion coefficient: 1.0639e-03 [cm²/s]
+2024-12-12 17:15:29,408 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:20:29,089 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:20:29,104 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:20:29,107 - INFO - Added proton 1/1:
+2024-12-12 17:20:29,107 - INFO -   Near O atom: 2
+2024-12-12 17:20:29,109 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:20:29,109 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:20:29,109 - INFO - Successfully added 1 protons
+2024-12-12 17:20:29,109 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:20:29,119 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 17:20:29,119 - INFO - Initializing MD simulation...
+2024-12-12 17:20:29,426 - INFO - Running MD at 1000K...
+2024-12-12 17:20:29,765 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 17:20:35,987 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 17:20:41,433 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 17:20:46,943 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 17:20:51,981 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 17:20:57,169 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:21:02,120 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:21:07,111 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:21:12,429 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:21:17,373 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:21:22,248 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:21:27,276 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:21:32,287 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:21:37,389 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:21:42,378 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:21:47,231 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:21:52,116 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:21:57,303 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:22:02,358 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:22:07,735 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:22:12,979 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:22:18,896 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:22:24,588 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:22:29,606 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:22:34,414 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:22:40,258 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:22:45,443 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:22:51,173 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:22:56,278 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:23:01,447 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:23:06,475 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:23:12,121 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:23:17,810 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:23:22,728 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:23:27,834 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:23:32,997 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:23:38,342 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:23:43,802 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:23:49,132 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:23:54,111 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:23:59,327 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:24:04,338 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:24:09,743 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:24:14,824 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:24:19,859 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:24:25,160 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:24:30,801 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:24:35,929 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:24:40,807 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:24:45,969 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:24:50,938 - INFO - Simulation at 1000K completed
+2024-12-12 17:24:52,089 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:24:52,241 - INFO - Results for 1000K (x-direction):
+2024-12-12 17:24:52,241 - INFO -   Diffusion coefficient: 1.2478e-03 [cm²/s]
+2024-12-12 17:24:52,241 - INFO -   Maximum MSD: 3.41 Å²
+2024-12-12 17:24:52,241 - INFO -   Average MSD: 1.91 Å²
+2024-12-12 17:24:52,242 - INFO - Results for 1000K (y-direction):
+2024-12-12 17:24:52,242 - INFO -   Diffusion coefficient: 1.2123e-03 [cm²/s]
+2024-12-12 17:24:52,242 - INFO -   Maximum MSD: 3.42 Å²
+2024-12-12 17:24:52,242 - INFO -   Average MSD: 2.10 Å²
+2024-12-12 17:24:52,243 - INFO - Results for 1000K (z-direction):
+2024-12-12 17:24:52,243 - INFO -   Diffusion coefficient: 1.3207e-03 [cm²/s]
+2024-12-12 17:24:52,243 - INFO -   Maximum MSD: 3.80 Å²
+2024-12-12 17:24:52,244 - INFO -   Average MSD: 1.87 Å²
+2024-12-12 17:24:52,245 - INFO - Results for 1000K (total-direction):
+2024-12-12 17:24:52,245 - INFO -   Diffusion coefficient: 1.2603e-03 [cm²/s]
+2024-12-12 17:24:52,245 - INFO -   Maximum MSD: 10.63 Å²
+2024-12-12 17:24:52,245 - INFO -   Average MSD: 5.89 Å²
+2024-12-12 17:24:55,955 - INFO - Total Results for 1000K:
+2024-12-12 17:24:55,956 - INFO -   Diffusion coefficient: 1.2603e-03 [cm²/s]
+2024-12-12 17:24:56,592 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:30:13,826 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:30:13,837 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:30:13,840 - INFO - Added proton 1/1:
+2024-12-12 17:30:13,840 - INFO -   Near O atom: 2
+2024-12-12 17:30:13,842 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:30:13,842 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:30:13,842 - INFO - Successfully added 1 protons
+2024-12-12 17:30:13,842 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:30:13,844 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 17:30:13,845 - INFO - Initializing MD simulation...
+2024-12-12 17:30:14,112 - INFO - Running MD at 1000K...
+2024-12-12 17:30:14,409 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 17:30:22,063 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 17:30:28,776 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 17:30:34,278 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 17:30:39,731 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 17:30:44,927 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:30:50,167 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:30:55,665 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:31:01,069 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:31:06,372 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:31:11,402 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:31:16,615 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:31:22,639 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:31:27,795 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:31:33,283 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:31:38,239 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:31:43,172 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:31:48,371 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:31:53,240 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:31:58,129 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:32:03,126 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:32:08,417 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:32:13,460 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:32:18,886 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:32:23,834 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:32:28,862 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:32:33,851 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:32:39,751 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:32:45,320 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:32:51,094 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:32:56,149 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:33:01,367 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:33:06,499 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:33:11,694 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:33:17,203 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:33:22,495 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:33:28,043 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:33:33,578 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:33:38,671 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:33:43,604 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:33:48,514 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:33:53,562 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:33:58,636 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:34:03,500 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:34:08,379 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:34:13,271 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:34:18,321 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:34:23,243 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:34:28,316 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:34:33,293 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:34:38,300 - INFO - Simulation at 1000K completed
+2024-12-12 17:34:39,336 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:34:39,519 - ERROR - MD simulation failed: too many values to unpack (expected 9)
+2024-12-12 17:34:39,519 - ERROR - Program failed: too many values to unpack (expected 9)
+2024-12-12 17:35:24,396 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:35:24,407 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:35:24,410 - INFO - Added proton 1/1:
+2024-12-12 17:35:24,410 - INFO -   Near O atom: 2
+2024-12-12 17:35:24,410 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:35:24,411 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:35:24,411 - INFO - Successfully added 1 protons
+2024-12-12 17:35:24,411 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:35:24,413 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 17:35:24,413 - INFO - Initializing MD simulation...
+2024-12-12 17:35:24,722 - INFO - Running MD at 1000K...
+2024-12-12 17:35:25,018 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 17:35:30,194 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 17:35:35,206 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 17:35:40,298 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 17:35:45,474 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 17:35:50,679 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:35:55,790 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:36:01,026 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:36:06,308 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:36:11,409 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:36:16,298 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:36:21,261 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:36:26,264 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:36:31,372 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:36:36,359 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:36:41,121 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:36:46,003 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:36:51,104 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:36:56,068 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:37:00,874 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:37:05,952 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:37:11,081 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:37:16,080 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:37:20,991 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:37:25,845 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:37:32,346 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:37:37,592 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:37:43,439 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:37:49,265 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:37:54,761 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:37:59,696 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:38:04,679 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:38:09,908 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:38:14,988 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:38:20,340 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:38:25,553 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:38:30,691 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:38:36,427 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:38:41,946 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:38:47,163 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:38:52,325 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:38:57,259 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:39:03,011 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:39:08,048 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:39:13,096 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:39:18,321 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:39:23,622 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:39:28,799 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:39:33,954 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:39:39,284 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:39:44,404 - INFO - Simulation at 1000K completed
+2024-12-12 17:39:45,485 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:39:45,686 - INFO - Results for 1000K (x-direction):
+2024-12-12 17:39:45,687 - INFO -   Diffusion coefficient: -1.5943e-04 [cm²/s]
+2024-12-12 17:39:45,687 - INFO -   Maximum MSD: 4.22 Å²
+2024-12-12 17:39:45,687 - INFO -   Average MSD: 3.38 Å²
+2024-12-12 17:39:45,688 - INFO - Results for 1000K (y-direction):
+2024-12-12 17:39:45,688 - INFO -   Diffusion coefficient: 2.5112e-06 [cm²/s]
+2024-12-12 17:39:45,688 - INFO -   Maximum MSD: 2.67 Å²
+2024-12-12 17:39:45,688 - INFO -   Average MSD: 2.17 Å²
+2024-12-12 17:39:45,689 - INFO - Results for 1000K (z-direction):
+2024-12-12 17:39:45,690 - INFO -   Diffusion coefficient: 1.2897e-04 [cm²/s]
+2024-12-12 17:39:45,690 - INFO -   Maximum MSD: 2.33 Å²
+2024-12-12 17:39:45,690 - INFO -   Average MSD: 1.90 Å²
+2024-12-12 17:39:45,691 - INFO - Results for 1000K (total-direction):
+2024-12-12 17:39:45,691 - INFO -   Diffusion coefficient: -4.6581e-06 [cm²/s]
+2024-12-12 17:39:45,691 - INFO -   Maximum MSD: 8.64 Å²
+2024-12-12 17:39:45,691 - INFO -   Average MSD: 7.45 Å²
+2024-12-12 17:39:49,116 - INFO - Total Results for 1000K:
+2024-12-12 17:39:49,116 - INFO -   Diffusion coefficient: 1.4304e-04 [cm²/s]
+2024-12-12 17:39:49,732 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:40:22,354 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:40:22,370 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:40:22,378 - INFO - Added proton 1/1:
+2024-12-12 17:40:22,378 - INFO -   Near O atom: 2
+2024-12-12 17:40:22,379 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:40:22,379 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:40:22,380 - INFO - Successfully added 1 protons
+2024-12-12 17:40:22,380 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:40:22,382 - INFO - 
+Starting simulation at 1000K...
+2024-12-12 17:40:22,382 - INFO - Initializing MD simulation...
+2024-12-12 17:40:22,689 - INFO - Running MD at 1000K...
+2024-12-12 17:40:23,012 - INFO - Temperature 1000K - Step 0/5000
+2024-12-12 17:40:28,603 - INFO - Temperature 1000K - Step 100/5000
+2024-12-12 17:40:34,167 - INFO - Temperature 1000K - Step 200/5000
+2024-12-12 17:40:39,309 - INFO - Temperature 1000K - Step 300/5000
+2024-12-12 17:40:44,425 - INFO - Temperature 1000K - Step 400/5000
+2024-12-12 17:40:49,604 - INFO - Temperature 1000K - Step 500/5000
+2024-12-12 17:40:54,657 - INFO - Temperature 1000K - Step 600/5000
+2024-12-12 17:40:59,811 - INFO - Temperature 1000K - Step 700/5000
+2024-12-12 17:41:05,975 - INFO - Temperature 1000K - Step 800/5000
+2024-12-12 17:41:11,510 - INFO - Temperature 1000K - Step 900/5000
+2024-12-12 17:41:16,988 - INFO - Temperature 1000K - Step 1000/5000
+2024-12-12 17:41:22,017 - INFO - Temperature 1000K - Step 1100/5000
+2024-12-12 17:41:27,101 - INFO - Temperature 1000K - Step 1200/5000
+2024-12-12 17:41:32,219 - INFO - Temperature 1000K - Step 1300/5000
+2024-12-12 17:41:38,039 - INFO - Temperature 1000K - Step 1400/5000
+2024-12-12 17:41:43,755 - INFO - Temperature 1000K - Step 1500/5000
+2024-12-12 17:41:49,147 - INFO - Temperature 1000K - Step 1600/5000
+2024-12-12 17:41:54,843 - INFO - Temperature 1000K - Step 1700/5000
+2024-12-12 17:42:00,136 - INFO - Temperature 1000K - Step 1800/5000
+2024-12-12 17:42:05,835 - INFO - Temperature 1000K - Step 1900/5000
+2024-12-12 17:42:10,856 - INFO - Temperature 1000K - Step 2000/5000
+2024-12-12 17:42:16,164 - INFO - Temperature 1000K - Step 2100/5000
+2024-12-12 17:42:21,480 - INFO - Temperature 1000K - Step 2200/5000
+2024-12-12 17:42:26,408 - INFO - Temperature 1000K - Step 2300/5000
+2024-12-12 17:42:31,251 - INFO - Temperature 1000K - Step 2400/5000
+2024-12-12 17:42:36,303 - INFO - Temperature 1000K - Step 2500/5000
+2024-12-12 17:42:41,222 - INFO - Temperature 1000K - Step 2600/5000
+2024-12-12 17:42:46,200 - INFO - Temperature 1000K - Step 2700/5000
+2024-12-12 17:42:51,156 - INFO - Temperature 1000K - Step 2800/5000
+2024-12-12 17:42:56,321 - INFO - Temperature 1000K - Step 2900/5000
+2024-12-12 17:43:01,243 - INFO - Temperature 1000K - Step 3000/5000
+2024-12-12 17:43:06,180 - INFO - Temperature 1000K - Step 3100/5000
+2024-12-12 17:43:11,323 - INFO - Temperature 1000K - Step 3200/5000
+2024-12-12 17:43:16,365 - INFO - Temperature 1000K - Step 3300/5000
+2024-12-12 17:43:21,573 - INFO - Temperature 1000K - Step 3400/5000
+2024-12-12 17:43:26,404 - INFO - Temperature 1000K - Step 3500/5000
+2024-12-12 17:43:31,274 - INFO - Temperature 1000K - Step 3600/5000
+2024-12-12 17:43:36,650 - INFO - Temperature 1000K - Step 3700/5000
+2024-12-12 17:43:41,786 - INFO - Temperature 1000K - Step 3800/5000
+2024-12-12 17:43:46,850 - INFO - Temperature 1000K - Step 3900/5000
+2024-12-12 17:43:52,496 - INFO - Temperature 1000K - Step 4000/5000
+2024-12-12 17:43:58,465 - INFO - Temperature 1000K - Step 4100/5000
+2024-12-12 17:44:04,342 - INFO - Temperature 1000K - Step 4200/5000
+2024-12-12 17:44:09,348 - INFO - Temperature 1000K - Step 4300/5000
+2024-12-12 17:44:14,542 - INFO - Temperature 1000K - Step 4400/5000
+2024-12-12 17:44:19,614 - INFO - Temperature 1000K - Step 4500/5000
+2024-12-12 17:44:24,906 - INFO - Temperature 1000K - Step 4600/5000
+2024-12-12 17:44:30,136 - INFO - Temperature 1000K - Step 4700/5000
+2024-12-12 17:44:35,057 - INFO - Temperature 1000K - Step 4800/5000
+2024-12-12 17:44:40,147 - INFO - Temperature 1000K - Step 4900/5000
+2024-12-12 17:44:45,062 - INFO - Simulation at 1000K completed
+2024-12-12 17:44:46,123 - INFO - Analyzing trajectory for 1000K...
+2024-12-12 17:44:46,218 - INFO - Results for 1000K (x-direction):
+2024-12-12 17:44:46,219 - INFO -   Diffusion coefficient: 8.8564e-04 [cm²/s]
+2024-12-12 17:44:46,219 - INFO -   Maximum MSD: 2.67 Å²
+2024-12-12 17:44:46,219 - INFO -   Average MSD: 1.36 Å²
+2024-12-12 17:44:46,220 - INFO - Results for 1000K (y-direction):
+2024-12-12 17:44:46,220 - INFO -   Diffusion coefficient: 1.2792e-03 [cm²/s]
+2024-12-12 17:44:46,220 - INFO -   Maximum MSD: 4.85 Å²
+2024-12-12 17:44:46,220 - INFO -   Average MSD: 2.63 Å²
+2024-12-12 17:44:46,221 - INFO - Results for 1000K (z-direction):
+2024-12-12 17:44:46,221 - INFO -   Diffusion coefficient: 1.0267e-03 [cm²/s]
+2024-12-12 17:44:46,221 - INFO -   Maximum MSD: 4.69 Å²
+2024-12-12 17:44:46,221 - INFO -   Average MSD: 2.72 Å²
+2024-12-12 17:44:46,223 - INFO - Results for 1000K (total-direction):
+2024-12-12 17:44:46,223 - INFO -   Diffusion coefficient: 1.0639e-03 [cm²/s]
+2024-12-12 17:44:46,223 - INFO -   Maximum MSD: 11.07 Å²
+2024-12-12 17:44:46,223 - INFO -   Average MSD: 6.71 Å²
+2024-12-12 17:44:49,673 - INFO - Total Results for 1000K:
+2024-12-12 17:44:49,673 - INFO -   Diffusion coefficient: 1.0639e-03 [cm²/s]
+2024-12-12 17:44:50,297 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:46:15,803 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:46:15,814 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:46:15,817 - INFO - Added proton 1/1:
+2024-12-12 17:46:15,817 - INFO -   Near O atom: 2
+2024-12-12 17:46:15,818 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:46:15,818 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:46:15,818 - INFO - Successfully added 1 protons
+2024-12-12 17:46:15,819 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:46:15,820 - INFO - 
+Starting simulation at 600K...
+2024-12-12 17:46:15,821 - INFO - Initializing MD simulation...
+2024-12-12 17:46:16,082 - INFO - Running MD at 600K...
+2024-12-12 17:46:16,371 - INFO - Temperature 600K - Step 0/10000
+2024-12-12 17:46:21,816 - INFO - Temperature 600K - Step 100/10000
+2024-12-12 17:46:26,796 - INFO - Temperature 600K - Step 200/10000
+2024-12-12 17:46:31,898 - INFO - Temperature 600K - Step 300/10000
+2024-12-12 17:46:36,978 - INFO - Temperature 600K - Step 400/10000
+2024-12-12 17:46:42,064 - INFO - Temperature 600K - Step 500/10000
+2024-12-12 17:46:47,168 - INFO - Temperature 600K - Step 600/10000
+2024-12-12 17:46:52,051 - INFO - Temperature 600K - Step 700/10000
+2024-12-12 17:46:57,215 - INFO - Temperature 600K - Step 800/10000
+2024-12-12 17:47:02,184 - INFO - Temperature 600K - Step 900/10000
+2024-12-12 17:47:07,162 - INFO - Temperature 600K - Step 1000/10000
+2024-12-12 17:47:12,234 - INFO - Temperature 600K - Step 1100/10000
+2024-12-12 17:47:17,173 - INFO - Temperature 600K - Step 1200/10000
+2024-12-12 17:47:22,103 - INFO - Temperature 600K - Step 1300/10000
+2024-12-12 17:47:27,001 - INFO - Temperature 600K - Step 1400/10000
+2024-12-12 17:47:32,020 - INFO - Temperature 600K - Step 1500/10000
+2024-12-12 17:47:36,963 - INFO - Temperature 600K - Step 1600/10000
+2024-12-12 17:47:41,972 - INFO - Temperature 600K - Step 1700/10000
+2024-12-12 17:47:46,949 - INFO - Temperature 600K - Step 1800/10000
+2024-12-12 17:47:51,983 - INFO - Temperature 600K - Step 1900/10000
+2024-12-12 17:47:56,816 - INFO - Temperature 600K - Step 2000/10000
+2024-12-12 17:48:01,804 - INFO - Temperature 600K - Step 2100/10000
+2024-12-12 17:48:06,933 - INFO - Temperature 600K - Step 2200/10000
+2024-12-12 17:48:11,986 - INFO - Temperature 600K - Step 2300/10000
+2024-12-12 17:48:16,797 - INFO - Temperature 600K - Step 2400/10000
+2024-12-12 17:48:21,635 - INFO - Temperature 600K - Step 2500/10000
+2024-12-12 17:48:26,488 - INFO - Temperature 600K - Step 2600/10000
+2024-12-12 17:48:31,737 - INFO - Temperature 600K - Step 2700/10000
+2024-12-12 17:48:36,726 - INFO - Temperature 600K - Step 2800/10000
+2024-12-12 17:48:41,686 - INFO - Temperature 600K - Step 2900/10000
+2024-12-12 17:48:46,633 - INFO - Temperature 600K - Step 3000/10000
+2024-12-12 17:48:51,531 - INFO - Temperature 600K - Step 3100/10000
+2024-12-12 17:48:56,428 - INFO - Temperature 600K - Step 3200/10000
+2024-12-12 17:49:01,372 - INFO - Temperature 600K - Step 3300/10000
+2024-12-12 17:49:06,302 - INFO - Temperature 600K - Step 3400/10000
+2024-12-12 17:49:11,287 - INFO - Temperature 600K - Step 3500/10000
+2024-12-12 17:49:16,359 - INFO - Temperature 600K - Step 3600/10000
+2024-12-12 17:49:21,346 - INFO - Temperature 600K - Step 3700/10000
+2024-12-12 17:49:26,351 - INFO - Temperature 600K - Step 3800/10000
+2024-12-12 17:49:31,290 - INFO - Temperature 600K - Step 3900/10000
+2024-12-12 17:49:36,377 - INFO - Temperature 600K - Step 4000/10000
+2024-12-12 17:49:41,492 - INFO - Temperature 600K - Step 4100/10000
+2024-12-12 17:49:46,665 - INFO - Temperature 600K - Step 4200/10000
+2024-12-12 17:49:51,507 - INFO - Temperature 600K - Step 4300/10000
+2024-12-12 17:49:56,521 - INFO - Temperature 600K - Step 4400/10000
+2024-12-12 17:50:01,293 - INFO - Temperature 600K - Step 4500/10000
+2024-12-12 17:50:06,391 - INFO - Temperature 600K - Step 4600/10000
+2024-12-12 17:50:11,240 - INFO - Temperature 600K - Step 4700/10000
+2024-12-12 17:50:16,144 - INFO - Temperature 600K - Step 4800/10000
+2024-12-12 17:50:21,052 - INFO - Temperature 600K - Step 4900/10000
+2024-12-12 17:50:25,974 - INFO - Temperature 600K - Step 5000/10000
+2024-12-12 17:50:31,285 - INFO - Temperature 600K - Step 5100/10000
+2024-12-12 17:50:36,251 - INFO - Temperature 600K - Step 5200/10000
+2024-12-12 17:50:41,051 - INFO - Temperature 600K - Step 5300/10000
+2024-12-12 17:50:46,008 - INFO - Temperature 600K - Step 5400/10000
+2024-12-12 17:50:51,109 - INFO - Temperature 600K - Step 5500/10000
+2024-12-12 17:50:56,153 - INFO - Temperature 600K - Step 5600/10000
+2024-12-12 17:51:01,075 - INFO - Temperature 600K - Step 5700/10000
+2024-12-12 17:51:06,022 - INFO - Temperature 600K - Step 5800/10000
+2024-12-12 17:51:10,895 - INFO - Temperature 600K - Step 5900/10000
+2024-12-12 17:51:15,819 - INFO - Temperature 600K - Step 6000/10000
+2024-12-12 17:51:20,917 - INFO - Temperature 600K - Step 6100/10000
+2024-12-12 17:51:26,227 - INFO - Temperature 600K - Step 6200/10000
+2024-12-12 17:51:31,356 - INFO - Temperature 600K - Step 6300/10000
+2024-12-12 17:51:36,114 - INFO - Temperature 600K - Step 6400/10000
+2024-12-12 17:51:40,918 - INFO - Temperature 600K - Step 6500/10000
+2024-12-12 17:51:46,321 - INFO - Temperature 600K - Step 6600/10000
+2024-12-12 17:51:51,724 - INFO - Temperature 600K - Step 6700/10000
+2024-12-12 17:51:56,500 - INFO - Temperature 600K - Step 6800/10000
+2024-12-12 17:52:01,598 - INFO - Temperature 600K - Step 6900/10000
+2024-12-12 17:52:06,752 - INFO - Temperature 600K - Step 7000/10000
+2024-12-12 17:52:11,714 - INFO - Temperature 600K - Step 7100/10000
+2024-12-12 17:52:16,874 - INFO - Temperature 600K - Step 7200/10000
+2024-12-12 17:52:21,874 - INFO - Temperature 600K - Step 7300/10000
+2024-12-12 17:52:26,932 - INFO - Temperature 600K - Step 7400/10000
+2024-12-12 17:52:32,238 - INFO - Temperature 600K - Step 7500/10000
+2024-12-12 17:52:37,298 - INFO - Temperature 600K - Step 7600/10000
+2024-12-12 17:52:42,446 - INFO - Temperature 600K - Step 7700/10000
+2024-12-12 17:52:47,577 - INFO - Temperature 600K - Step 7800/10000
+2024-12-12 17:52:52,508 - INFO - Temperature 600K - Step 7900/10000
+2024-12-12 17:52:57,907 - INFO - Temperature 600K - Step 8000/10000
+2024-12-12 17:53:03,188 - INFO - Temperature 600K - Step 8100/10000
+2024-12-12 17:53:08,270 - INFO - Temperature 600K - Step 8200/10000
+2024-12-12 17:53:13,226 - INFO - Temperature 600K - Step 8300/10000
+2024-12-12 17:53:18,362 - INFO - Temperature 600K - Step 8400/10000
+2024-12-12 17:53:24,164 - INFO - Temperature 600K - Step 8500/10000
+2024-12-12 17:53:29,247 - INFO - Temperature 600K - Step 8600/10000
+2024-12-12 17:53:34,319 - INFO - Temperature 600K - Step 8700/10000
+2024-12-12 17:53:39,406 - INFO - Temperature 600K - Step 8800/10000
+2024-12-12 17:53:44,424 - INFO - Temperature 600K - Step 8900/10000
+2024-12-12 17:53:49,651 - INFO - Temperature 600K - Step 9000/10000
+2024-12-12 17:53:54,901 - INFO - Temperature 600K - Step 9100/10000
+2024-12-12 17:54:00,196 - INFO - Temperature 600K - Step 9200/10000
+2024-12-12 17:54:05,563 - INFO - Temperature 600K - Step 9300/10000
+2024-12-12 17:54:11,184 - INFO - Temperature 600K - Step 9400/10000
+2024-12-12 17:54:16,494 - INFO - Temperature 600K - Step 9500/10000
+2024-12-12 17:54:21,861 - INFO - Temperature 600K - Step 9600/10000
+2024-12-12 17:54:27,256 - INFO - Temperature 600K - Step 9700/10000
+2024-12-12 17:54:32,586 - INFO - Temperature 600K - Step 9800/10000
+2024-12-12 17:54:37,916 - INFO - Temperature 600K - Step 9900/10000
+2024-12-12 17:54:43,332 - INFO - Simulation at 600K completed
+2024-12-12 17:54:44,438 - INFO - Analyzing trajectory for 600K...
+2024-12-12 17:54:44,625 - INFO - Results for 600K (x-direction):
+2024-12-12 17:54:44,625 - INFO -   Diffusion coefficient: 1.6856e-05 [cm²/s]
+2024-12-12 17:54:44,625 - INFO -   Maximum MSD: 1.02 Å²
+2024-12-12 17:54:44,625 - INFO -   Average MSD: 0.47 Å²
+2024-12-12 17:54:44,626 - INFO - Results for 600K (y-direction):
+2024-12-12 17:54:44,626 - INFO -   Diffusion coefficient: -3.0426e-05 [cm²/s]
+2024-12-12 17:54:44,626 - INFO -   Maximum MSD: 1.35 Å²
+2024-12-12 17:54:44,626 - INFO -   Average MSD: 0.64 Å²
+2024-12-12 17:54:44,628 - INFO - Results for 600K (z-direction):
+2024-12-12 17:54:44,628 - INFO -   Diffusion coefficient: 7.5618e-06 [cm²/s]
+2024-12-12 17:54:44,628 - INFO -   Maximum MSD: 0.67 Å²
+2024-12-12 17:54:44,628 - INFO -   Average MSD: 0.27 Å²
+2024-12-12 17:54:44,629 - INFO - Results for 600K (total-direction):
+2024-12-12 17:54:44,629 - INFO -   Diffusion coefficient: -2.0028e-06 [cm²/s]
+2024-12-12 17:54:44,629 - INFO -   Maximum MSD: 2.40 Å²
+2024-12-12 17:54:44,629 - INFO -   Average MSD: 1.38 Å²
+2024-12-12 17:54:47,966 - INFO - Total Results for 600K:
+2024-12-12 17:54:47,966 - INFO -   Diffusion coefficient: -2.0028e-06 [cm²/s]
+2024-12-12 17:54:48,590 - INFO - 
+All MD simulations and analysis completed successfully
+2024-12-12 17:55:54,981 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-12 17:55:54,997 - INFO - Structure loaded: BaZrO3
+2024-12-12 17:55:55,001 - INFO - Added proton 1/1:
+2024-12-12 17:55:55,001 - INFO -   Near O atom: 2
+2024-12-12 17:55:55,001 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-12 17:55:55,001 - INFO -   OH distance: 0.980 Å
+2024-12-12 17:55:55,001 - INFO - Successfully added 1 protons
+2024-12-12 17:55:55,002 - INFO - Final composition: HBaO3Zr
+2024-12-12 17:55:55,004 - INFO - 
+Starting simulation at 800K...
+2024-12-12 17:55:55,004 - INFO - Initializing MD simulation...
+2024-12-12 17:55:55,325 - INFO - Running MD at 800K...
+2024-12-12 17:55:55,615 - INFO - Temperature 800K - Step 0/10000
+2024-12-12 17:56:01,504 - INFO - Temperature 800K - Step 100/10000
+2024-12-12 17:56:07,184 - INFO - Temperature 800K - Step 200/10000
+2024-12-12 17:56:13,935 - INFO - Temperature 800K - Step 300/10000
+2024-12-12 17:56:20,344 - INFO - Temperature 800K - Step 400/10000
+2024-12-12 17:56:26,084 - INFO - Temperature 800K - Step 500/10000
+2024-12-12 17:56:31,522 - INFO - Temperature 800K - Step 600/10000
+2024-12-12 17:56:36,637 - INFO - Temperature 800K - Step 700/10000
+2024-12-12 17:56:41,862 - INFO - Temperature 800K - Step 800/10000
+2024-12-12 17:56:46,944 - INFO - Temperature 800K - Step 900/10000
+2024-12-12 17:56:52,203 - INFO - Temperature 800K - Step 1000/10000
+2024-12-12 17:56:57,473 - INFO - Temperature 800K - Step 1100/10000
+2024-12-12 17:57:02,557 - INFO - Temperature 800K - Step 1200/10000
+2024-12-12 17:57:07,808 - INFO - Temperature 800K - Step 1300/10000
+2024-12-12 17:57:12,933 - INFO - Temperature 800K - Step 1400/10000
+2024-12-12 17:57:18,107 - INFO - Temperature 800K - Step 1500/10000
+2024-12-12 17:57:23,267 - INFO - Temperature 800K - Step 1600/10000
+2024-12-12 17:57:28,563 - INFO - Temperature 800K - Step 1700/10000
+2024-12-12 17:57:33,942 - INFO - Temperature 800K - Step 1800/10000
+2024-12-12 17:57:39,103 - INFO - Temperature 800K - Step 1900/10000
+2024-12-12 17:57:44,260 - INFO - Temperature 800K - Step 2000/10000
+2024-12-12 17:57:49,152 - INFO - Temperature 800K - Step 2100/10000
+2024-12-12 17:57:54,225 - INFO - Temperature 800K - Step 2200/10000
+2024-12-12 17:57:59,216 - INFO - Temperature 800K - Step 2300/10000
+2024-12-12 17:58:04,140 - INFO - Temperature 800K - Step 2400/10000
+2024-12-12 17:58:09,127 - INFO - Temperature 800K - Step 2500/10000
+2024-12-12 17:58:14,043 - INFO - Temperature 800K - Step 2600/10000
+2024-12-12 17:58:19,113 - INFO - Temperature 800K - Step 2700/10000
+2024-12-12 17:58:23,986 - INFO - Temperature 800K - Step 2800/10000
+2024-12-12 17:58:29,105 - INFO - Temperature 800K - Step 2900/10000
+2024-12-12 17:58:34,064 - INFO - Temperature 800K - Step 3000/10000
+2024-12-12 17:58:39,029 - INFO - Temperature 800K - Step 3100/10000
+2024-12-12 17:58:44,078 - INFO - Temperature 800K - Step 3200/10000
+2024-12-12 17:58:48,944 - INFO - Temperature 800K - Step 3300/10000
+2024-12-12 17:58:53,853 - INFO - Temperature 800K - Step 3400/10000
+2024-12-12 17:58:58,751 - INFO - Temperature 800K - Step 3500/10000
+2024-12-12 17:59:03,767 - INFO - Temperature 800K - Step 3600/10000
+2024-12-12 17:59:08,681 - INFO - Temperature 800K - Step 3700/10000
+2024-12-12 17:59:13,487 - INFO - Temperature 800K - Step 3800/10000
+2024-12-12 17:59:18,445 - INFO - Temperature 800K - Step 3900/10000
+2024-12-12 17:59:23,343 - INFO - Temperature 800K - Step 4000/10000
+2024-12-12 17:59:28,223 - INFO - Temperature 800K - Step 4100/10000
+2024-12-12 17:59:33,527 - INFO - Temperature 800K - Step 4200/10000
+2024-12-12 17:59:38,626 - INFO - Temperature 800K - Step 4300/10000
+2024-12-12 17:59:43,787 - INFO - Temperature 800K - Step 4400/10000
+2024-12-12 17:59:48,697 - INFO - Temperature 800K - Step 4500/10000
+2024-12-12 17:59:53,859 - INFO - Temperature 800K - Step 4600/10000
+2024-12-12 18:00:00,004 - INFO - Temperature 800K - Step 4700/10000
+2024-12-12 18:00:05,387 - INFO - Temperature 800K - Step 4800/10000
+2024-12-12 18:00:10,605 - INFO - Temperature 800K - Step 4900/10000
+2024-12-12 18:00:16,104 - INFO - Temperature 800K - Step 5000/10000
+2024-12-12 18:00:21,877 - INFO - Temperature 800K - Step 5100/10000
+2024-12-12 18:00:26,922 - INFO - Temperature 800K - Step 5200/10000
+2024-12-12 18:00:31,923 - INFO - Temperature 800K - Step 5300/10000
+2024-12-12 18:00:36,977 - INFO - Temperature 800K - Step 5400/10000
+2024-12-12 18:00:42,359 - INFO - Temperature 800K - Step 5500/10000
+2024-12-12 18:00:48,053 - INFO - Temperature 800K - Step 5600/10000
+2024-12-12 18:00:53,214 - INFO - Temperature 800K - Step 5700/10000
+2024-12-12 18:00:58,278 - INFO - Temperature 800K - Step 5800/10000
+2024-12-12 18:01:03,685 - INFO - Temperature 800K - Step 5900/10000
+2024-12-12 18:01:08,879 - INFO - Temperature 800K - Step 6000/10000
+2024-12-12 18:01:14,316 - INFO - Temperature 800K - Step 6100/10000
+2024-12-12 18:01:19,860 - INFO - Temperature 800K - Step 6200/10000
+2024-12-12 18:01:25,119 - INFO - Temperature 800K - Step 6300/10000
+2024-12-12 18:01:30,159 - INFO - Temperature 800K - Step 6400/10000
+2024-12-12 18:01:35,289 - INFO - Temperature 800K - Step 6500/10000
+2024-12-12 18:01:40,628 - INFO - Temperature 800K - Step 6600/10000
+2024-12-12 18:01:45,754 - INFO - Temperature 800K - Step 6700/10000
+2024-12-12 18:01:50,957 - INFO - Temperature 800K - Step 6800/10000
+2024-12-12 18:01:55,975 - INFO - Temperature 800K - Step 6900/10000
+2024-12-12 18:02:01,684 - INFO - Temperature 800K - Step 7000/10000
+2024-12-12 18:02:06,908 - INFO - Temperature 800K - Step 7100/10000
+2024-12-12 18:02:11,964 - INFO - Temperature 800K - Step 7200/10000
+2024-12-12 18:02:17,064 - INFO - Temperature 800K - Step 7300/10000
+2024-12-12 18:02:22,328 - INFO - Temperature 800K - Step 7400/10000
+2024-12-12 18:02:27,810 - INFO - Temperature 800K - Step 7500/10000
+2024-12-12 18:02:33,366 - INFO - Temperature 800K - Step 7600/10000
+2024-12-12 18:02:38,792 - INFO - Temperature 800K - Step 7700/10000
+2024-12-12 18:02:43,778 - INFO - Temperature 800K - Step 7800/10000
+2024-12-12 18:02:48,782 - INFO - Temperature 800K - Step 7900/10000
+2024-12-12 18:02:53,878 - INFO - Temperature 800K - Step 8000/10000
+2024-12-12 18:02:58,783 - INFO - Temperature 800K - Step 8100/10000
+2024-12-12 18:03:03,752 - INFO - Temperature 800K - Step 8200/10000
+2024-12-12 18:03:08,589 - INFO - Temperature 800K - Step 8300/10000
+2024-12-12 18:03:13,587 - INFO - Temperature 800K - Step 8400/10000
+2024-12-12 18:03:18,638 - INFO - Temperature 800K - Step 8500/10000
+2024-12-12 18:03:23,559 - INFO - Temperature 800K - Step 8600/10000
+2024-12-12 18:03:28,615 - INFO - Temperature 800K - Step 8700/10000
+2024-12-12 18:03:34,300 - INFO - Temperature 800K - Step 8800/10000
+2024-12-12 18:03:40,090 - INFO - Temperature 800K - Step 8900/10000
+2024-12-12 18:03:46,811 - INFO - Temperature 800K - Step 9000/10000
+2024-12-12 18:03:53,562 - INFO - Temperature 800K - Step 9100/10000
+2024-12-12 18:03:59,040 - INFO - Temperature 800K - Step 9200/10000
+2024-12-12 18:04:04,613 - INFO - Temperature 800K - Step 9300/10000
+2024-12-12 18:04:10,144 - INFO - Temperature 800K - Step 9400/10000
+2024-12-12 18:04:15,625 - INFO - Temperature 800K - Step 9500/10000
+2024-12-12 18:04:21,852 - INFO - Temperature 800K - Step 9600/10000
+2024-12-12 18:04:27,114 - INFO - Temperature 800K - Step 9700/10000
+2024-12-12 18:04:32,579 - INFO - Temperature 800K - Step 9800/10000
+2024-12-12 18:04:38,369 - INFO - Temperature 800K - Step 9900/10000
+2024-12-12 18:04:44,108 - INFO - Simulation at 800K completed
+2024-12-12 18:04:45,554 - INFO - Analyzing trajectory for 800K...
+2024-12-12 18:04:45,739 - INFO - Results for 800K (x-direction):
+2024-12-12 18:04:45,740 - INFO -   Diffusion coefficient: 1.9779e-04 [cm²/s]
+2024-12-12 18:04:45,740 - INFO -   Maximum MSD: 1.98 Å²
+2024-12-12 18:04:45,740 - INFO -   Average MSD: 0.76 Å²
+2024-12-12 18:04:45,741 - INFO - Results for 800K (y-direction):
+2024-12-12 18:04:45,741 - INFO -   Diffusion coefficient: 1.0814e-03 [cm²/s]
+2024-12-12 18:04:45,741 - INFO -   Maximum MSD: 5.71 Å²
+2024-12-12 18:04:45,741 - INFO -   Average MSD: 2.41 Å²
+2024-12-12 18:04:45,742 - INFO - Results for 800K (z-direction):
+2024-12-12 18:04:45,742 - INFO -   Diffusion coefficient: 5.0450e-04 [cm²/s]
+2024-12-12 18:04:45,742 - INFO -   Maximum MSD: 4.09 Å²
+2024-12-12 18:04:45,742 - INFO -   Average MSD: 2.27 Å²
+2024-12-12 18:04:45,744 - INFO - Results for 800K (total-direction):
+2024-12-12 18:04:45,744 - INFO -   Diffusion coefficient: 5.9456e-04 [cm²/s]
+2024-12-12 18:04:45,744 - INFO -   Maximum MSD: 10.30 Å²
+2024-12-12 18:04:45,744 - INFO -   Average MSD: 5.45 Å²
+2024-12-12 18:04:49,247 - INFO - Total Results for 800K:
+2024-12-12 18:04:49,247 - INFO -   Diffusion coefficient: 5.9456e-04 [cm²/s]
+2024-12-12 18:04:49,868 - INFO - 
+All MD simulations and analysis completed successfully
