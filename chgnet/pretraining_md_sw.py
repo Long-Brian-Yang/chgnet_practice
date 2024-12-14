@@ -14,6 +14,7 @@ from chgnet.model.dynamics import MolecularDynamics
 
 warnings.filterwarnings("ignore")
 
+
 def setup_logging(log_dir: str = "logs") -> None:
     """
     Setup logging system
@@ -27,6 +28,7 @@ def setup_logging(log_dir: str = "logs") -> None:
             logging.StreamHandler()
         ]
     )
+
 
 def parse_args():
     """
@@ -54,6 +56,7 @@ def parse_args():
                         help='Enable debug mode')
 
     return parser.parse_args()
+
 
 def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     """
@@ -130,7 +133,7 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
         # Add proton
         atoms.append(Atom('H', position=h_pos))
         oh_dist = atoms.get_distance(-1, o_idx, mic=True)
-        
+
         logger.info(f"Added proton {i+1}/{n_protons}:")
         logger.info(f"  Near O atom: {o_idx}")
         logger.info(f"  Position: {h_pos}")
@@ -141,8 +144,9 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
 
     return atoms
 
-def calculate_msd_sliding_window(trajectory: Trajectory, atom_index: int, 
-                               timestep: float = 1.0, window_size: int = None):
+
+def calculate_msd_sliding_window(trajectory: Trajectory, atom_index: int,
+                                 timestep: float = 1.0, window_size: int = None):
     """
     Calculate MSD using sliding window method.
     """
@@ -150,35 +154,36 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_index: int,
     for atoms in trajectory:
         positions.append(atoms.positions[atom_index])
     positions = np.array(positions)
-    
+
     n_frames = len(positions)
     if window_size is None:
         window_size = n_frames // 4
-    
+
     # Number of windows that will be analyzed
     n_windows = n_frames - window_size + 1
-    
+
     # Initialize arrays for MSD calculation
     msd = np.zeros(window_size)
     counts = np.zeros(window_size)
-    
+
     # Calculate MSD using sliding windows
     for start in range(n_windows):
         end = start + window_size
         window_positions = positions[start:end]
-        
+
         # Calculate displacements within this window
         for t in range(window_size):
             if start + t < n_frames:
                 displacement = window_positions[t] - window_positions[0]
                 msd[t] += np.sum(displacement**2)
                 counts[t] += 1
-    
+
     # Average MSD for each time interval
     msd = np.where(counts > 0, msd / counts, 0)
     time = np.arange(window_size) * timestep / 1000  # Convert to ps
-    
+
     return time, msd
+
 
 def analyze_msd(trajectories: list, atom_index: int, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
@@ -192,19 +197,19 @@ def analyze_msd(trajectories: list, atom_index: int, temperatures: list,
     for traj_file, temp in zip(trajectories, temperatures):
         logger.info(f"Analyzing trajectory for {temp}K...")
         trajectory = Trajectory(str(traj_file), 'r')
-        
-        time, msd = calculate_msd_sliding_window(trajectory, atom_index, 
-                                               timestep=timestep,
-                                               window_size=window_size)
-        
+
+        time, msd = calculate_msd_sliding_window(trajectory, atom_index,
+                                                 timestep=timestep,
+                                                 window_size=window_size)
+
         # Linear fit using numpy vstack
         A = np.vstack([time, np.ones(len(time))]).T
         slope, _ = np.linalg.lstsq(A, msd, rcond=None)[0]
         D = slope / 6  # diffusion coefficient
-        
+
         plt.plot(time, msd, label=f"{temp}K (D={D*1e-16*1e12:.2e} cm²/s)")
         plt.plot(time, time * slope, '--', alpha=0.5)
-        
+
         logger.info(f"Results for {temp}K:")
         logger.info(f"  Diffusion coefficient: {D*1e-16*1e12:6.4e} [cm^2/s]")
         logger.info(f"  Maximum MSD: {np.max(msd):.2f} Å²")
@@ -219,6 +224,7 @@ def analyze_msd(trajectories: list, atom_index: int, temperatures: list,
 
     plt.savefig(output_dir / 'msd_sliding_window.png', dpi=300, bbox_inches='tight')
     plt.close()
+
 
 def run_md_simulation(args) -> None:
     """
@@ -288,13 +294,14 @@ def run_md_simulation(args) -> None:
 
         # Analyze trajectories
         analyze_msd(trajectory_files, proton_index, args.temperatures,
-                   args.timestep, output_dir, logger, args.window_size)
+                    args.timestep, output_dir, logger, args.window_size)
 
         logger.info("\nAll MD simulations and analysis completed successfully")
 
     except Exception as e:
         logger.error(f"MD simulation failed: {str(e)}")
         raise
+
 
 if __name__ == "__main__":
     args = parse_args()

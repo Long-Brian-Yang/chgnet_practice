@@ -1,0 +1,194 @@
+2024-12-13 11:37:53,965 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 11:37:53,975 - INFO - Structure loaded: BaZrO3
+2024-12-13 11:37:53,978 - INFO - Added proton 1/1:
+2024-12-13 11:37:53,978 - INFO -   Near O atom: 2
+2024-12-13 11:37:53,979 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 11:37:53,979 - INFO -   OH distance: 0.980 Å
+2024-12-13 11:37:53,979 - INFO - Successfully added 1 protons
+2024-12-13 11:37:53,979 - INFO - Final composition: HBaO3Zr
+2024-12-13 11:37:53,980 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 11:37:54,040 - INFO - Model loaded successfully
+2024-12-13 11:37:54,040 - INFO - 
+Starting simulation at 800K...
+2024-12-13 11:37:54,041 - INFO - Initializing MD simulation...
+2024-12-13 11:37:54,043 - INFO - Running MD at 800K...
+2024-12-13 11:37:54,497 - INFO - Temperature 800K - Step 0/6000
+2024-12-13 11:37:59,163 - INFO - Temperature 800K - Step 100/6000
+2024-12-13 11:38:37,592 - INFO - Temperature 800K - Step 200/6000
+2024-12-13 11:40:23,865 - INFO - Temperature 800K - Step 300/6000
+2024-12-13 11:42:42,376 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 11:42:42,403 - INFO - Structure loaded: BaZrO3
+2024-12-13 11:42:42,416 - INFO - Added proton 1/1:
+2024-12-13 11:42:42,416 - INFO -   Near O atom: 2
+2024-12-13 11:42:42,419 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 11:42:42,419 - INFO -   OH distance: 0.980 Å
+2024-12-13 11:42:42,419 - INFO - Successfully added 1 protons
+2024-12-13 11:42:42,419 - INFO - Final composition: HBaO3Zr
+2024-12-13 11:42:42,421 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 11:42:42,630 - INFO - Model loaded successfully
+2024-12-13 11:42:42,630 - INFO - 
+Starting simulation at 800K...
+2024-12-13 11:42:42,631 - INFO - Initializing MD simulation...
+2024-12-13 11:42:42,636 - INFO - Running MD at 800K...
+2024-12-13 11:42:43,478 - INFO - Temperature 800K - Step 0/4000
+2024-12-13 11:42:48,258 - INFO - Temperature 800K - Step 100/4000
+2024-12-13 11:43:25,615 - INFO - Temperature 800K - Step 200/4000
+2024-12-13 11:45:41,749 - INFO - Temperature 800K - Step 300/4000
+2024-12-13 11:55:40,570 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 11:55:40,581 - INFO - Structure loaded: BaZrO3
+2024-12-13 11:55:40,584 - INFO - Added proton 1/1:
+2024-12-13 11:55:40,584 - INFO -   Near O atom: 2
+2024-12-13 11:55:40,585 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 11:55:40,585 - INFO -   OH distance: 0.980 Å
+2024-12-13 11:55:40,585 - INFO - Successfully added 1 protons
+2024-12-13 11:55:40,585 - INFO - Final composition: HBaO3Zr
+2024-12-13 11:55:40,587 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 11:55:40,641 - INFO - Model loaded successfully
+2024-12-13 11:55:40,641 - INFO - 
+Starting simulation at 800K...
+2024-12-13 11:55:40,641 - INFO - Initializing MD simulation...
+2024-12-13 11:55:40,646 - INFO - Running MD at 800K...
+2024-12-13 11:55:41,099 - INFO - Temperature 800K - Step 0/40000
+2024-12-13 11:55:45,771 - INFO - Temperature 800K - Step 100/40000
+2024-12-13 11:56:28,016 - INFO - Temperature 800K - Step 200/40000
+2024-12-13 12:01:25,103 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 12:01:25,113 - INFO - Structure loaded: BaZrO3
+2024-12-13 12:01:25,116 - INFO - Added proton 1/1:
+2024-12-13 12:01:25,116 - INFO -   Near O atom: 2
+2024-12-13 12:01:25,117 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 12:01:25,117 - INFO -   OH distance: 0.980 Å
+2024-12-13 12:01:25,117 - INFO - Successfully added 1 protons
+2024-12-13 12:01:25,117 - INFO - Final composition: HBaO3Zr
+2024-12-13 12:01:25,118 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 12:01:25,173 - INFO - Model loaded successfully
+2024-12-13 12:01:25,173 - INFO - 
+Starting simulation at 800K...
+2024-12-13 12:01:25,174 - INFO - Initializing MD simulation...
+2024-12-13 12:01:25,178 - INFO - Running MD at 800K...
+2024-12-13 12:01:25,572 - INFO - Temperature 800K - Step 0/4000
+2024-12-13 12:01:30,353 - INFO - Temperature 800K - Step 100/4000
+2024-12-13 12:02:07,530 - INFO - Temperature 800K - Step 200/4000
+2024-12-13 12:03:43,803 - INFO - Temperature 800K - Step 300/4000
+2024-12-13 12:08:28,417 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 12:08:28,428 - INFO - Structure loaded: BaZrO3
+2024-12-13 12:08:28,431 - INFO - Added proton 1/1:
+2024-12-13 12:08:28,431 - INFO -   Near O atom: 2
+2024-12-13 12:08:28,431 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 12:08:28,432 - INFO -   OH distance: 0.980 Å
+2024-12-13 12:08:28,432 - INFO - Successfully added 1 protons
+2024-12-13 12:08:28,432 - INFO - Final composition: HBaO3Zr
+2024-12-13 12:08:28,433 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 12:08:28,467 - INFO - Model loaded successfully
+2024-12-13 12:08:28,467 - INFO - 
+Starting simulation at 800K...
+2024-12-13 12:08:28,467 - INFO - Initializing MD simulation...
+2024-12-13 12:08:28,470 - INFO - Running MD at 800K...
+2024-12-13 12:08:28,783 - INFO - Temperature 800K - Step 0/1000
+2024-12-13 12:08:33,173 - INFO - Temperature 800K - Step 100/1000
+2024-12-13 12:09:08,965 - INFO - Temperature 800K - Step 200/1000
+2024-12-13 12:10:43,917 - INFO - Temperature 800K - Step 300/1000
+2024-12-13 12:14:43,040 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 12:14:43,051 - INFO - Structure loaded: BaZrO3
+2024-12-13 12:14:43,053 - INFO - Added proton 1/1:
+2024-12-13 12:14:43,053 - INFO -   Near O atom: 2
+2024-12-13 12:14:43,053 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 12:14:43,053 - INFO -   OH distance: 0.980 Å
+2024-12-13 12:14:43,053 - INFO - Successfully added 1 protons
+2024-12-13 12:14:43,053 - INFO - Final composition: HBaO3Zr
+2024-12-13 12:14:43,055 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 12:14:43,087 - INFO - Model loaded successfully
+2024-12-13 12:14:43,087 - INFO - 
+Starting simulation at 800K...
+2024-12-13 12:14:43,087 - INFO - Initializing MD simulation...
+2024-12-13 12:14:43,092 - INFO - Running MD at 800K...
+2024-12-13 12:14:45,470 - INFO - Temperature 800K - Step 0/1000
+2024-12-13 13:14:55,235 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 13:14:55,245 - INFO - Structure loaded: BaZrO3
+2024-12-13 13:14:55,248 - INFO - Added proton 1/1:
+2024-12-13 13:14:55,248 - INFO -   Near O atom: 2
+2024-12-13 13:14:55,249 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 13:14:55,249 - INFO -   OH distance: 0.980 Å
+2024-12-13 13:14:55,249 - INFO - Successfully added 1 protons
+2024-12-13 13:14:55,249 - INFO - Final composition: HBaO3Zr
+2024-12-13 13:14:55,250 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 13:14:55,335 - INFO - Model loaded successfully
+2024-12-13 13:14:55,335 - INFO - 
+Starting simulation at 800K...
+2024-12-13 13:14:55,335 - INFO - Initializing MD simulation...
+2024-12-13 13:14:55,339 - INFO - Running MD at 800K...
+2024-12-13 13:14:57,736 - INFO - Temperature 800K - Step 0/20000
+2024-12-13 13:16:42,379 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 13:16:42,389 - INFO - Structure loaded: BaZrO3
+2024-12-13 13:16:42,391 - INFO - Added proton 1/1:
+2024-12-13 13:16:42,391 - INFO -   Near O atom: 2
+2024-12-13 13:16:42,392 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 13:16:42,392 - INFO -   OH distance: 0.980 Å
+2024-12-13 13:16:42,392 - INFO - Successfully added 1 protons
+2024-12-13 13:16:42,392 - INFO - Final composition: HBaO3Zr
+2024-12-13 13:16:42,393 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 13:16:42,423 - INFO - Model loaded successfully
+2024-12-13 13:16:42,423 - INFO - 
+Starting simulation at 800K...
+2024-12-13 13:16:42,423 - INFO - Initializing MD simulation...
+2024-12-13 13:16:42,425 - INFO - Running MD at 800K...
+2024-12-13 13:16:44,922 - INFO - Temperature 800K - Step 0/2000
+2024-12-13 14:30:28,076 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 14:30:28,089 - INFO - Structure loaded: BaZrO3
+2024-12-13 14:30:28,091 - INFO - Added proton 1/1:
+2024-12-13 14:30:28,091 - INFO -   Near O atom: 2
+2024-12-13 14:30:28,092 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 14:30:28,093 - INFO -   OH distance: 0.980 Å
+2024-12-13 14:30:28,093 - INFO - Successfully added 1 protons
+2024-12-13 14:30:28,093 - INFO - Final composition: HBaO3Zr
+2024-12-13 14:30:28,095 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 14:30:28,161 - INFO - Model loaded successfully
+2024-12-13 14:30:28,161 - INFO - 
+Starting simulation at 800K...
+2024-12-13 14:30:28,161 - INFO - Initializing MD simulation...
+2024-12-13 14:30:28,166 - INFO - Running MD at 800K...
+2024-12-13 14:30:30,708 - INFO - Temperature 800K - Step 0/40000
+2024-12-13 14:31:06,778 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 14:31:06,789 - INFO - Structure loaded: BaZrO3
+2024-12-13 14:31:06,792 - INFO - Added proton 1/1:
+2024-12-13 14:31:06,792 - INFO -   Near O atom: 2
+2024-12-13 14:31:06,792 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 14:31:06,792 - INFO -   OH distance: 0.980 Å
+2024-12-13 14:31:06,792 - INFO - Successfully added 1 protons
+2024-12-13 14:31:06,792 - INFO - Final composition: HBaO3Zr
+2024-12-13 14:31:06,793 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 14:31:06,853 - INFO - Model loaded successfully
+2024-12-13 14:31:06,853 - INFO - 
+Starting simulation at 1000K...
+2024-12-13 14:31:06,853 - INFO - Initializing MD simulation...
+2024-12-13 14:31:06,856 - INFO - Running MD at 1000K...
+2024-12-13 14:31:09,532 - INFO - Temperature 1000K - Step 0/2000
+2024-12-13 15:07:24,161 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 15:07:24,171 - INFO - Structure loaded: BaZrO3
+2024-12-13 15:07:24,173 - INFO - Added proton 1/1:
+2024-12-13 15:07:24,173 - INFO -   Near O atom: 2
+2024-12-13 15:07:24,174 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 15:07:24,174 - INFO -   OH distance: 0.980 Å
+2024-12-13 15:07:24,174 - INFO - Successfully added 1 protons
+2024-12-13 15:07:24,174 - INFO - Final composition: HBaO3Zr
+2024-12-13 15:07:24,175 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 15:07:24,225 - INFO - Model loaded successfully
+2024-12-13 15:07:24,225 - INFO - 
+Starting simulation at 1000K...
+2024-12-13 15:07:24,225 - INFO - Initializing MD simulation...
+2024-12-13 15:07:24,229 - INFO - Running MD at 1000K...
+2024-12-13 15:07:27,062 - INFO - Temperature 1000K - Step 0/2000
+2024-12-13 15:16:18,381 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-13 15:16:18,392 - INFO - Structure loaded: BaZrO3
+2024-12-13 15:16:18,395 - INFO - Added proton 1/1:
+2024-12-13 15:16:18,395 - INFO -   Near O atom: 2
+2024-12-13 15:16:18,395 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-13 15:16:18,395 - INFO -   OH distance: 0.980 Å
+2024-12-13 15:16:18,395 - INFO - Successfully added 1 protons
+2024-12-13 15:16:18,395 - INFO - Final composition: HBaO3Zr
+2024-12-13 15:16:18,396 - INFO - Loading finetuned CHGNet model from: ./finetuning_results/checkpoints/chgnet_finetuned.pth
+2024-12-13 15:16:18,458 - INFO - Model loaded successfully
+2024-12-13 15:16:18,458 - INFO - 
+Starting simulation at 1000K...
+2024-12-13 15:16:18,458 - INFO - Initializing MD simulation...
+2024-12-13 15:16:18,462 - INFO - Running MD at 1000K...
+2024-12-13 15:16:20,949 - INFO - Temperature 1000K - Step 0/2000

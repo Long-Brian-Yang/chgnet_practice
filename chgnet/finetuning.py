@@ -49,9 +49,9 @@ def parse_args():
                         help='Path to the JSON dataset file')
     parser.add_argument('--batch-size', type=int, default=2,
                         help='Batch size for training')
-    parser.add_argument('--train-ratio', type=float, default=0.8,
+    parser.add_argument('--train-ratio', type=float, default=0.7,
                         help='Proportion of dataset for training')
-    parser.add_argument('--val-ratio', type=float, default=0.1,
+    parser.add_argument('--val-ratio', type=float, default=0.2,
                         help='Proportion of dataset for validation')
     parser.add_argument('--epochs', type=int, default=50,
                         help='Number of training epochs')

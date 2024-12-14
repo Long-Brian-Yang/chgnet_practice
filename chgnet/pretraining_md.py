@@ -16,6 +16,7 @@ from chgnet.model.dynamics import MolecularDynamics
 
 warnings.filterwarnings("ignore")
 
+
 def setup_logging(log_dir: str = "logs") -> None:
     """
     Setup logging system
@@ -30,6 +31,7 @@ def setup_logging(log_dir: str = "logs") -> None:
         ]
     )
 
+
 def parse_args():
     """
     Parse command line arguments
@@ -40,11 +42,11 @@ def parse_args():
     parser.add_argument('--ensemble', type=str, default="nvt",
                         choices=['npt', 'nve', 'nvt'],
                         help='Type of ensemble')
-    parser.add_argument('--temperatures', type=float, nargs='+', default=[800],
+    parser.add_argument('--temperatures', type=float, nargs='+', default=[1000],
                         help='Temperatures for MD simulation (K), e.g. 800 900 1000')
     parser.add_argument('--timestep', type=float, default=1.0,
                         help='Timestep for MD simulation (fs)')
-    parser.add_argument('--n-steps', type=int, default=10000,
+    parser.add_argument('--n-steps', type=int, default=40000,
                         help='Number of MD steps')
     parser.add_argument('--n-protons', type=int, default=1,
                         help='Number of protons to add')
@@ -56,6 +58,7 @@ def parse_args():
                         help='Enable debug mode')
 
     return parser.parse_args()
+
 
 def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     """
@@ -132,7 +135,7 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
         # Add proton
         atoms.append(Atom('H', position=h_pos))
         oh_dist = atoms.get_distance(-1, o_idx, mic=True)
-        
+
         logger.info(f"Added proton {i+1}/{n_protons}:")
         logger.info(f"  Near O atom: {o_idx}")
         logger.info(f"  Position: {h_pos}")
@@ -143,71 +146,73 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
 
     return atoms
 
-def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list, 
-                               timestep: float = 1.0, window_size: int = None):
+
+def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
+                                 timestep: float = 1.0, window_size: int = None):
     """
     Calculate MSD using sliding window method for both directional and total MSD.
     """
     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
     positions = positions_all[:, atom_indices]
-    
+
     n_frames = len(positions)
     if window_size is None:
         window_size = n_frames // 4
-        
+
     shift_t = window_size // 2  # Shift window by half its size
-    
+
     # Initialize arrays for accumulating MSD values
     msd_x = np.zeros(window_size)
     msd_y = np.zeros(window_size)
     msd_z = np.zeros(window_size)
     msd_total = np.zeros(window_size)
     counts = np.zeros(window_size)
-    
+
     # Calculate MSD using sliding windows
     n_windows = n_frames - window_size + 1
     for start in range(0, n_frames - window_size, shift_t):
         window = slice(start, start + window_size)
         ref_pos = positions[start]
-        
+
         # Calculate displacements
         disp = positions[window] - ref_pos
-        
+
         # Calculate MSD components
         msd_x += np.mean(disp[..., 0]**2, axis=1)
         msd_y += np.mean(disp[..., 1]**2, axis=1)
         msd_z += np.mean(disp[..., 2]**2, axis=1)
         msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
         counts += 1
-    
+
     # Average MSDs
     msd_x /= counts
     msd_y /= counts
     msd_z /= counts
     msd_total /= counts
-    
+
     # Calculate time array in picoseconds
     time = np.arange(window_size) * timestep / 1000
-    
+
     # Calculate diffusion coefficients using np.polyfit
     D_x = np.polyfit(time, msd_x, 1)[0] / 2  # For 1D
     D_y = np.polyfit(time, msd_y, 1)[0] / 2
     D_z = np.polyfit(time, msd_z, 1)[0] / 2
     D_total = np.polyfit(time, msd_total, 1)[0] / 6  # For 3D
-    
+
     # # Calculate diffusion coefficients using statsmodels OLS
     # model_x = sm.OLS(msd_x, sm.add_constant(time))
     # D_x = model_x.fit().params[1] / 2  # For 1D
-    
+
     # model_y = sm.OLS(msd_y, sm.add_constant(time))
     # D_y = model_y.fit().params[1] / 2
-    
+
     # model_z = sm.OLS(msd_z, sm.add_constant(time))
     # D_z = model_z.fit().params[1] / 2
-    
+
     # model_total = sm.OLS(msd_total, sm.add_constant(time))
     # D_total = model_total.fit().params[1] / 6  # For 3D
     return time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
+
 
 def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
@@ -224,54 +229,54 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
     for traj_file, temp in zip(trajectories, temperatures):
         logger.info(f"Analyzing trajectory for {temp}K...")
         trajectory = Trajectory(str(traj_file), 'r')
-        
+
         # Calculate MSD with directional components
         time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total = calculate_msd_sliding_window(
             trajectory, [proton_index], timestep=timestep, window_size=window_size
         )
-        
+
         # Convert diffusion coefficients to cm²/s
         D_x_cm2s = D_x * 1e-16 / 1e-12
         D_y_cm2s = D_y * 1e-16 / 1e-12
         D_z_cm2s = D_z * 1e-16 / 1e-12
         D_total_cm2s = D_total * 1e-16 / 1e-12
-        
+
         # Plot each component
         msds = [msd_x, msd_y, msd_z, msd_total]
         Ds = [D_x_cm2s, D_y_cm2s, D_z_cm2s, D_total_cm2s]
-        
+
         for ax, msd, D, component in zip(axes, msds, Ds, components):
             # Plot MSD
             ax.plot(time, msd, label=f"{temp}K (D={D:.2e} cm²/s)")
-            
+
             # Linear fit using np.polyfit
             slope = np.polyfit(time, msd, 1)[0]
-            
+
             # Plot fit line
             ax.plot(time, time * slope, '--', alpha=0.5)
-            
+
             # Customize plot
-            ax.set_title(f"{component.upper()}-direction MSD" if component != 'total' else "Total MSD", 
-                        fontsize=fontsize)
+            ax.set_title(f"{component.upper()}-direction MSD" if component != 'total' else "Total MSD",
+                         fontsize=fontsize)
             ax.set_xlabel("Time (ps)", fontsize=fontsize-4)
             ax.set_ylabel("MSD (Å²)", fontsize=fontsize-4)
             ax.tick_params(labelsize=fontsize-6)
             ax.legend(fontsize=fontsize-6)
             ax.grid(True, alpha=0.3)
-            
+
             # Log results
             logger.info(f"Results for {temp}K ({component}-direction):")
             logger.info(f"  Diffusion coefficient: {D:6.4e} [cm²/s]")
             logger.info(f"  Maximum MSD: {np.max(msd):.2f} Å²")
             logger.info(f"  Average MSD: {np.mean(msd):.2f} Å²")
-    
+
     plt.tight_layout()
     plt.savefig(output_dir / 'msd_analysis_all_components.png', dpi=300, bbox_inches='tight')
     plt.close()
-    
+
     # Create additional single plot for total MSD with style matching reference
     plt.figure(figsize=(12, 8))
-    
+
     for traj_file, temp in zip(trajectories, temperatures):
         trajectory = Trajectory(str(traj_file), 'r')
         time, _, _, _, msd_total, _, _, _, D_total = calculate_msd_sliding_window(
@@ -283,26 +288,27 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
         # Plot MSD with diffusion coefficient in label
         plt.plot(time, msd_total, label=f"{temp}K (D={D_cm2s:.2e} cm²/s)")
-        
+
         # Linear fit using np.polyfit
         slope = np.polyfit(time, msd_total, 1)[0]
-        
+
         # Plot fit line
         plt.plot(time, time * slope, '--', alpha=0.5)
-        
+
         D = slope / 6
         logger.info(f"Total Results for {temp}K:")
         logger.info(f"  Diffusion coefficient: {D*1e-16*1e12:6.4e} [cm²/s]")
-    
+
     plt.title("CHGnet pre-training by VASP", fontsize=fontsize)
     plt.xlabel("Time (ps)", fontsize=fontsize)
     plt.ylabel("MSD (Å²)", fontsize=fontsize)
     plt.tick_params(labelsize=fontsize-4)
     plt.legend(fontsize=fontsize-4)
     plt.tight_layout()
-    
+
     plt.savefig(output_dir / 'msd_total.png', dpi=300, bbox_inches='tight')
     plt.close()
+
 
 def run_md_simulation(args) -> None:
     """
@@ -372,13 +378,14 @@ def run_md_simulation(args) -> None:
 
         # Analyze trajectories
         analyze_msd(trajectory_files, proton_index, args.temperatures,
-                   args.timestep, output_dir, logger, args.window_size)
+                    args.timestep, output_dir, logger, args.window_size)
 
         logger.info("\nAll MD simulations and analysis completed successfully")
 
     except Exception as e:
         logger.error(f"MD simulation failed: {str(e)}")
         raise
+
 
 if __name__ == "__main__":
     args = parse_args()
