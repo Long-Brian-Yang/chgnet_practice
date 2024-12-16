@@ -14,7 +14,7 @@ from pymatgen.io.vasp import Poscar
 import torch
 from chgnet.model import CHGNet
 from chgnet.model.dynamics import MolecularDynamics
-from chgnet.model import StructOptimizer
+from chgnet.model import StructOptimXZSAAizer
 
 warnings.filterwarnings("ignore")
 
@@ -58,7 +58,7 @@ def parse_args():
                         help='Type of ensemble')
     parser.add_argument('--temperatures', type=float, nargs='+', default=[1000],
                         help='Temperatures for MD simulation (K), e.g. 800 900 1000')
-    parser.add_argument('--timestep', type=float, default=1.0,
+    parser.add_argument('--timestep', type=float, default=0.5,
                         help='Timestep for MD simulation (fs)')
     parser.add_argument('--n-steps', type=int, default=10000,
                         help='Number of MD steps')
@@ -163,7 +163,7 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
 
 
 def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
-                                 timestep: float = 1.0, loginterval: int = 10,window_size: int = None):
+                                 timestep: float = 0.5, loginterval: int = 20,window_size: int = None):
     """
     Calculate MSD using sliding window method for both directional and total MSD.
 
@@ -181,7 +181,7 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
     
     n_frames = len(positions)
     if window_size is None:
-        window_size = min(n_frames // 4, 1000)
+        window_size = min(n_frames // 2, 5000)
     shift_t = max(1, window_size // 2)
     
     msd_x = np.zeros(window_size)
@@ -410,7 +410,7 @@ def run_md_simulation(args) -> None:
                 timestep=args.timestep,
                 trajectory=str(traj_file),
                 logfile=str(md_log_file),
-                loginterval=10,  # Increased logging frequency
+                loginterval=20,  # Increased logging frequency
                 use_device='cpu'  # Explicitly specify device
             )
 

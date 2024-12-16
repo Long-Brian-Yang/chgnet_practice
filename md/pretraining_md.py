@@ -36,6 +36,38 @@ def setup_logging(log_dir: str = "logs") -> None:
     )
 
 
+def parse_args():
+    """
+    Parse command line arguments
+
+    Args:
+        None
+
+    Returns:
+        args (argparse.Namespace): parsed arguments
+    """
+    parser = argparse.ArgumentParser(description='CHGNet pretraining MD Simulation')
+    parser.add_argument('--structure-file', type=str, default="BaZrO3.cif",
+                        help='Path to the structure CIF file')
+    parser.add_argument('--ensemble', type=str, default="npt",
+                        choices=['npt', 'nve', 'nvt'],
+                        help='Type of ensemble')
+    parser.add_argument('--temperatures', type=float, nargs='+', default=[600],
+                        help='Temperatures for MD simulation (K), e.g. 800 900 1000')
+    parser.add_argument('--timestep', type=float, default=2.0,
+                        help='Timestep for MD simulation (fs)')
+    parser.add_argument('--n-steps', type=int, default=1000,
+                        help='Number of MD steps')
+    parser.add_argument('--n-protons', type=int, default=1,
+                        help='Number of protons to add')
+    parser.add_argument('--output-dir', type=str, default='./pretraining_md_results',
+                        help='Directory to save outputs')
+    parser.add_argument('--debug', action='store_true',
+                        help='Enable debug mode')
+
+    return parser.parse_args()
+
+
 def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     """
     Add protons to the structure based on theoretical understanding.
@@ -123,38 +155,6 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     logger.info(f"Final composition: {atoms.get_chemical_formula()}")
 
     return atoms
-
-
-def parse_args():
-    """
-    Parse command line arguments
-
-    Args:
-        None
-
-    Returns:
-        args (argparse.Namespace): parsed arguments
-    """
-    parser = argparse.ArgumentParser(description='CHGNet pretraining MD Simulation')
-    parser.add_argument('--structure-file', type=str, default="BaZrO3.cif",
-                        help='Path to the structure CIF file')
-    parser.add_argument('--ensemble', type=str, default="npt",
-                        choices=['npt', 'nve', 'nvt'],
-                        help='Type of ensemble')
-    parser.add_argument('--temperatures', type=float, nargs='+', default=[600],
-                        help='Temperatures for MD simulation (K), e.g. 800 900 1000')
-    parser.add_argument('--timestep', type=float, default=2.0,
-                        help='Timestep for MD simulation (fs)')
-    parser.add_argument('--n-steps', type=int, default=1000,
-                        help='Number of MD steps')
-    parser.add_argument('--n-protons', type=int, default=1,
-                        help='Number of protons to add')
-    parser.add_argument('--output-dir', type=str, default='./pretraining_md_results',
-                        help='Directory to save outputs')
-    parser.add_argument('--debug', action='store_true',
-                        help='Enable debug mode')
-
-    return parser.parse_args()
 
 
 def calculate_msd(trajectory: Trajectory, atom_index: int, timestep: float = 1.0):
