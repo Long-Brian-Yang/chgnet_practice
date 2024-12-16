@@ -2569,3 +2569,17 @@ Starting simulation at 1000K...
 2024-12-13 14:26:54,809 - INFO -   Diffusion coefficient: 1.2363e-03 [cm²/s]
 2024-12-13 14:26:55,433 - INFO - 
 All MD simulations and analysis completed successfully
+2024-12-15 16:34:01,165 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-15 16:34:01,175 - INFO - Structure loaded: BaZrO3
+2024-12-15 16:34:01,178 - INFO - Added proton 1/1:
+2024-12-15 16:34:01,178 - INFO -   Near O atom: 2
+2024-12-15 16:34:01,179 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-15 16:34:01,179 - INFO -   OH distance: 0.980 Å
+2024-12-15 16:34:01,179 - INFO - Successfully added 1 protons
+2024-12-15 16:34:01,179 - INFO - Final composition: HBaO3Zr
+2024-12-15 16:34:01,182 - INFO - 
+Starting simulation at 1000K...
+2024-12-15 16:34:01,182 - INFO - Initializing MD simulation...
+2024-12-15 16:34:01,468 - INFO - Running MD at 1000K...
+2024-12-15 16:34:01,769 - INFO - Temperature 1000K - Step 0/40000
+2024-12-15 16:34:06,894 - INFO - Temperature 1000K - Step 100/40000

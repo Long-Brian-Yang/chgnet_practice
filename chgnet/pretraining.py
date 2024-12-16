@@ -47,15 +47,15 @@ def parse_args():
     parser = argparse.ArgumentParser(description='CHGNet Training')
     parser.add_argument('--json-path', type=str, default="./data/dataset.json",
                         help='Path to the JSON dataset file')
-    parser.add_argument('--batch-size', type=int, default=2,
+    parser.add_argument('--batch-size', type=int, default=1,
                         help='Batch size for training')
     parser.add_argument('--train-ratio', type=float, default=0.8,
                         help='Proportion of dataset for training')
     parser.add_argument('--val-ratio', type=float, default=0.1,
                         help='Proportion of dataset for validation')
-    parser.add_argument('--epochs', type=int, default=50,
+    parser.add_argument('--epochs', type=int, default=40,
                         help='Number of training epochs')
-    parser.add_argument('--learning-rate', type=float, default=1e-2,
+    parser.add_argument('--learning-rate', type=float, default=1e-4,
                         help='Learning rate for optimizer')
     parser.add_argument('--output-dir', type=str, default='./pretraining_results',
                         help='Directory to save outputs')

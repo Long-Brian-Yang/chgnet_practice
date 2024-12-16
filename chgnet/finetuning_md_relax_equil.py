@@ -6,7 +6,6 @@ from pathlib import Path
 import matplotlib.pyplot as plt
 from ase.io.trajectory import Trajectory
 from ase import Atom, Atoms
-import statsmodels.api as sm
 from ase.md.velocitydistribution import MaxwellBoltzmannDistribution
 from pymatgen.core import Structure
 from pymatgen.io.ase import AseAtomsAdaptor
@@ -15,6 +14,7 @@ import torch
 from chgnet.model import CHGNet
 from chgnet.model.dynamics import MolecularDynamics
 from chgnet.model import StructOptimizer
+
 
 warnings.filterwarnings("ignore")
 
@@ -58,12 +58,16 @@ def parse_args():
                         help='Type of ensemble')
     parser.add_argument('--temperatures', type=float, nargs='+', default=[1000],
                         help='Temperatures for MD simulation (K), e.g. 800 900 1000')
-    parser.add_argument('--timestep', type=float, default=1.0,
+    parser.add_argument('--timestep', type=float, default=0.5,
                         help='Timestep for MD simulation (fs)')
-    parser.add_argument('--n-steps', type=int, default=10000,
-                        help='Number of MD steps')
+    parser.add_argument('--n-steps', type=int, default=4000,
+                        help='Number of MD steps for production run')
+    parser.add_argument('--equil-steps', type=int, default=200,
+                        help='Number of MD steps for equilibration run')
     parser.add_argument('--n-protons', type=int, default=1,
                         help='Number of protons to add')
+    parser.add_argument('--loginterval', type=int, default=10,
+                        help='Number of steps between writing trajectory frames')
     parser.add_argument('--output-dir', type=str, default='./finetuning_md_results',
                         help='Directory to save outputs')
     parser.add_argument('--window-size', type=int, default=None,
@@ -178,65 +182,52 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
     """
     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
     positions = positions_all[:, atom_indices]
-    
+
     n_frames = len(positions)
     if window_size is None:
         window_size = min(n_frames // 4, 1000)
-    shift_t = max(1, window_size // 2)
-    
+
+    shift_t = max(1, window_size // 10)
+
     msd_x = np.zeros(window_size)
     msd_y = np.zeros(window_size)
     msd_z = np.zeros(window_size)
     msd_total = np.zeros(window_size)
     counts = np.zeros(window_size)
-    
+
+    n_windows = n_frames - window_size + 1
     for start in range(0, n_frames - window_size, shift_t):
-        # Calculate MSD for each atom and average over all atoms
-        for dt in range(window_size):
-            for t0 in range(start, start + window_size - dt):
-                disp = positions[t0 + dt] - positions[t0]
-                
-                msd_x[dt] += disp[..., 0]**2
-                msd_y[dt] += disp[..., 1]**2
-                msd_z[dt] += disp[..., 2]**2
-                msd_total[dt] += np.sum(disp**2, axis=-1)
-                counts[dt] += 1
-            
+        window = slice(start, start + window_size)
+        ref_pos = positions[start]
+
+        disp = positions[window] - ref_pos
+
+        msd_x += np.mean(disp[..., 0]**2, axis=1)
+        msd_y += np.mean(disp[..., 1]**2, axis=1)
+        msd_z += np.mean(disp[..., 2]**2, axis=1)
+        msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
+        counts += 1
+
     msd_x /= counts
     msd_y /= counts
     msd_z /= counts
     msd_total /= counts
+
+    time_per_frame = (timestep * loginterval) / 1000.0  # transform to ps
     
-    time_per_frame = (timestep * loginterval) / 1000.0  # ps
     time = np.arange(window_size) * time_per_frame
-    
-    # # Fit linear slope to calculate diffusion coefficient
-    # D_x = np.polyfit(time, msd_x, 1)[0] / 2
-    # D_y = np.polyfit(time, msd_y, 1)[0] / 2
-    # D_z = np.polyfit(time, msd_z, 1)[0] / 2
-    # D_total = np.polyfit(time, msd_total, 1)[0] / 6
-    # Use statsmodels for linear regression
-    X = sm.add_constant(time)
-    
-    # Calculate diffusion coefficients
-    model_x = sm.OLS(msd_x, X).fit()
-    D_x = model_x.params[1] / 2  # 1D
-    
-    model_y = sm.OLS(msd_y, X).fit()
-    D_y = model_y.params[1] / 2
-    
-    model_z = sm.OLS(msd_z, X).fit()
-    D_z = model_z.params[1] / 2
-    
-    model_total = sm.OLS(msd_total, X).fit()
-    D_total = model_total.params[1] / 6  # 3D
-    
+
+    D_x = np.polyfit(time, msd_x, 1)[0] / 2  # For 1D
+    D_y = np.polyfit(time, msd_y, 1)[0] / 2
+    D_z = np.polyfit(time, msd_z, 1)[0] / 2
+    D_total = np.polyfit(time, msd_total, 1)[0] / 6  # For 3D
+
     return time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
 
 
 def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
-                window_size: int = None) -> None:
+                loginterval: int = 10,  window_size: int = None) -> None:
     """
     Analyze MSD data and create plots for all components and total MSD
 
@@ -305,6 +296,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
         D_cm2s = D_total * 1e-16 / 1e-12
         plt.plot(time, msd_total, label=f"{temp}K (D={D_cm2s:.2e} cm²/s)")
+        fit_start_index = np.where(time > 0.1)[0][0]
         slope = np.polyfit(time, msd_total, 1)[0]
         plt.plot(time, time * slope, '--', alpha=0.5)
 
@@ -325,7 +317,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
 def run_md_simulation(args) -> None:
     """
-    Run molecular dynamics simulation at multiple temperatures
+    Run molecular dynamics simulation at multiple temperatures with separate equilibration and production phases.
 
     Args:
         args (argparse.Namespace): command line arguments
@@ -350,36 +342,31 @@ def run_md_simulation(args) -> None:
         atoms_adaptor = AseAtomsAdaptor()
         atoms = atoms_adaptor.get_atoms(structure)
         atoms = add_protons(atoms, args.n_protons)
+        
+        # Maxwell-Boltzmann distribution for initial velocities
+        logger.info("Initializing velocities with Maxwell-Boltzmann distribution...")
+        MaxwellBoltzmannDistribution(atoms, temperature_K=args.temperatures[0])
+        
         proton_index = len(atoms) - 1
+        # Structure optimization after adding protons
+        logger.info("Performing structure optimization after adding protons...")
+        relaxer = StructOptimizer()
+        # Convert back to pymatgen Structure for optimization
+        protonated_structure = atoms_adaptor.get_structure(atoms)
         
-        # # Structure optimization after adding protons
-        # logger.info("Performing structure optimization after adding protons...")
-        # relaxer = StructOptimizer()
-        # # Convert back to pymatgen Structure for optimization
-        # protonated_structure = atoms_adaptor.get_structure(atoms)
+        # use relaxer to optimize the structure
+        optimization_result = relaxer.relax(
+            protonated_structure,
+            fmax=0.1,     
+            steps=100,        
+            verbose=True
+        )
         
-        # # use relaxer to optimize the structure
-        # optimization_result = relaxer.relax(
-        #     protonated_structure,
-        #     fmax=0.1,     
-        #     steps=100,        
-        #     verbose=True
-        # )
+        optimized_atoms = atoms_adaptor.get_atoms(optimization_result["final_structure"])
         
-        # optimized_atoms = atoms_adaptor.get_atoms(optimization_result["final_structure"])
+        # Save optimized structure
+        logger.info("Structure optimization completed")
         
-        # Assign initial velocities based on target temperature
-        target_temperature = args.temperatures[0]  # Use the first temperature as the initial target temperature
-        logger.info(f"Assigning initial velocities at {target_temperature} K")
-        MaxwellBoltzmannDistribution(atoms, temperature_K=target_temperature)
-
-        # Convert back to Structure for MD
-        pmg_structure = atoms_adaptor.get_structure(atoms)
-
-        # Save structure with protons
-        poscar = Poscar(pmg_structure)
-        poscar.write_file(output_dir / "POSCAR_with_H")
-
         # Load model
         logger.info(f"Loading finetuned CHGNet model from: {args.model_path}")
         model = CHGNet()
@@ -396,36 +383,61 @@ def run_md_simulation(args) -> None:
             temp_dir = output_dir / f"T_{temp}K"
             temp_dir.mkdir(exist_ok=True)
 
-            traj_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.traj"
+            equil_traj_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}_equil.traj"
+            production_traj_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}_production.traj"
             md_log_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.log"
-            trajectory_files.append(traj_file)
 
-            # Setup MD simulation
-            logger.info("Initializing MD simulation...")
+            # Equilibration phase
+            logger.info(f"Initializing MD simulation for equilibration at {temp}K...")
             md = MolecularDynamics(
-                atoms=pmg_structure,
+                atoms=optimized_atoms.copy(),
                 model=model,
                 ensemble=args.ensemble,
                 temperature=temp,
                 timestep=args.timestep,
-                trajectory=str(traj_file),
+                trajectory=str(equil_traj_file),
                 logfile=str(md_log_file),
-                loginterval=10,  # Increased logging frequency
-                use_device='cpu'  # Explicitly specify device
+                loginterval=args.loginterval,
+                use_device='cpu'
             )
 
-            # Run simulation
-            logger.info(f"Running MD at {temp}K...")
+            logger.info(f"Running {args.equil_steps} equilibration steps at {temp}K...")
+            for step in range(args.equil_steps):
+                md.run(1)
+                if step % 100 == 0:
+                    logger.info(f"Equilibration step {step}/{args.equil_steps}")
+            logger.info("Equilibration completed.")
+
+            # Use final atoms from equilibration as starting point for production
+            equil_final_atoms = md.atoms
+
+            # Production phase
+            logger.info(f"Initializing MD simulation for production at {temp}K...")
+            md = MolecularDynamics(
+                atoms=equil_final_atoms,
+                model=model,
+                ensemble=args.ensemble,
+                temperature=temp,
+                timestep=args.timestep,
+                trajectory=str(production_traj_file),
+                logfile=str(md_log_file),
+                loginterval=args.loginterval,
+                use_device='cpu'
+            )
+
+            logger.info(f"Running production {args.n_steps} steps at {temp}K...")
             for step in range(args.n_steps):
                 md.run(1)
                 if step % 100 == 0:
-                    logger.info(f"Temperature {temp}K - Step {step}/{args.n_steps}")
+                    logger.info(f"Production step {step}/{args.n_steps}")
+            logger.info(f"Production simulation at {temp}K completed")
 
-            logger.info(f"Simulation at {temp}K completed")
+            # Only production trajectory files are used for MSD analysis
+            trajectory_files.append(production_traj_file)
 
         # Analyze trajectories with window-based MSD calculation
         analyze_msd(trajectory_files, proton_index, args.temperatures,
-                    args.timestep, output_dir, logger, args.window_size)
+                    args.timestep, output_dir, logger, loginterval=args.loginterval, window_size = args.window_size)
 
         logger.info("\nAll MD simulations and analysis completed successfully")
 
