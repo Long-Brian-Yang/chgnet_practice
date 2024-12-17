@@ -2583,3 +2583,31 @@ Starting simulation at 1000K...
 2024-12-15 16:34:01,468 - INFO - Running MD at 1000K...
 2024-12-15 16:34:01,769 - INFO - Temperature 1000K - Step 0/40000
 2024-12-15 16:34:06,894 - INFO - Temperature 1000K - Step 100/40000
+2024-12-17 12:57:37,343 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-17 12:57:37,354 - INFO - Structure loaded: BaZrO3
+2024-12-17 12:57:37,356 - INFO - Added proton 1/1:
+2024-12-17 12:57:37,357 - INFO -   Near O atom: 2
+2024-12-17 12:57:37,357 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-17 12:57:37,357 - INFO -   OH distance: 0.980 Å
+2024-12-17 12:57:37,357 - INFO - Successfully added 1 protons
+2024-12-17 12:57:37,357 - INFO - Final composition: HBaO3Zr
+2024-12-17 12:57:37,357 - INFO - Assigning initial velocities at 1000 K
+2024-12-17 12:57:37,360 - INFO - 
+Starting simulation at 1000K...
+2024-12-17 12:57:37,361 - INFO - Initializing MD simulation...
+2024-12-17 12:57:37,646 - INFO - Running MD at 1000K...
+2024-12-17 12:57:37,937 - INFO - Temperature 1000K - Step 0/10000
+2024-12-17 13:07:39,589 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-17 13:07:39,599 - INFO - Structure loaded: BaZrO3
+2024-12-17 13:07:39,601 - INFO - Added proton 1/1:
+2024-12-17 13:07:39,601 - INFO -   Near O atom: 2
+2024-12-17 13:07:39,602 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-17 13:07:39,602 - INFO -   OH distance: 0.980 Å
+2024-12-17 13:07:39,602 - INFO - Successfully added 1 protons
+2024-12-17 13:07:39,603 - INFO - Final composition: HBaO3Zr
+2024-12-17 13:07:39,603 - INFO - Assigning initial velocities at 1000 K
+2024-12-17 13:07:39,606 - INFO - 
+Starting simulation at 1000K...
+2024-12-17 13:07:39,606 - INFO - Initializing MD simulation...
+2024-12-17 13:07:39,856 - INFO - Running MD at 1000K...
+2024-12-17 13:07:40,126 - INFO - Temperature 1000K - Step 0/10000

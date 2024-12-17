@@ -44,8 +44,11 @@ def parse_args():
     """
     Parse command line arguments
 
+    Args:
+        None
+
     Returns:
-        args (argparse.Namespace): parsed arguments
+        argparse.Namespace: command line arguments
     """
     parser = argparse.ArgumentParser(description='CHGNet Finetuning MD Simulation')
     parser.add_argument('--structure-file', type=str, default="./structures/BaZrO3.cif",
@@ -82,11 +85,11 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     Add protons to the structure based on theoretical understanding.
 
     Args:
-        atoms (Atoms): Initial structure
+        atoms (Atoms): ASE Atoms object
         n_protons (int): Number of protons to add
 
     Returns:
-        Atoms: Structure with protons added
+        Atoms: ASE Atoms object with protons added
     """
     logger = logging.getLogger(__name__)
     OH_BOND_LENGTH = 0.98  # Å
@@ -167,18 +170,19 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
 
 
 def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
-                                 timestep: float = 1.0, loginterval: int = 10,window_size: int = None):
+                                 timestep: float = 1.0, loginterval: int = 10, window_size: int = None):
     """
-    Calculate MSD using sliding window method for both directional and total MSD.
+    Calculate mean squared displacement (MSD) using a sliding window approach
 
     Args:
-        trajectory: ASE trajectory
-        atom_indices: List of atom indices to track
-        timestep: MD timestep in fs
-        window_size: Size of sliding window
+        trajectory (Trajectory): ASE Trajectory object
+        atom_indices (list): List of atom indices to track
+        timestep (float): MD timestep in fs
+        loginterval (int): Logging interval in steps
+        window_size (int): Size of sliding window for MSD calculation
 
     Returns:
-        tuple: (time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total)
+        tuple: time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
     """
     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
     positions = positions_all[:, atom_indices]
@@ -214,7 +218,7 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
     msd_total /= counts
 
     time_per_frame = (timestep * loginterval) / 1000.0  # transform to ps
-    
+
     time = np.arange(window_size) * time_per_frame
 
     D_x = np.polyfit(time, msd_x, 1)[0] / 2  # For 1D
@@ -229,16 +233,20 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
                 loginterval: int = 10,  window_size: int = None) -> None:
     """
-    Analyze MSD data and create plots for all components and total MSD
+    Analyze MSD from multiple trajectories at different temperatures
 
     Args:
-        trajectories: List of trajectory file paths
-        proton_index: Index of the proton to track
-        temperatures: List of temperatures
-        timestep: MD timestep
-        output_dir: Output directory
-        logger: Logger instance
-        window_size: Size of sliding window for MSD calculation
+        trajectories (list): List of trajectory files
+        proton_index (int): Index of the proton atom
+        temperatures (list): List of temperatures
+        timestep (float): MD timestep in fs
+        output_dir (Path): Output directory
+        logger (logging.Logger): Logger object
+        loginterval (int): Logging interval in steps
+        window_size (int): Size of sliding window for MSD calculation
+
+    Returns:
+        None
     """
     # Create subplot figure with all components
     fontsize = 24
@@ -317,10 +325,13 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
 def run_md_simulation(args) -> None:
     """
-    Run molecular dynamics simulation at multiple temperatures with separate equilibration and production phases.
+    Run MD simulation with CHGNet model
 
     Args:
-        args (argparse.Namespace): command line arguments
+        args (argparse.Namespace): Command line arguments
+
+    Returns:
+        None
     """
     try:
         output_dir = Path(args.output_dir)
@@ -342,31 +353,31 @@ def run_md_simulation(args) -> None:
         atoms_adaptor = AseAtomsAdaptor()
         atoms = atoms_adaptor.get_atoms(structure)
         atoms = add_protons(atoms, args.n_protons)
-        
+
         # Maxwell-Boltzmann distribution for initial velocities
         logger.info("Initializing velocities with Maxwell-Boltzmann distribution...")
         MaxwellBoltzmannDistribution(atoms, temperature_K=args.temperatures[0])
-        
+
         proton_index = len(atoms) - 1
         # Structure optimization after adding protons
         logger.info("Performing structure optimization after adding protons...")
         relaxer = StructOptimizer()
         # Convert back to pymatgen Structure for optimization
         protonated_structure = atoms_adaptor.get_structure(atoms)
-        
+
         # use relaxer to optimize the structure
         optimization_result = relaxer.relax(
             protonated_structure,
-            fmax=0.1,     
-            steps=100,        
+            fmax=0.1,
+            steps=100,
             verbose=True
         )
-        
+
         optimized_atoms = atoms_adaptor.get_atoms(optimization_result["final_structure"])
-        
+
         # Save optimized structure
         logger.info("Structure optimization completed")
-        
+
         # Load model
         logger.info(f"Loading finetuned CHGNet model from: {args.model_path}")
         model = CHGNet()
@@ -437,7 +448,7 @@ def run_md_simulation(args) -> None:
 
         # Analyze trajectories with window-based MSD calculation
         analyze_msd(trajectory_files, proton_index, args.temperatures,
-                    args.timestep, output_dir, logger, loginterval=args.loginterval, window_size = args.window_size)
+                    args.timestep, output_dir, logger, loginterval=args.loginterval, window_size=args.window_size)
 
         logger.info("\nAll MD simulations and analysis completed successfully")
 

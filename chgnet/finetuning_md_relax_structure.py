@@ -306,6 +306,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
     plt.savefig(output_dir / 'msd_total.png', dpi=300, bbox_inches='tight')
     plt.close()
 
+
 def run_md_simulation(args) -> None:
     try:
         output_dir = Path(args.output_dir)
@@ -334,20 +335,20 @@ def run_md_simulation(args) -> None:
         relaxer = StructOptimizer()
         # Convert back to pymatgen Structure for optimization
         protonated_structure = atoms_adaptor.get_structure(atoms)
-        
+
         # use relaxer to optimize the structure
         optimization_result = relaxer.relax(
             protonated_structure,
-            fmax=0.1,     
-            steps=100,        
+            fmax=0.1,
+            steps=100,
             verbose=True
         )
-        
+
         optimized_atoms = atoms_adaptor.get_atoms(optimization_result["final_structure"])
-        
+
         # Save optimized structure
         logger.info("Structure optimization completed")
-        
+
         # Load model for MD
         logger.info(f"Loading finetuned CHGNet model from: {args.model_path}")
         model = CHGNet()
