@@ -13,6 +13,7 @@ from pymatgen.core import Structure
 from pymatgen.io.ase import AseAtomsAdaptor
 from pymatgen.io.vasp import Poscar
 from chgnet.model.dynamics import MolecularDynamics
+from chgnet.model import StructOptimizer
 
 warnings.filterwarnings("ignore")
 
@@ -66,7 +67,7 @@ def parse_args():
                         help='Directory to save outputs')
     parser.add_argument('--window-size', type=int, default=None,
                         help='Window size for MSD calculation')
-    parser.add_argument('--loginterval', type=int, default=20,
+    parser.add_argument('--loginterval', type=int, default=10,
                         help='Logging interval for MD simulation')
     parser.add_argument('--use-device', type=str, default='cpu',
                         choices=['cpu', 'cuda'],
@@ -190,28 +191,47 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
     positions = positions_all[:, atom_indices]
 
+    # n_frames = len(positions)
+    # if window_size is None:
+    #     window_size = min(n_frames // 2, 5000)
+    # shift_t = max(1, window_size // 2)
     n_frames = len(positions)
     if window_size is None:
-        window_size = min(n_frames // 2, 5000)
-    shift_t = max(1, window_size // 2)
+        window_size = n_frames // 4
+
+    shift_t = window_size // 2
 
     msd_x = np.zeros(window_size)
     msd_y = np.zeros(window_size)
     msd_z = np.zeros(window_size)
     msd_total = np.zeros(window_size)
     counts = np.zeros(window_size)
-
+    
+    n_windows = n_frames - window_size + 1
     for start in range(0, n_frames - window_size, shift_t):
-        # Calculate MSD for each atom and average over all atoms
-        for dt in range(window_size):
-            for t0 in range(start, start + window_size - dt):
-                disp = positions[t0 + dt] - positions[t0]
+        window = slice(start, start + window_size)
+        ref_pos = positions[start]
+            # Calculate displacements
+        disp = positions[window] - ref_pos
 
-                msd_x[dt] += disp[..., 0]**2
-                msd_y[dt] += disp[..., 1]**2
-                msd_z[dt] += disp[..., 2]**2
-                msd_total[dt] += np.sum(disp**2, axis=-1)
-                counts[dt] += 1
+        # Calculate MSD components
+        msd_x += np.mean(disp[..., 0]**2, axis=1)
+        msd_y += np.mean(disp[..., 1]**2, axis=1)
+        msd_z += np.mean(disp[..., 2]**2, axis=1)
+        msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
+        counts += 1
+
+    # for start in range(0, n_frames - window_size, shift_t):
+    #     # Calculate MSD for each atom and average over all atoms
+    #     for dt in range(window_size):
+    #         for t0 in range(start, start + window_size - dt):
+    #             disp = positions[t0 + dt] - positions[t0]
+
+    #             msd_x[dt] += disp[..., 0]**2
+    #             msd_y[dt] += disp[..., 1]**2
+    #             msd_z[dt] += disp[..., 2]**2
+    #             msd_total[dt] += np.sum(disp**2, axis=-1)
+    #             counts[dt] += 1
 
     msd_x /= counts
     msd_y /= counts
@@ -387,16 +407,30 @@ def run_md_simulation(args) -> None:
         atoms = atoms_adaptor.get_atoms(structure)
         atoms = add_protons(atoms, args.n_protons)
         proton_index = len(atoms) - 1  # Last added atom is the proton
+        
+        # Structure optimization after adding protons
+        logger.info("Performing structure optimization after adding protons...")
+        relaxer = StructOptimizer()
+        # Convert back to pymatgen Structure for optimization
+        protonated_structure = atoms_adaptor.get_structure(atoms)
 
-        # Assign initial velocities based on target temperature
-        target_temperature = args.temperatures[0]  # Use the first temperature as the initial target temperature
-        logger.info(f"Assigning initial velocities at {target_temperature} K")
-        MaxwellBoltzmannDistribution(atoms, temperature_K=target_temperature)
+        # use relaxer to optimize the structure
+        optimization_result = relaxer.relax(
+            protonated_structure,
+            fmax=0.1,
+            steps=100,
+            verbose=True
+        )
 
-        # Save structure with protons
-        pmg_structure = atoms_adaptor.get_structure(atoms)
-        poscar = Poscar(pmg_structure)
-        poscar.write_file(output_dir / "POSCAR_with_H")
+        optimized_atoms = atoms_adaptor.get_atoms(optimization_result["final_structure"])
+
+        # Save optimized structure
+        logger.info("Structure optimization completed")
+
+        # # Save structure with protons
+        # pmg_structure = atoms_adaptor.get_structure(atoms)
+        # poscar = Poscar(pmg_structure)
+        # poscar.write_file(output_dir / "POSCAR_with_H")
 
         trajectory_files = []
 
@@ -407,6 +441,13 @@ def run_md_simulation(args) -> None:
             temp_dir = output_dir / f"T_{temp}K"
             temp_dir.mkdir(exist_ok=True)
 
+            # Create a copy of optimized atoms for this temperature
+            current_atoms = optimized_atoms.copy()
+
+            # Set initial velocities for this temperature
+            logger.info(f"Assigning initial velocities at {temp}K")
+            MaxwellBoltzmannDistribution(current_atoms, temperature_K=temp)
+
             traj_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.traj"
             md_log_file = temp_dir / f"md_out_{args.ensemble}_T_{temp}.log"
             trajectory_files.append(traj_file)
@@ -414,7 +455,7 @@ def run_md_simulation(args) -> None:
             # Setup MD simulation
             logger.info("Initializing MD simulation...")
             md = MolecularDynamics(
-                atoms=pmg_structure,
+                atoms=current_atoms,  # if dont want to optimize structure: atoms=pmg_structure,
                 ensemble=args.ensemble,
                 temperature=temp,
                 timestep=args.timestep,
