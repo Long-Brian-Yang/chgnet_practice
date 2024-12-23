@@ -1,0 +1,45 @@
+2024-12-18 14:39:21,357 - INFO - Loading structure from: ./structures/BaZrO3.cif
+2024-12-18 14:39:21,542 - INFO - Structure loaded: BaZrO3
+2024-12-18 14:39:21,544 - INFO - Added proton 1/1:
+2024-12-18 14:39:21,544 - INFO -   Near O atom: 2
+2024-12-18 14:39:21,545 - INFO -   Position: [1.69591668 2.49608332 3.39183335]
+2024-12-18 14:39:21,545 - INFO -   OH distance: 0.980 Å
+2024-12-18 14:39:21,545 - INFO - Successfully added 1 protons
+2024-12-18 14:39:21,545 - INFO - Final composition: HBaO3Zr
+2024-12-18 14:39:21,545 - INFO - Assigning initial velocities at 1000 K
+2024-12-18 14:39:21,547 - INFO - 
+Starting simulation at 1000K...
+2024-12-18 14:39:21,547 - INFO - Initializing MD simulation...
+2024-12-18 14:39:21,847 - INFO - Running MD at 1000K...
+2024-12-18 14:39:22,202 - INFO - Temperature 1000K - Step 0/1000
+2024-12-18 14:39:27,136 - INFO - Temperature 1000K - Step 100/1000
+2024-12-18 14:39:32,067 - INFO - Temperature 1000K - Step 200/1000
+2024-12-18 14:39:37,045 - INFO - Temperature 1000K - Step 300/1000
+2024-12-18 14:39:42,186 - INFO - Temperature 1000K - Step 400/1000
+2024-12-18 14:39:47,679 - INFO - Temperature 1000K - Step 500/1000
+2024-12-18 14:39:52,348 - INFO - Temperature 1000K - Step 600/1000
+2024-12-18 14:39:56,991 - INFO - Temperature 1000K - Step 700/1000
+2024-12-18 14:40:01,706 - INFO - Temperature 1000K - Step 800/1000
+2024-12-18 14:40:06,465 - INFO - Temperature 1000K - Step 900/1000
+2024-12-18 14:40:11,263 - INFO - Simulation at 1000K completed
+2024-12-18 14:40:12,158 - INFO - Analyzing trajectory for 1000K...
+2024-12-18 14:40:12,194 - INFO - Results for 1000K (x-direction):
+2024-12-18 14:40:12,194 - INFO -   Diffusion coefficient: 1.2328e-03 [cm²/s]
+2024-12-18 14:40:12,194 - INFO -   Maximum MSD: 2.87 Å²
+2024-12-18 14:40:12,194 - INFO -   Average MSD: 1.38 Å²
+2024-12-18 14:40:12,195 - INFO - Results for 1000K (y-direction):
+2024-12-18 14:40:12,195 - INFO -   Diffusion coefficient: 7.5279e-04 [cm²/s]
+2024-12-18 14:40:12,195 - INFO -   Maximum MSD: 2.02 Å²
+2024-12-18 14:40:12,195 - INFO -   Average MSD: 0.81 Å²
+2024-12-18 14:40:12,196 - INFO - Results for 1000K (z-direction):
+2024-12-18 14:40:12,196 - INFO -   Diffusion coefficient: 6.0201e-04 [cm²/s]
+2024-12-18 14:40:12,197 - INFO -   Maximum MSD: 1.55 Å²
+2024-12-18 14:40:12,197 - INFO -   Average MSD: 0.85 Å²
+2024-12-18 14:40:12,198 - INFO - Results for 1000K (total-direction):
+2024-12-18 14:40:12,198 - INFO -   Diffusion coefficient: 8.6252e-04 [cm²/s]
+2024-12-18 14:40:12,198 - INFO -   Maximum MSD: 6.44 Å²
+2024-12-18 14:40:12,198 - INFO -   Average MSD: 3.04 Å²
+2024-12-18 14:40:14,016 - INFO - Total Results for 1000K:
+2024-12-18 14:40:14,016 - INFO -   Diffusion coefficient: 8.6252e-04 [cm²/s]
+2024-12-18 14:40:14,327 - INFO - 
+All MD simulations and analysis completed successfully

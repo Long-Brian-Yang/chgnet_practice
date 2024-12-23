@@ -461,7 +461,7 @@ def run_md_simulation(args) -> None:
         # Load model
         logger.info(f"Loading finetuned CHGNet model from: {args.model_path}")
         model = CHGNet()
-        model.load_state_dict(torch.load(args.model_path, map_location="cpu"))
+        model.load_state_dict(torch.load(args.model_path, map_location="cuda"))
         model.eval()
         logger.info("Model loaded successfully")
 

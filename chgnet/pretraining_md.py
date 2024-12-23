@@ -11,6 +11,7 @@ import statsmodels.api as sm
 from ase.md.velocitydistribution import MaxwellBoltzmannDistribution
 from pymatgen.core import Structure
 from pymatgen.io.ase import AseAtomsAdaptor
+from scipy.signal import savgol_filter
 from pymatgen.io.vasp import Poscar
 from chgnet.model.dynamics import MolecularDynamics
 from chgnet.model import StructOptimizer
@@ -50,7 +51,7 @@ def parse_args():
         argparse.Namespace: parsed arguments
     """
     parser = argparse.ArgumentParser(description='CHGNet pretraining MD Simulation')
-    parser.add_argument('--structure-file', type=str, default="./structures/BaZrO3.cif",
+    parser.add_argument('--structure-file', type=str, default="./structures/BaZrO3_333.cif",
                         help='Path to the structure CIF file')
     parser.add_argument('--ensemble', type=str, default="nvt",
                         choices=['npt', 'nve', 'nvt'],
@@ -170,9 +171,7 @@ def add_protons(atoms: Atoms, n_protons: int) -> Atoms:
     logger.info(f"Final composition: {atoms.get_chemical_formula()}")
 
     return atoms
-
-
-def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
+def calculate_msd_sliding_window(trajectory: Trajectory, proton_indices: list,
                                  timestep: float = 0.5,  window_size: int = None,
                                  loginterval: int = 20):
     """
@@ -180,7 +179,7 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
 
     Args:
         trajectory (Trajectory): ASE Trajectory object
-        atom_indices (list): List of atom indices to calculate MSD
+        proton_indices (list): List of proton indices to calculate MSD
         timestep (float): MD timestep (fs)
         loginterval (int): Logging interval for MD simulation
         window_size (int): Size of sliding window for MSD calculation
@@ -188,84 +187,211 @@ def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
     Returns:
         tuple: time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
     """
+    # Debug print
+    logging.debug(f"Calculating MSD for protons: {proton_indices}")
+    
     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
-    positions = positions_all[:, atom_indices]
-
-    # n_frames = len(positions)
-    # if window_size is None:
-    #     window_size = min(n_frames // 2, 5000)
-    # shift_t = max(1, window_size // 2)
+    positions = positions_all[:, proton_indices]
     n_frames = len(positions)
+    
     if window_size is None:
-        window_size = n_frames // 4
+        window_size = min(n_frames // 2, 2000)
+    # shift_t = max(1, window_size // 2)
+    shift_t = window_size // 6
 
-    shift_t = window_size // 2
+    # if window_size is None:
+    #     window_size = n_frames // 4
+    # shift_t = window_size // 2
 
+    # Initialize arrays
     msd_x = np.zeros(window_size)
     msd_y = np.zeros(window_size)
     msd_z = np.zeros(window_size)
     msd_total = np.zeros(window_size)
     counts = np.zeros(window_size)
     
-    n_windows = n_frames - window_size + 1
+    # Calculate box size for periodic boundary conditions
+    box_size = trajectory[0].get_cell().diagonal()
+    
+    # MSD calculation
     for start in range(0, n_frames - window_size, shift_t):
         window = slice(start, start + window_size)
         ref_pos = positions[start]
-            # Calculate displacements
-        disp = positions[window] - ref_pos
+        
+        # Calculate displacements
+        disp = positions[window] - ref_pos[None, :, :]
+        
+        # Apply periodic boundary conditions for each dimension
+        for i in range(3):
+            mask = np.abs(disp[..., i]) > box_size[i]/2
+            disp[..., i][mask] -= np.sign(disp[..., i][mask]) * box_size[i]
 
-        # Calculate MSD components
+    # n_windows = n_frames - window_size + 1
+    # for start in range(0, n_frames - window_size, shift_t):
+    #     window = slice(start, start + window_size)
+    #     ref_pos = positions[start]
+    #         # Calculate displacements
+    #     disp = positions[window] - ref_pos
+
+        # # Calculate MSD components
+        # msd_x += np.mean(disp[..., 0]**2, axis=1)
+        # msd_y += np.mean(disp[..., 1]**2, axis=1)
+        # msd_z += np.mean(disp[..., 2]**2, axis=1)
+        # msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
+        # counts += 1
+        # Calculate MSD components - average over protons
         msd_x += np.mean(disp[..., 0]**2, axis=1)
         msd_y += np.mean(disp[..., 1]**2, axis=1)
         msd_z += np.mean(disp[..., 2]**2, axis=1)
         msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
         counts += 1
 
-    # for start in range(0, n_frames - window_size, shift_t):
-    #     # Calculate MSD for each atom and average over all atoms
-    #     for dt in range(window_size):
-    #         for t0 in range(start, start + window_size - dt):
-    #             disp = positions[t0 + dt] - positions[t0]
-
-    #             msd_x[dt] += disp[..., 0]**2
-    #             msd_y[dt] += disp[..., 1]**2
-    #             msd_z[dt] += disp[..., 2]**2
-    #             msd_total[dt] += np.sum(disp**2, axis=-1)
-    #             counts[dt] += 1
-
+    # Average MSD
     msd_x /= counts
     msd_y /= counts
     msd_z /= counts
     msd_total /= counts
+    
+    # Minimal smoothing to handle obvious noise
+    window_length = min(11, window_size // 40)
+    if window_length > 3 and window_length % 2 == 0:
+        window_length += 1
+        # Only slightly smooth the total MSD
+        msd_total = savgol_filter(msd_total, window_length, 2)
 
     time_per_frame = (timestep * loginterval) / 1000.0  # ps
     time = np.arange(window_size) * time_per_frame
 
-    # # Fit linear slope to calculate diffusion coefficient
-    # D_x = np.polyfit(time, msd_x, 1)[0] / 2
-    # D_y = np.polyfit(time, msd_y, 1)[0] / 2
-    # D_z = np.polyfit(time, msd_z, 1)[0] / 2
-    # D_total = np.polyfit(time, msd_total, 1)[0] / 6
-    # Use statsmodels for linear regression
-    X = sm.add_constant(time)
+    # # Use statsmodels for linear regression
+    # X = sm.add_constant(time)
 
-    # Calculate diffusion coefficients
-    model_x = sm.OLS(msd_x, X).fit()
-    D_x = model_x.params[1] / 2  # 1D
+    # # Calculate diffusion coefficients
+    # model_x = sm.OLS(msd_x, X).fit()
+    # D_x = model_x.params[1] / 2  # 1D
 
-    model_y = sm.OLS(msd_y, X).fit()
+    # model_y = sm.OLS(msd_y, X).fit()
+    # D_y = model_y.params[1] / 2
+
+    # model_z = sm.OLS(msd_z, X).fit()
+    # D_z = model_z.params[1] / 2
+
+    # model_total = sm.OLS(msd_total, X).fit()
+    # D_total = model_total.params[1] / 6  # 3D
+    # Fit process
+    # Use the middle 80% of data, which is a common choice
+    start_fit = int(window_size * 0.1)
+    end_fit = int(window_size * 0.9)
+    X = sm.add_constant(time[start_fit:end_fit])
+    
+    # Use ordinary least squares
+    model_x = sm.OLS(msd_x[start_fit:end_fit], X).fit()
+    D_x = model_x.params[1] / 2
+    
+    model_y = sm.OLS(msd_y[start_fit:end_fit], X).fit()
     D_y = model_y.params[1] / 2
-
-    model_z = sm.OLS(msd_z, X).fit()
+    
+    model_z = sm.OLS(msd_z[start_fit:end_fit], X).fit()
     D_z = model_z.params[1] / 2
-
-    model_total = sm.OLS(msd_total, X).fit()
-    D_total = model_total.params[1] / 6  # 3D
+    
+    model_total = sm.OLS(msd_total[start_fit:end_fit], X).fit()
+    D_total = model_total.params[1] / 6
 
     return time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
 
+# def calculate_msd_sliding_window(trajectory: Trajectory, atom_indices: list,
+#                                  timestep: float = 0.5,  window_size: int = None,
+#                                  loginterval: int = 20):
+#     """
+#     Calculate mean squared displacement (MSD) using a sliding window approach
 
-def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
+#     Args:
+#         trajectory (Trajectory): ASE Trajectory object
+#         atom_indices (list): List of atom indices to calculate MSD
+#         timestep (float): MD timestep (fs)
+#         loginterval (int): Logging interval for MD simulation
+#         window_size (int): Size of sliding window for MSD calculation
+
+#     Returns:
+#         tuple: time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
+#     """
+#     positions_all = np.array([atoms.get_positions() for atoms in trajectory])
+#     positions = positions_all[:, atom_indices]
+
+#     # n_frames = len(positions)
+#     # if window_size is None:
+#     #     window_size = min(n_frames // 2, 5000)
+#     # shift_t = max(1, window_size // 2)
+#     n_frames = len(positions)
+#     if window_size is None:
+#         window_size = n_frames // 4
+
+#     shift_t = window_size // 2
+
+#     msd_x = np.zeros(window_size)
+#     msd_y = np.zeros(window_size)
+#     msd_z = np.zeros(window_size)
+#     msd_total = np.zeros(window_size)
+#     counts = np.zeros(window_size)
+    
+#     n_windows = n_frames - window_size + 1
+#     for start in range(0, n_frames - window_size, shift_t):
+#         window = slice(start, start + window_size)
+#         ref_pos = positions[start]
+#             # Calculate displacements
+#         disp = positions[window] - ref_pos
+
+#         # Calculate MSD components
+#         msd_x += np.mean(disp[..., 0]**2, axis=1)
+#         msd_y += np.mean(disp[..., 1]**2, axis=1)
+#         msd_z += np.mean(disp[..., 2]**2, axis=1)
+#         msd_total += np.mean(np.sum(disp**2, axis=2), axis=1)
+#         counts += 1
+
+#     # for start in range(0, n_frames - window_size, shift_t):
+#     #     # Calculate MSD for each atom and average over all atoms
+#     #     for dt in range(window_size):
+#     #         for t0 in range(start, start + window_size - dt):
+#     #             disp = positions[t0 + dt] - positions[t0]
+
+#     #             msd_x[dt] += disp[..., 0]**2
+#     #             msd_y[dt] += disp[..., 1]**2
+#     #             msd_z[dt] += disp[..., 2]**2
+#     #             msd_total[dt] += np.sum(disp**2, axis=-1)
+#     #             counts[dt] += 1
+
+#     msd_x /= counts
+#     msd_y /= counts
+#     msd_z /= counts
+#     msd_total /= counts
+
+#     time_per_frame = (timestep * loginterval) / 1000.0  # ps
+#     time = np.arange(window_size) * time_per_frame
+
+#     # # Fit linear slope to calculate diffusion coefficient
+#     # D_x = np.polyfit(time, msd_x, 1)[0] / 2
+#     # D_y = np.polyfit(time, msd_y, 1)[0] / 2
+#     # D_z = np.polyfit(time, msd_z, 1)[0] / 2
+#     # D_total = np.polyfit(time, msd_total, 1)[0] / 6
+#     # Use statsmodels for linear regression
+#     X = sm.add_constant(time)
+
+#     # Calculate diffusion coefficients
+#     model_x = sm.OLS(msd_x, X).fit()
+#     D_x = model_x.params[1] / 2  # 1D
+
+#     model_y = sm.OLS(msd_y, X).fit()
+#     D_y = model_y.params[1] / 2
+
+#     model_z = sm.OLS(msd_z, X).fit()
+#     D_z = model_z.params[1] / 2
+
+#     model_total = sm.OLS(msd_total, X).fit()
+#     D_total = model_total.params[1] / 6  # 3D
+
+#     return time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
+
+
+def analyze_msd(trajectories: list, proton_indices: int, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
                 window_size: int = None, loginterval: int = 20) -> None:
     """
@@ -273,7 +399,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
     Args:
         trajectories (list): List of trajectory files
-        proton_index (int): Index of the proton atom
+        proton_indices (list): List of proton indices to calculate MSD
         temperatures (list): List of temperatures
         timestep (float): MD timestep (fs)
         output_dir (Path): Output directory
@@ -284,7 +410,10 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
     Returns:
         None
     """
-    # First create subplot figure with all components
+    logger.info(f"Starting MSD analysis for {len(proton_indices)} protons")
+    logger.info(f"Proton indices: {proton_indices}")
+
+    # Create subplot figure with all components
     fontsize = 24
     components = ['x', 'y', 'z', 'total']
     fig, axes = plt.subplots(2, 2, figsize=(24, 20))
@@ -296,7 +425,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
 
         # Calculate MSD with directional components
         time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total = calculate_msd_sliding_window(
-            trajectory, [proton_index], timestep=timestep,
+            trajectory, proton_indices, timestep=timestep,
             window_size=window_size, loginterval=loginterval
         )
 
@@ -345,7 +474,7 @@ def analyze_msd(trajectories: list, proton_index: int, temperatures: list,
     for traj_file, temp in zip(trajectories, temperatures):
         trajectory = Trajectory(str(traj_file), 'r')
         time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total = calculate_msd_sliding_window(
-            trajectory, [proton_index], timestep=timestep,
+            trajectory, proton_indices, timestep=timestep,
             window_size=window_size, loginterval=loginterval
         )
 
@@ -402,12 +531,18 @@ def run_md_simulation(args) -> None:
         structure = Structure.from_file(args.structure_file)
         logger.info(f"Structure loaded: {structure.composition.reduced_formula}")
 
-        # Convert to ASE atoms and add protons
+        # # Convert to ASE atoms and add protons
+        # atoms_adaptor = AseAtomsAdaptor()
+        # atoms = atoms_adaptor.get_atoms(structure)
+        # atoms = add_protons(atoms, args.n_protons)
+        # proton_index = len(atoms) - 1  # Last added atom is the proton
         atoms_adaptor = AseAtomsAdaptor()
         atoms = atoms_adaptor.get_atoms(structure)
+        initial_atom_count = len(atoms)  # Store initial count before adding protons
         atoms = add_protons(atoms, args.n_protons)
-        proton_index = len(atoms) - 1  # Last added atom is the proton
-        
+        proton_indices = list(range(initial_atom_count, len(atoms)))  # Get all proton indices
+        logger.info(f"Added {len(proton_indices)} protons at indices: {proton_indices}")
+
         # Structure optimization after adding protons
         logger.info("Performing structure optimization after adding protons...")
         relaxer = StructOptimizer()
@@ -475,7 +610,7 @@ def run_md_simulation(args) -> None:
             logger.info(f"Simulation at {temp}K completed")
 
         # Analyze trajectories
-        analyze_msd(trajectory_files, proton_index, args.temperatures,
+        analyze_msd(trajectory_files, proton_indices, args.temperatures,
                     args.timestep, output_dir, logger, args.window_size,
                     loginterval=args.loginterval)
 
