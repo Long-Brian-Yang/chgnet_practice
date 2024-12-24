@@ -391,9 +391,9 @@ def calculate_msd_sliding_window(trajectory: Trajectory, proton_indices: list,
 #     return time, msd_x, msd_y, msd_z, msd_total, D_x, D_y, D_z, D_total
 
 
-def analyze_msd(trajectories: list, proton_indices: int, temperatures: list,
+def analyze_msd(trajectories: list, proton_indices: list, temperatures: list,
                 timestep: float, output_dir: Path, logger: logging.Logger,
-                window_size: int = None, loginterval: int = 20) -> None:
+                window_size: int = None, loginterval: int = 10) -> None:
     """
     Analyze trajectories by calculating mean squared displacement (MSD) for each component
 
