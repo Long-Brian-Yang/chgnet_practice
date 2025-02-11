@@ -53,9 +53,9 @@ def parse_args():
                         help='Proportion of dataset for training')
     parser.add_argument('--val-ratio', type=float, default=0.1,
                         help='Proportion of dataset for validation')
-    parser.add_argument('--epochs', type=int, default=40,
+    parser.add_argument('--epochs', type=int, default=100,
                         help='Number of training epochs')
-    parser.add_argument('--learning-rate', type=float, default=1e-4,
+    parser.add_argument('--learning-rate', type=float, default=1e-5,
                         help='Learning rate for optimizer')
     parser.add_argument('--output-dir', type=str, default='./pretraining_results',
                         help='Directory to save outputs')
